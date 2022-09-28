@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       security password
       <br></br>
-      <code>discored le gana</code>
+      <code>discord le gana</code>
     </div>
   );
 }
