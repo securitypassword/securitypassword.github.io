@@ -6,7 +6,7 @@ export default class Login extends Component {
       <div className="App">
         <input type="text" id="user" />
         <br></br>
-        <input type="button" id="send" value="action" />
+        <input type="button" id="send" value="actions" />
       </div>
     )
   }
