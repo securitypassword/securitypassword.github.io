@@ -5,6 +5,7 @@ export default class Login extends Component {
     return (
       <div className="App">
         <input type="text" id="user" />
+        <br></br>
         <input type="button" id="send" />
       </div>
     )
