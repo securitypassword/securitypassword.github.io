@@ -4,6 +4,14 @@ import Login from './comps/Login';
 
 
 function App() {
+  const [data, setData] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("https://glitch.com/~perfect-cream-wound")
+      .then((res) => res.json())
+      .then((data) => console.log(data.message));
+  }, []);
+
   return (
     <div className="App">
       security password
