@@ -1,27 +1,27 @@
 import React, { Component, startTransition } from 'react'
+import { TextInput, Button, Text, View } from 'react-native'
 import $ from 'jquery'
 
 export default class Login extends Component {
+
+
+
   render() {
-    start()
     codes()
     return (
       <div className="App">
         
-        <input type="text" id="user" />
+        <TextInput id="user"></TextInput>
         <br></br>
-        <input type="button" id="send" value="action" />
+        <Button  onClick={send}>sned</Button>
         <p id="log"></p>
       </div>
     )
   }
 }
-
-function start(){
-  $("#send").click(function(){
-    codes()
-    console.log("iwi")
-  })
+function send(){
+  codes()
+  console.log("iwi")
 }
 
 function codes(){
@@ -30,6 +30,7 @@ function codes(){
     .then(function(json) {
       $("#log").innerHTML=json.data
       $("#log").value=json.data
+      console.log(json.data)
       console.log("uwu")
 });
 }
