@@ -13,7 +13,7 @@ export default class Login extends Component {
         
         <TextInput id="user"></TextInput>
         <br></br>
-        <Button  onClick={send}>sned</Button>
+        <Button title="fissh" onPress={send}></Button>
         <p id="log"></p>
       </div>
     )
