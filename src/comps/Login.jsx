@@ -28,7 +28,7 @@ function codes(){
   fetch("https://perfect-cream-wound.glitch.me/" , {method : 'GET'})
   .then(function(response) { return response.json(); })
     .then(function(json) {
-      $("#log").innerHTML=json.data
+      $("#log").text(json.data)
       $("#log").value=json.data
       console.log(json.data)
       console.log("uwu")
