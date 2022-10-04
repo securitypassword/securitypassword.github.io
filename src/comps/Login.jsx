@@ -20,6 +20,7 @@ function codes(){
   fetch("https://perfect-cream-wound.glitch.me/")
   .then((response) => response.json())
   .then((data) => {
+    console.log(data.message)
     $("#log").innerHTML=data.message
   });
 }
