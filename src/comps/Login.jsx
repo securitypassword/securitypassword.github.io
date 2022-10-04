@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component, startTransition } from 'react'
 import $ from 'jquery'
 
 export default class Login extends Component {
   render() {
+    start()
     codes()
     return (
       <div className="App">
@@ -16,11 +17,19 @@ export default class Login extends Component {
   }
 }
 
+function start(){
+  $("#send").click(function(){
+    codes()
+    console.log("iwi")
+  })
+}
+
 function codes(){
-  fetch("https://perfect-cream-wound.glitch.me/")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data.message)
-    $("#log").innerHTML=data.message
-  });
+  fetch("https://perfect-cream-wound.glitch.me/" , {method : 'GET'})
+  .then(function(response) { return response.json(); })
+    .then(function(json) {
+      $("#log").innerHTML=json.data
+      $("#log").value=json.data
+      console.log("uwu")
+});
 }
