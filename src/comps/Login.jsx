@@ -17,8 +17,9 @@ export default class Login extends Component {
 }
 
 function codes(){
+  const req=null
   fetch("https://perfect-cream-wound.glitch.me/")
   .then(response => response.json())
-  .then(json => $("#log").innerHTML=JSON.parse(json).data);
-
+  .then(json => req=JSON.parse(json));
+  $("#log").innerHTML=req.data
 }
