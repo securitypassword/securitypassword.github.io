@@ -1,6 +1,7 @@
 import React, { Component, startTransition } from 'react'
 import { TextInput, Button, Text, View } from 'react-native'
 import $ from 'jquery'
+import {en,de} from "./sec"
 
 export default class Login extends Component {
 
@@ -10,28 +11,23 @@ export default class Login extends Component {
     return (
       <div className="App">
         
-        <TextInput id="user"></TextInput>
+        <input type="text" id="user" />
         <br></br>
-        <Button title="data" onPress={data}></Button>
-        <Button title="message" onPress={message}></Button>
+        <input type="text" id="pass" />
+        <br></br>
+        <Button title="log" onPress={log}></Button>
         <p id="log"></p>
       </div>
     )
   }
 }
-function data(){
-  fetch("https://perfect-cream-wound.glitch.me/" , {method : 'GET'})
-  .then(function(response) { return response.json(); })
+function log(){
+  var usu=en($("#user").val())
+  fetch("https://perfect-cream-wound.glitch.me/login/?user="+usu, {method : 'GET',})
+  .then(function(response) {
+     return response.json(); })
     .then(function(json) {
       $("#log").text(json.data)
       console.log(json.data)
     });
   }
-  function message(){
-    fetch("https://perfect-cream-wound.glitch.me/" , {method : 'GET'})
-    .then(function(response) { return response.json(); })
-      .then(function(json) {
-        $("#log").text(json.message)
-        console.log(json.message)
-      });
-    }
