@@ -8,8 +8,10 @@ export default class RandomPass extends Component {
   render() {
     return (
       <div className="RandomPass">
-        <Switcher></Switcher>
-        <p id="pass"></p>
+        <Switcher id="genUp"></Switcher>
+        <input type="numbre" id="genNum" placeholder="length" ></input>
+        <br></br>
+        <input type="text" id="genPass"></input>
         <Button title="generate" onPress={gen}></Button>
       </div>
     )
@@ -17,16 +19,17 @@ export default class RandomPass extends Component {
 }
 function gen(){
   var low="true"
-  var up="false"
+  var up=$("#genUp").getVal()
+  console.log(up)
   var n="false"
   var num="false"
   var char="false"
-  var len=9
+  var len=$("#genNum").val()
   fetch("https://perfect-cream-wound.glitch.me/generate/?low="+low+"&up="+up+"&n="+n+"&num="+num+"&char="+char+"&len="+len, {method : 'GET',})
   .then(function(response) {
      return response.json(); })
     .then(function(json) {
-      $("#pass").text(de(json.data))
+      $("#genPass").val(de(json.data))
       console.log(de(json.data))
     });
 }

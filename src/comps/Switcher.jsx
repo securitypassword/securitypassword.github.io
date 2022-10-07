@@ -3,13 +3,12 @@ import {StyleSheet, Switch, View, Text} from 'react-native'
 import $ from 'jquery'
 import {en,de} from "./sec"
 
-var state = {  
-  switchValue: false  
-};  
-function setState(s){
-  state=s
-}
 
+var state=""
+
+function getVal(){
+  return state.switchValue
+}
 export default class Switcher extends Component {
   state = {  
     switchValue: false  
