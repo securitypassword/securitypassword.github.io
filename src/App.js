@@ -18,6 +18,7 @@ function App() {
       <NewPass></NewPass>
       <GetPass></GetPass>
       <Encoder></Encoder>
+      <Register></Register>
     </div>
   );
 }
