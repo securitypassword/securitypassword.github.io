@@ -4,6 +4,8 @@ import React from 'react';
 import Login from './comps/Login';
 import TitlePass from './comps/TitlePass';
 import NewPass from './comps/NewPass';
+import GetPass from './comps/GetPass';
+import Encoder from './comps/Encoder';
 
 
 function App() {
@@ -11,9 +13,10 @@ function App() {
     <div className="App">
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
       <TitlePass></TitlePass>
-      <Login></Login>
-      <br></br>
+      <Login id="login"></Login>
       <NewPass></NewPass>
+      <GetPass></GetPass>
+      <Encoder></Encoder>
     </div>
   );
 }

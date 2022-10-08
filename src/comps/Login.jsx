@@ -1,33 +1,38 @@
-import React, { Component, startTransition } from 'react'
-import { TextInput, Button, Text, View } from 'react-native'
+import React, { Component, startTransition, useState } from 'react'
+import {Button} from 'react-native'
 import $ from 'jquery'
 import {en,de} from "./sec"
 
 export default class Login extends Component {
-
-
-
   render() {
     return (
       <div className="App">
         
-        <input type="text" id="user" />
-        <br></br>
-        <input type="text" id="pass" />
-        <br></br>
-        <Button title="log" onPress={log}></Button>
-        <p id="log"></p>
+        <input type="text" id="logUser" />
+        <br id="br1"></br>
+        <input type="text" id="logPass" />
+        <br id="br2"></br>
+        <Button id="logBtn" title="log" onPress={log}></Button>
+        <p id="logTxt"></p>
+        <p id="logId"></p>
       </div>
     )
   }
 }
 function log(){
-  var usu=en($("#user").val())
-  fetch("https://perfect-cream-wound.glitch.me/login/?user="+usu, {method : 'GET',})
+  var usu=en($("#logUser").val())
+  var pass=en($("#logPass").val())
+  fetch("https://perfect-cream-wound.glitch.me/login/?user="+usu+"&pass="+pass, {method : 'GET',})
   .then(function(response) {
      return response.json(); })
     .then(function(json) {
-      $("#log").text(json.data)
+      if(json.data!=""){
+        $("#logTxt").text("id: ")
+       $("#logId").text(json.data)
+      }else{
+       $("#logTxt").text("usu o pass bien`t")
+       $("#logId").text("")
+      }
       console.log(json.data)
     });
   }

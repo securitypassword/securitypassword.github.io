@@ -1,22 +1,55 @@
-import React, { Component, startTransition } from 'react'
-import {Button} from 'react-native'
+import React, { Component} from 'react'
+import {Button,Switch} from 'react-native'
 import $ from 'jquery'
 import {en,de} from "./sec"
 
-var low=false;
-var up=false
-var n=false
-var num=false
-var char=false
+var state = ""; 
+
+function setState(s){
+  this.state=s
+}
+
+state = {  
+  low: false,
+  up:false,
+  n:false,
+  num:false,
+  char:false
+}; 
 
 export default class RandomPass extends Component {
+  state = {  
+    low: false,
+    up:false,
+    n:false,
+    num:false,
+    char:false
+  };  
+
   render() {
     return (
       <div className="RandomPass">
-        <Switch  id="low"
-                  value={low}  
-                  onValueChange ={low=!low}></Switch> 
-        <input type="numbre" id="genNum" placeholder="length" ></input>
+        <Switch id={this.id+".low"} value={this.state.low}  
+                  onValueChange ={(low)=>{this.setState({low})
+                  state.low=low}}></Switch><label>low</label>
+
+        <Switch id={this.id+".up"} value={this.state.up}  
+                  onValueChange ={(up)=>{this.setState({up})
+                  state.up=up}}></Switch><label>up</label>
+
+        <Switch id={this.id+".n"} value={this.state.n}  
+                  onValueChange ={(n)=>{this.setState({n})
+                  state.n=n}}></Switch><label>ñ</label>
+
+        <Switch id={this.id+".num"} value={this.state.num}  
+                  onValueChange ={(num)=>{this.setState({num})
+                  state.num=num}}></Switch><label>nums</label>
+
+        <Switch id={this.id+".char"} value={this.state.char}  
+                  onValueChange ={(char)=>{this.setState({char})
+                  state.char=char}}></Switch><label>special chars</label>
+                  <br></br>
+        <input type="number" id="genNum" placeholder="length" ></input>
         <br></br>
         <input type="text" id="genPass"></input>
         <Button title="generate" onPress={gen}></Button>
@@ -26,8 +59,9 @@ export default class RandomPass extends Component {
 }
 function gen(){
   var len=$("#genNum").val()
-  fetch("https://perfect-cream-wound.glitch.me/generate/?low="+low.toString()+"&up="+up.toString()
-  +"&n="+n.toString()+"&num="+num.toString()+"&char="+char.toString()+"&len="+len, {method : 'GET',})
+  fetch("https://perfect-cream-wound.glitch.me/generate/?low="+state.low.toString()
+  +"&up="+state.up.toString()+"&n="+state.n.toString()+"&num="+state.num.toString()
+  +"&char="+state.char.toString()+"&len="+len, {method : 'GET',})
   .then(function(response) {
      return response.json(); })
     .then(function(json) {
