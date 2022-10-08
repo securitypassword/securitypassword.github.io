@@ -1,14 +1,17 @@
 import React, { Component, startTransition } from 'react'
 import {Button} from 'react-native'
-import Switcher from './Switcher'
 import $ from 'jquery'
 import {en,de} from "./sec"
+
+var low=false;
 
 export default class RandomPass extends Component {
   render() {
     return (
       <div className="RandomPass">
-        <Switcher id="genUp"></Switcher>
+        <Switch  id="low"
+                  value={low}  
+                  onValueChange ={low=!low}></Switch> 
         <input type="numbre" id="genNum" placeholder="length" ></input>
         <br></br>
         <input type="text" id="genPass"></input>
