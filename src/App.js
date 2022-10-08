@@ -6,6 +6,7 @@ import TitlePass from './comps/TitlePass';
 import NewPass from './comps/NewPass';
 import GetPass from './comps/GetPass';
 import Encoder from './comps/Encoder';
+import Register from './comps/Register';
 
 
 function App() {

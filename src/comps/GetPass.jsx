@@ -29,8 +29,8 @@ function getPass(){
 
         for(var r in resJson){
           changeTable+="<tr>"
-          changeTable+="<td>"+resJson[r].reg_name+"</td>"
-          changeTable+="<td>"+resJson[r].reg_pass+"</td>"
+          changeTable+="<td>"+de(resJson[r].reg_name)+"</td>"
+          changeTable+="<td>"+de(resJson[r].reg_pass)+"</td>"
           changeTable+="</tr>"
         }
         $("#getPassTable").html(changeTable)
