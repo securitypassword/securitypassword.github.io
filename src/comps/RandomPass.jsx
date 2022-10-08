@@ -4,6 +4,10 @@ import $ from 'jquery'
 import {en,de} from "./sec"
 
 var low=false;
+var up=false
+var n=false
+var num=false
+var char=false
 
 export default class RandomPass extends Component {
   render() {
@@ -21,14 +25,9 @@ export default class RandomPass extends Component {
   }
 }
 function gen(){
-  var low="true"
-  var up=$("#genUp").getVal()
-  console.log(up)
-  var n="false"
-  var num="false"
-  var char="false"
   var len=$("#genNum").val()
-  fetch("https://perfect-cream-wound.glitch.me/generate/?low="+low+"&up="+up+"&n="+n+"&num="+num+"&char="+char+"&len="+len, {method : 'GET',})
+  fetch("https://perfect-cream-wound.glitch.me/generate/?low="+low.toString()+"&up="+up.toString()
+  +"&n="+n.toString()+"&num="+num.toString()+"&char="+char.toString()+"&len="+len, {method : 'GET',})
   .then(function(response) {
      return response.json(); })
     .then(function(json) {
