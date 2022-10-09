@@ -23,7 +23,8 @@ export default class RandomPass extends Component {
     up:false,
     n:false,
     num:false,
-    char:false
+    char:false,
+    rect:false
   };  
 
   render() {
@@ -49,6 +50,11 @@ export default class RandomPass extends Component {
                   onValueChange ={(char)=>{this.setState({char})
                   state.char=char}}></Switch><label>special chars</label>
                   <br></br>
+
+        <Switch id={this.id+".rect"} value={this.state.rect}  
+                  onValueChange ={(rect)=>{this.setState({rect})
+                  state.rect=rect}}></Switch><label>rectangles :3</label>
+                  <br></br>
         <input type="number" id="genNum" placeholder="length" ></input>
         <br></br>
         <input type="text" id="genPass"></input>
@@ -61,7 +67,7 @@ function gen(){
   var len=$("#genNum").val()
   fetch("https://perfect-cream-wound.glitch.me/generate/?low="+state.low.toString()
   +"&up="+state.up.toString()+"&n="+state.n.toString()+"&num="+state.num.toString()
-  +"&char="+state.char.toString()+"&len="+len, {method : 'GET',})
+  +"&char="+state.char.toString()+"&rect="+state.rect.toString()+"&len="+len, {method : 'GET',})
   .then(function(response) {
      return response.json(); })
     .then(function(json) {
