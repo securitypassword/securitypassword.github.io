@@ -15,7 +15,9 @@ export default class GetPass extends Component {
   }
 }
 function getPass(){
-  var usu_id=parseInt($("#logId").text())
+  var usu_id=parseInt($("#logId").text())  
+  usu_id=usu_id.substring(1,usu_id.length)
+  usu_id=parseInt(usu_id)
   var resJson=""
   fetch("https://securitypassword.cyclic.app/getRegisters/?usu_id="+usu_id, {method : 'GET',})
   .then(function(response) {
