@@ -58,8 +58,8 @@ export default class RandomPass extends Component {
                   <br></br>
         <input type="number" id="genNum" placeholder="length" ></input>
         <br></br>
-        <input type="text" id="genPass"></input>
         <Button title="generate" onPress={gen}></Button>
+        <input type="text" id="genPass" placeholder='new pass'></input>
       </div>
     )
   }

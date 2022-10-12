@@ -1,4 +1,5 @@
 import React, { Component, startTransition } from 'react'
+import {Button} from 'react-native'
 import RandomPass from './RandomPass';
 import $ from 'jquery'
 import {en,de} from "./sec"
@@ -18,7 +19,20 @@ export default class NewPass extends Component {
     }
   }
   function savePass(){
-    var pass=$("#genPass")
-    var name=$("#newPassName")
-    console.log(pass+" "+name)
+    var usu_id=parseInt($("#logId").text())
+    var pass=$("#genPass").val()
+    var name=$("#newPassName").val()
+    if(pass!=""){
+      console.log(pass+" "+name)
+      pass=en(pass)
+      name=en(name)
+      fetch("https://securitypassword.cyclic.app/savePass/?usu_id="+usu_id+"&pass="+pass+"&name="+name, {method : 'GET',})
+      .then(function(response) {
+        return response.json(); })
+        .then(function(json) {
+          if(json.data!=""){
+            console.log(de(json.data))
+          }
+      })
+    }
   }
