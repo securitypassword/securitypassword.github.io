@@ -19,10 +19,12 @@ export default class NewPass extends Component {
     }
   }
   function savePass(){
-    var usu_id=parseInt($("#logId").text())
+    var usu_id=$("#logId").text()
     var pass=$("#genPass").val()
     var name=$("#newPassName").val()
-    if(pass!=""){
+    if(pass!=""&&usu_id!=""){
+      usu_id=usu_id.substring(1,usu_id.length)
+      usu_id=parseInt(usu_id)
       console.log(pass+" "+name)
       pass=en(pass)
       name=en(name)
