@@ -17,7 +17,7 @@ export default class GetPass extends Component {
 function getPass(){
   var usu_id=parseInt($("#logId").text())
   var resJson=""
-  fetch("https://perfect-cream-wound.glitch.me/getRegisters/?usu_id="+usu_id, {method : 'GET',})
+  fetch("https://securitypassword.cyclic.app/getRegisters/?usu_id="+usu_id, {method : 'GET',})
   .then(function(response) {
      return response.json(); })
     .then(function(json) {

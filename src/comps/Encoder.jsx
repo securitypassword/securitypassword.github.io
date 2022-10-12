@@ -17,7 +17,7 @@ export default class Encoder extends Component {
 }
 function encode(){
     var enc=en($("#encText").val())
-    fetch("https://perfect-cream-wound.glitch.me/encode/?enc="+enc, {method : 'GET',})
+    fetch("https://securitypassword.cyclic.app/encode/?enc="+enc, {method : 'GET',})
     .then(function(response) {
        return response.json(); })
       .then(function(json) {

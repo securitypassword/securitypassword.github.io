@@ -14,7 +14,8 @@ state = {
   up:false,
   n:false,
   num:false,
-  char:false
+  char:false,
+  rect:false
 }; 
 
 export default class RandomPass extends Component {
@@ -65,7 +66,7 @@ export default class RandomPass extends Component {
 }
 function gen(){
   var len=$("#genNum").val()
-  fetch("https://perfect-cream-wound.glitch.me/generate/?low="+state.low.toString()
+  fetch("https://securitypassword.cyclic.app/generate/?low="+state.low.toString()
   +"&up="+state.up.toString()+"&n="+state.n.toString()+"&num="+state.num.toString()
   +"&char="+state.char.toString()+"&rect="+state.rect.toString()+"&len="+len, {method : 'GET',})
   .then(function(response) {

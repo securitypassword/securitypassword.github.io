@@ -11,7 +11,14 @@ export default class NewPass extends Component {
       return (
         <div className="NewPass">
           <RandomPass></RandomPass>
+          <input type="text" id="newPassName" placeholder='name'></input> 
+          <Button title="save" onPress={savePass}></Button>
         </div>
       )
     }
+  }
+  function savePass(){
+    var pass=$("#genPass")
+    var name=$("#newPassName")
+    console.log(pass+" "+name)
   }
