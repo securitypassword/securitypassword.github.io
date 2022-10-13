@@ -29,14 +29,20 @@ function getPass(){
         var changeTable=""
         resJson=JSON.parse(data)
 
+        var table=document.getElementById("getPassTable")
+        table.innerHTML=""
         for(var r in resJson){
-          changeTable+="<tr>"
-          changeTable+="<td>"+de(resJson[r].reg_name)+"</td>"
-          changeTable+="<td>"+de(resJson[r].reg_pass)+"</td>"
-          changeTable+="</tr>"
-          console.log("key "+r+" "+de(resJson[r].reg_id))
+          var regId=de(resJson[r].reg_id)
+          var row = table.insertRow(r);
+          var cellName = row.insertCell(0);
+          var cellPass = row.insertCell(1);
+          var cellDel = row.insertCell(2);
+          cellName.append(de(resJson[r].reg_name))
+          cellPass.append(de(resJson[r].reg_pass))
+          var command= 'fetch("https://securitypassword.cyclic.app/delRegister/?reg_id='+regId+'", {method : "GET",}).then()'
+          cellDel.innerHTML="<input type='button' value='delete' onclick='"+command+"' id='delBtn"+r+"' ></Button>"
+          console.log("key "+r+" "+regId)
         }
-        $("#getPassTable").html(changeTable)
       }
     });
 }
