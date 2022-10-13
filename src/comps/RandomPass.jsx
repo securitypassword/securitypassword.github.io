@@ -5,9 +5,6 @@ import {en,de} from "./sec"
 
 var state = ""; 
 
-function setState(s){
-  this.state=s
-}
 
 state = {  
   low: false,

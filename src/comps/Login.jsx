@@ -1,9 +1,12 @@
-import React, { Component, startTransition, useState } from 'react'
+import React, { Component, startTransition, useState} from 'react'
 import {Button} from 'react-native'
 import $ from 'jquery'
 import {en,de} from "./sec"
 
+
+
 export default class Login extends Component {
+
   render() {
     return (
       <div className="App">
@@ -28,7 +31,8 @@ function log(){
     .then(function(json) {
       if(json.data!=""){
         $("#logTxt").text("id: ")
-       $("#logId").text(json.data)
+        $("#logId").text(json.data)
+        $("#login").attr("usu_id",json.data)
       }else{
        $("#logTxt").text("usu o pass bien`t")
        $("#logId").text("")
