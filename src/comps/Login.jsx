@@ -3,8 +3,6 @@ import {Button} from 'react-native'
 import $ from 'jquery'
 import {en,de} from "./sec"
 
-
-
 export default class Login extends Component {
 
   render() {
@@ -17,7 +15,6 @@ export default class Login extends Component {
         <br id="br2"></br>
         <Button id="logBtn" title="log" onPress={log}></Button>
         <p id="logTxt"></p>
-        <p id="logId"></p>
       </div>
     )
   }
@@ -30,9 +27,9 @@ function log(){
      return response.json(); })
     .then(function(json) {
       if(json.data!=""){
-        $("#logTxt").text("id: ")
         $("#logId").text(json.data)
         $("#login").attr("usu_id",json.data)
+        $("#logTxt").text("logeo bien")
       }else{
        $("#logTxt").text("usu o pass bien`t")
        $("#logId").text("")

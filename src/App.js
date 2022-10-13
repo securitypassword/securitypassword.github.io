@@ -19,6 +19,7 @@ function App() {
       <GetPass></GetPass>
       <Encoder></Encoder>
       <Register></Register>
+        <p id="logId" hidden></p>
     </div>
   );
 }
