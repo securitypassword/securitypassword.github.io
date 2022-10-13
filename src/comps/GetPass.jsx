@@ -34,6 +34,7 @@ function getPass(){
           changeTable+="<td>"+de(resJson[r].reg_name)+"</td>"
           changeTable+="<td>"+de(resJson[r].reg_pass)+"</td>"
           changeTable+="</tr>"
+          console.log("key "+r+" "+de(resJson[r].reg_id))
         }
         $("#getPassTable").html(changeTable)
       }
