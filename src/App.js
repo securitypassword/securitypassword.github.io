@@ -3,19 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React from 'react';
 import Login from './comps/Login';
+import NavPrincipal from './comps/NavPrincipal';
 import TitlePass from './comps/TitlePass';
-import CardBackground from './comps/CardBackground';
+import NewPass from './comps/NewPass';
+import GetPass from './comps/GetPass';
 import Encoder from './comps/Encoder';
-import Pass from './comps/Pass';
 import Register from './comps/Register';
-import Navigation from './comps/Navigation';
-import { ImageBackground } from 'react-native-web';
-import $ from 'jquery'
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
-import { Routes ,Route } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -28,7 +22,6 @@ function App() {
     <Route path='/Register' element={<Register/>} />
     <Route path='/Pass/:usu_id' element={<Pass  /> } />
     </Routes>
-    <p id="logId" hidden></p>
     </div>
     </Router>
   );
