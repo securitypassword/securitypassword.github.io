@@ -5,10 +5,15 @@ import React from 'react';
 import Login from './comps/Login';
 import NavPrincipal from './comps/NavPrincipal';
 import TitlePass from './comps/TitlePass';
-import NewPass from './comps/NewPass';
-import GetPass from './comps/GetPass';
+import Pass from './comps/Pass';
 import Encoder from './comps/Encoder';
 import Register from './comps/Register';
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
+import { Routes ,Route } from 'react-router-dom';
+import Navigation from './comps/Navigation';
 
 
 function App() {
