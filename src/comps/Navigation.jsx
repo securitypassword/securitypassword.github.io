@@ -2,7 +2,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CardBackground from './CardBackground';
-import {  Link} from "react-router-dom";
+import {
+  NavLink
+} from "react-router-dom";
 
 function ColorSchemesExample() {
   return (
@@ -12,8 +14,8 @@ function ColorSchemesExample() {
         <Container>
           <Navbar.Brand href="/">Security Password</Navbar.Brand>
           <Nav className="ml-auto">
-            <Link to="/login" id="loginLink">Login</Link>
-            <Link to="/register" id="regLink">Sign up</Link>
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/register">Sign up</NavLink>
           </Nav>
         </Container>
       </Navbar>

@@ -2,10 +2,11 @@ import React, { Component, startTransition, useState} from 'react'
 import {Button} from 'react-native'
 import $ from 'jquery'
 import {en,de} from "./sec"
+import { useNavigate } from "react-router-dom";
 
-export default class Login extends Component {
 
-  render() {
+function Login(){
+  let navigate=useNavigate()
     return (
       <div className="App">
         
@@ -13,13 +14,12 @@ export default class Login extends Component {
         <br id="br1"></br>
         <input type="text" id="logPass" />
         <br id="br2"></br>
-        <Button id="logBtn" title="log" onPress={log}></Button>
+        <Button id="logBtn" title="log" onPress={()=>log(navigate)}></Button>
         <p id="logTxt"></p>
       </div>
     )
-  }
 }
-function log(){
+function log(navigate){
   var usu=en($("#logUser").val())
   var pass=en($("#logPass").val())
   fetch("https://securitypassword.cyclic.app/login/?user="+usu+"&pass="+pass, {method : 'GET',})
@@ -30,7 +30,7 @@ function log(){
         $("#logId").text(json.data)
         $("#login").attr("usu_id",json.data)
         $("#logTxt").text("logeo bien")
-        window.location.href = '/pass/'+en(json.data.substring(1,json.data.length-1));
+        navigate('/pass/'+en(json.data.substring(1,json.data.length-1)))
       }else{
        $("#logTxt").text("usu o pass bien`t")
        $("#logId").text("")
@@ -38,3 +38,5 @@ function log(){
       console.log(json.data)
     });
   }
+
+  export default Login;
