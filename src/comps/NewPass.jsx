@@ -4,11 +4,10 @@ import RandomPass from './RandomPass';
 import $ from 'jquery'
 import {en,de} from "./sec"
 
-export default class NewPass extends Component {
+var varsGet=""
 
-
-
-    render() {
+function NewPass(vars) {
+  varsGet=vars
       return (
         <div className="NewPass">
           <RandomPass></RandomPass>
@@ -16,14 +15,13 @@ export default class NewPass extends Component {
           <Button title="save" onPress={savePass}></Button>
         </div>
       )
-    }
+    
   }
   function savePass(){
-    var usu_id=$("#logId").text()
+    var usu_id=de(varsGet.vars.usu_id)
     var pass=$("#genPass").val()
     var name=$("#newPassName").val()
     if(pass!=""&&usu_id!=""){
-      usu_id=usu_id.substring(1,usu_id.length)
       usu_id=parseInt(usu_id)
       console.log(pass+" "+name)
       pass=en(pass)
@@ -38,3 +36,5 @@ export default class NewPass extends Component {
       })
     }
   }
+
+  export default NewPass;
