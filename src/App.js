@@ -14,7 +14,6 @@ import { Routes ,Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
     <div className="App"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
       
     <Routes>
@@ -25,7 +24,6 @@ function App() {
     </Routes>
     <p id="logId" hidden></p>
     </div>
-    </Router>
   );
 }
 
