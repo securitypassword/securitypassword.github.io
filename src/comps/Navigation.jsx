@@ -11,8 +11,8 @@ function ColorSchemesExample() {
         <Container>
           <Navbar.Brand href="/">Security Password</Navbar.Brand>
           <Nav className="ml-auto">
-            <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/register">Sign up</Nav.Link>
+            <Nav.Link to="/login">Login</Nav.Link>
+            <Nav.Link to="/register">Sign up</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

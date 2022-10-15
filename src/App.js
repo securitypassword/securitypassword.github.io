@@ -19,7 +19,6 @@ function App() {
     <div className="App"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     
     <HashRouter basename="/">
-    <Link to="/login">Home</Link>
       <Routes>
         <Route path='/' element={<Navigation></Navigation>} />
         <Route path='/login' element={<Login/>} />
