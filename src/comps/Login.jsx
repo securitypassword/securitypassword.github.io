@@ -30,7 +30,7 @@ function log(){
         $("#logId").text(json.data)
         $("#login").attr("usu_id",json.data)
         $("#logTxt").text("logeo bien")
-        window.location.href = '/Pass/'+en(json.data.substring(1,json.data.length-1));
+        window.location.href = '/pass/'+en(json.data.substring(1,json.data.length-1));
       }else{
        $("#logTxt").text("usu o pass bien`t")
        $("#logId").text("")

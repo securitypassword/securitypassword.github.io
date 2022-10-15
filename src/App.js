@@ -19,9 +19,9 @@ function App() {
       
     <Routes>
     <Route path='/' element={<Navigation></Navigation>} />
-    <Route path='/Login' element={<Login/>} />
-    <Route path='/Register' element={<Register/>} />
-    <Route path='/Pass/:usu_id' element={<Pass  /> } />
+    <Route path='/login' element={<Login/>} />
+    <Route path='/register' element={<Register/>} />
+    <Route path='/pass/:usu_id' element={<Pass  /> } />
     </Routes>
     <p id="logId" hidden></p>
     </div>
