@@ -7,10 +7,8 @@ import Register from './comps/Register';
 import Navigation from './comps/Navigation';
 import $ from 'jquery'
 import {
-  BrowserRouter,
   Routes,
   Route,
-  Link,
   HashRouter,
 } from "react-router-dom";
 
