@@ -35,10 +35,13 @@ function getBin(){
           var row = table.insertRow(r);
           var cellName = row.insertCell(0);
           var cellPass = row.insertCell(1);
-          var cellDel = row.insertCell(2);
+          var cellRes = row.insertCell(2);
+          var cellDel = row.insertCell(3);
           cellName.append(de(resJson[r].reg_name))
           cellPass.append(de(resJson[r].reg_pass))
           var command= 'fetch("https://securitypassword.cyclic.app/delRegister/?reg_id='+regId+'", {method : "GET",}).then()'
+          cellRes.innerHTML="<input type='button' value='restore' onclick='"+command+"' id='resBtn"+r+"' ></Button>"
+          command= 'fetch("https://securitypassword.cyclic.app/restoreRegister/?reg_id='+regId+'", {method : "GET",}).then()'
           cellDel.innerHTML="<input type='button' value='delete' onclick='"+command+"' id='delBtn"+r+"' ></Button>"
           console.log("key "+r+" "+regId)
         }
