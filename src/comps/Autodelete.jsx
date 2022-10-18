@@ -22,7 +22,7 @@ function autodel(){
         .then(function(json) {
         if(json.data!=""){
             console.log(json.data)
-            $("#logTxt").text(json.data)
+            $("#autoDelRes").text(json.data)
         }
         })
     }
