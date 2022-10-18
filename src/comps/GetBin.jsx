@@ -8,7 +8,7 @@ function GetBin(vars){
   varsGet=vars
     return (
       <div className="App">
-        <Button id="getBinBtn" title="get password" onPress={getBin}></Button>
+        <Button id="getBinBtn" title="get deleted password" onPress={getBin}></Button>
         <table id="getBinTable"></table>
       </div>
     )
