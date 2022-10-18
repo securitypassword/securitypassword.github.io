@@ -27,10 +27,10 @@ function log(navigate){
      return response.json(); })
     .then(function(json) {
       if(json.data!=""){
-        $("#logId").text(json.data)
-        $("#login").attr("usu_id",json.data)
+        $("#logId").text(json.data.id)
+        $("#login").attr("usu_id",json.data.id)
         $("#logTxt").text("logeo bien")
-        navigate('/pass/'+en(json.data.substring(1,json.data.length-1)))
+        navigate('/pass/'+en(json.data.id.substring(1,json.data.id.length-1)))
       }else{
        $("#logTxt").text("usu o pass bien`t")
        $("#logId").text("")
