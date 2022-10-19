@@ -30,9 +30,10 @@ function getPass(){
 
         var table=document.getElementById("getPassTable")
         table.innerHTML=""
+        var i=0;
         for(var r in resJson){
           var regId=de(resJson[r].reg_id)
-          var row = table.insertRow(r);
+          var row = table.insertRow(i);
           var cellName = row.insertCell(0);
           var cellPass = row.insertCell(1);
           var cellDel = row.insertCell(2);
@@ -41,6 +42,7 @@ function getPass(){
           var command= 'fetch("https://securitypassword.cyclic.app/delRegister/?reg_id='+regId+'", {method : "GET",}).then()'
           cellDel.innerHTML="<input type='button' value='delete' onclick='"+command+"' id='delBtn"+r+"' ></Button>"
           console.log("key "+r+" "+regId)
+          i+=1;
         }
       }
     });
