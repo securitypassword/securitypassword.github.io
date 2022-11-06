@@ -5,6 +5,7 @@ import Login from './comps/Login';
 import Pass from './comps/Pass';
 import Register from './comps/Register';
 import Navigation from './comps/Navigation';
+import Admin from './comps/Admin';
 import $ from 'jquery'
 import {
   Routes,
@@ -22,6 +23,7 @@ function App() {
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/pass/:usu_id' element={<Pass  /> } />
+        <Route path='/admin/:token' element={<Admin  /> } />
       </Routes>
     </HashRouter>
     <p id="logId" hidden></p>
