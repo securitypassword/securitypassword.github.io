@@ -1,7 +1,7 @@
 import React, { Component} from 'react'
 import {Button} from 'react-native'
 import $ from 'jquery'
-import {en,de} from "./sec"
+import {en,de,safe} from "./sec"
 
 var varsGet=""
 function GetPass(vars){
@@ -36,8 +36,8 @@ function getPass(){
           var cellName = row.insertCell(0);
           var cellPass = row.insertCell(1);
           var cellDel = row.insertCell(2);
-          cellName.append(de(resJson[r].reg_name))
-          cellPass.append(de(resJson[r].reg_pass))
+          cellName.append(safe(de(resJson[r].reg_name)))
+          cellPass.append(safe(de(resJson[r].reg_pass)))
           var command= 'fetch("https://securitypassword.cyclic.app/delRegister/?reg_id='+regId+'", {method : "GET",}).then()'
           cellDel.innerHTML="<input type='button' value='delete' onclick='"+command+"' id='delBtn"+r+"' ></Button>"
           console.log("key "+r+" "+regId)
