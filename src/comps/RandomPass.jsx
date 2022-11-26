@@ -2,6 +2,7 @@ import React, { Component} from 'react'
 import {Button,Switch} from 'react-native'
 import $ from 'jquery'
 import {en,de} from "./sec"
+import './GetPass.css'
 
 var state = ""; 
 
@@ -30,28 +31,21 @@ export default class RandomPass extends Component {
       <div className="RandomPass">
         <Switch id={this.id+".low"} value={this.state.low}  
                   onValueChange ={(low)=>{this.setState({low})
-                  state.low=low}}></Switch><label>low</label>
+                  state.low=low}}><label>Minusculas</label></Switch>
 
         <Switch id={this.id+".up"} value={this.state.up}  
                   onValueChange ={(up)=>{this.setState({up})
-                  state.up=up}}></Switch><label>up</label>
-
-        <Switch id={this.id+".n"} value={this.state.n}  
-                  onValueChange ={(n)=>{this.setState({n})
-                  state.n=n}}></Switch><label>ñ</label>
+                  state.up=up}}><label>Mayusculas</label></Switch>
 
         <Switch id={this.id+".num"} value={this.state.num}  
                   onValueChange ={(num)=>{this.setState({num})
-                  state.num=num}}></Switch><label>nums</label>
+                  state.num=num}}><label>Numeros</label></Switch>
 
         <Switch id={this.id+".char"} value={this.state.char}  
                   onValueChange ={(char)=>{this.setState({char})
-                  state.char=char}}></Switch><label>special chars</label>
+                  state.char=char}}><label>Caracteres especiales</label></Switch>
                   <br></br>
 
-        <Switch id={this.id+".rect"} value={this.state.rect}  
-                  onValueChange ={(rect)=>{this.setState({rect})
-                  state.rect=rect}}></Switch><label>rectangles :3</label>
                   <br></br>
         <input type="number" id="genNum" placeholder="length" ></input>
         <br></br>

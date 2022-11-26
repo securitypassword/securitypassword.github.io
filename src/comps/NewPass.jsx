@@ -2,18 +2,34 @@ import React, { Component, startTransition } from 'react'
 import {Button} from 'react-native'
 import RandomPass from './RandomPass';
 import $ from 'jquery'
+import InputGroup from 'react-bootstrap/InputGroup';
 import {en,de} from "./sec"
+import './GetPass.css'
 
 var varsGet=""
 
 function NewPass(vars) {
   varsGet=vars
       return (
-        <div className="NewPass">
+        <center>
+        <section className="NewPass">
           <RandomPass></RandomPass>
-          <input type="text" id="newPassName" placeholder='name'></input> 
+          <InputGroup size="sm" className="mb-3">
+            <InputGroup.Text id="inputGroup-sizing-sm">Titulo</InputGroup.Text>
+            <input type="text" id="logUser" /> 
+          </InputGroup>      
+          <InputGroup size="sm" className="mb-3">
+            <InputGroup.Text id="inputGroup-sizing-sm">Contraseña</InputGroup.Text>
+            <input type="text" id="logPass" /> 
+          </InputGroup>    
+          <InputGroup size="sm" className="mb-3">
+            <InputGroup.Text id="inputGroup-sizing-sm">URL</InputGroup.Text>
+            <input type="text" id="url" /> 
+          </InputGroup>  
           <Button title="save" onPress={savePass}></Button>
-        </div>
+        </section>          
+        </center>
+
       )
     
   }

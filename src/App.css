@@ -38,10 +38,15 @@
 }
 
 #logUser{
-  background-color : #c300ff;
-  color: #f0a0ff;
+  background-color : #d8e3ec;
+  color: #d8e3ec;
 }
 #logPass{
-  background-color : #00ffff;
-  color: #f0a0ff;
+  background-color : #d8e3ec;
+  color: #d8e3ec;
 }
+#url{
+  background-color : #d8e3ec;
+  color: #d8e3ec;
+}
+

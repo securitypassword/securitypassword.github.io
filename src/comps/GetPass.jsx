@@ -1,15 +1,17 @@
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 import React, { Component} from 'react'
-import {Button} from 'react-native'
 import $ from 'jquery'
 import {en,de,safe} from "./sec"
+import './GetPass.css'
 
 var varsGet=""
 function GetPass(vars){
   varsGet=vars
     return (
-      <div className="App">
-        <Button id="getPassBtn" title="get password" onPress={getPass}></Button>
-        <table id="getPassTable"></table>
+      <div className="getpass">
+        <Button variant="light" id="getPassBtn" title="get password" onPress={getPass}></Button>
+        <Table striped bordered hover variant="dark" id="getPassTable"></Table>
       </div>
     )
   
