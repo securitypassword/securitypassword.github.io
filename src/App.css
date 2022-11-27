@@ -36,17 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-#logUser{
-  background-color : #d8e3ec;
-  color: #d8e3ec;
-}
-#logPass{
-  background-color : #d8e3ec;
-  color: #d8e3ec;
-}
-#url{
-  background-color : #d8e3ec;
-  color: #d8e3ec;
-}
-
