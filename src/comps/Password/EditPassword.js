@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { getpass } from './GetPasswords';
 import { from64 } from '../../api/sec';
 import DelPassword from "./DelPassword"
+import SecurityCheck from './SecurityCheck';
 import axios from '../../api/axios';
 
 //const EDIT_REG_URL = process.env.API_URL + "/editReg"
@@ -94,6 +95,8 @@ const EditPassword = () => {
             required
             placeholder='value'
         />
+        <br></br>
+        <SecurityCheck text={value}></SecurityCheck>
         <br></br>
         <br></br>
         <input

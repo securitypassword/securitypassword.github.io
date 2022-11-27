@@ -8,6 +8,7 @@ import NewPassword from './Password/NewPassword';
 import Admin from './Admin/Admin';
 import Register from './User/Register';
 import EditPassword from './Password/EditPassword';
+import Bin from './Password/Bin';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 //va a administrar todos los componentes en base a las rutas
@@ -17,6 +18,7 @@ const Paths = () => {
                 <BrowserRouter>
                     <Routes>
                         <Route path='/' element={<Home></Home>}></Route>
+                        <Route path='/bin' element={<Bin></Bin>}></Route>
                         <Route path='/login' element={<Login></Login>}></Route>
                         <Route path='/logout' element={<Logout></Logout>}></Route>
                         <Route path='/register' element={<Register></Register>}></Route>

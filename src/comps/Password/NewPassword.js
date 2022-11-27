@@ -2,6 +2,7 @@ import React from 'react';
 import Generator from "./Generator"
 import Auth from '../Tokens/Auth';
 import NavbarPass from './NavbarPass';
+import SecurityCheck from './SecurityCheck';
 import { useState } from "react";
 import axios from "../../api/axios"
 
@@ -63,7 +64,10 @@ const NewPassword = () => {
             onChange={(e) => setValue(e.target.value)}
             value={value}
             required
+            placeholder='value'
         />
+        <br></br>
+        <SecurityCheck text={value}></SecurityCheck>
         <br></br>
         <br></br>
         <input

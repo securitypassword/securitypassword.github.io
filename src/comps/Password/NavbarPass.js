@@ -17,6 +17,11 @@ const NavbarPass = () => {
             Get Passwords
             </Link>
             <Link
+            to='/bin'
+            className='nav-links'>
+            Bin
+            </Link>
+            <Link
             to='/logout'
             className='nav-links'>
             LogOut
