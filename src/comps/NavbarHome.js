@@ -6,15 +6,15 @@ const NavbarHome = () => {
         <>
         <nav>
             <Link
-            to='/register'
-            className='nav-links'>
-            Registrarse
-            </Link>
-
-            <Link
             to='/'
             className='nav-links'>
             Home
+            </Link>
+
+            <Link
+            to='/register'
+            className='nav-links'>
+            Registrarse
             </Link>
 
             <Link

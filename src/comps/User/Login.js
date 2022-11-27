@@ -6,7 +6,6 @@ import axios from '../../api/axios';
 import { Link } from "react-router-dom";
 import { authquery } from '../Tokens/Auth';
 import NavbarHome from '../NavbarHome';
-import { useAsync } from 'react-async';
 
 //const LOGIN_URL = process.env.API_URL + "/login"
 const LOGIN_URL = "https://securitypassword.cyclic.app/login"
@@ -54,6 +53,9 @@ const Login = () => {
             }
             if(response.data.valid===true){
                 window.sessionStorage.setItem("token",response.data.data)
+                if(response.data.usu_rol===42){
+                    window.location.href = "/admin"
+                }
                 //window.location.href = "/login"
             }
             setPwd('');

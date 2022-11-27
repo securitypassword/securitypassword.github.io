@@ -6,9 +6,14 @@ const NavbarPass = () => {
         <>
         <nav>
             <Link
-            to='/register'
+            to='/newpassword'
             className='nav-links'>
-            Registrarse
+            New Password
+            </Link>
+            <Link
+            to='/passwords'
+            className='nav-links'>
+            Get Passwords
             </Link>
             <Link
             to='/logout'

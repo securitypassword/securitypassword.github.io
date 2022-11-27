@@ -1,6 +1,7 @@
 import React from 'react';
 import Auth from '../Tokens/Auth';
 import NavbarPass from './NavbarPass';
+import GetPasswords from './GetPasswords';
 
 const Passwords = () => {
     return(
@@ -8,6 +9,7 @@ const Passwords = () => {
         <Auth></Auth>
         <NavbarPass></NavbarPass>
         <div>passwords</div>
+        <GetPasswords></GetPasswords>
         </>
     )
 }
