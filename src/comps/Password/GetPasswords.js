@@ -2,14 +2,13 @@ import React, {Fragment} from 'react';
 import {authquery} from '../Tokens/Auth';
 import axios from "../../api/axios"
 import Password from './Password';
-import Passwords from './Passwords';
-import { useRef, useState, useEffect } from 'react';
+import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
 
 //const GET_REGS_URL = process.env.API_URL + "/getActiveRegs"
 const GET_REGS_URL = "https://securitypassword.cyclic.app/getActiveRegs"
 
-const getpass = async () => {
+export const getpass = async () => {
     let token = window.sessionStorage.getItem("token")
     const query = {
         token:token
@@ -40,7 +39,7 @@ const GetPasswords = () => {
             console.log("pass",passwords)
             for(let i in passwords){
                 let pwd=passwords[i]
-                ramPass[i]={key:i, name:from64(pwd.name).toString(), url:from64(pwd.url).toString(), value:from64(pwd.value).toString()}
+                ramPass[i]={key:i, id: pwd.id, name:from64(pwd.name).toString(), url:from64(pwd.url).toString(), value:from64(pwd.value).toString()}
                 console.log(ramPass[i])
             }
             resp=ramPass
@@ -57,14 +56,16 @@ const GetPasswords = () => {
             return resp
         })
 
-    })
+    }, [getPass])
     return(
         <>
+            <p>{error}</p>
             <Fragment>
                 {
                     pass.map((password) =>
                         <Password key={password.key} name={password.name}
-                        url={password.url} value={password.value}></Password>
+                        url={password.url} value={password.value}
+                        id={password.id} ></Password>
                     )
                 }
             </Fragment>

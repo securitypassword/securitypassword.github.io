@@ -4,6 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 const NavbarPass = () => {
     return(
         <>
+        <br></br>
         <nav>
             <Link
             to='/newpassword'

@@ -23,10 +23,6 @@ const Login = () => {
         userRef.current.focus();
     }, [])
 
-    useEffect(() => {
-        setErrMsg('');
-    }, [user, pwd])
-
     authquery().then(function(valid){
         if(valid){
             window.location.href = "/passwords"

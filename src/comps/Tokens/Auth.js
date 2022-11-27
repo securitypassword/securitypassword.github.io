@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {Navigate, Outlet, useLocation} from "react-router-dom";
 import axios from "../../api/axios"
 //const AUTH_URL = process.env.API_URL + "/loginToken"
@@ -33,11 +33,13 @@ export const authquery = async () => {
 
 const Auth = () => {
     const location = useLocation();
-    authquery().then(function(valid){
-        if(!valid){
-            window.location.href = "/login"
-        }
-    })
+    useEffect(() => {
+        authquery().then(function(valid){
+            if(!valid){
+                window.location.href = "/login"
+            }
+        })
+    }, [])
 }
 
 export default Auth
