@@ -1,7 +1,0 @@
-{
-    "name": "securitypassword",
-    "integrations": {
-      "capacitor": {}
-    },
-    "type": "react"
-  }
