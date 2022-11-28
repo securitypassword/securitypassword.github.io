@@ -20,12 +20,12 @@ const setAutoDel = async (setError) => {
             withCredentials: true
         }
     );
-    if(resp.data.data=="error"){
-        setError(resp.data.msg)
+    if(queryresp.data.data=="error"){
+        setError(queryresp.data.msg)
     }
-    if(resp.data.data=="success"){
-        const msg = "auto delete set to " + resp.data.data
-        resp=resp.data.data
+    if(queryresp.data.data=="success"){
+        const msg = "auto delete set to " + queryresp.data.msg
+        resp=queryresp.data.msg
         setError(msg)
     }
     return resp
@@ -43,12 +43,12 @@ const getAutoDel = async (setError) => {
             withCredentials: true
         }
     );
-    if(resp.data.data=="error"){
+    if(queryresp.data.data=="error"){
         setError(resp.data.msg)
     }
-    if(resp.data.data=="success"){
-        const msg = "auto delete set to " + resp.data.data
-        resp=resp.data.data
+    if(queryresp.data.data=="success"){
+        const msg = "auto delete is " + queryresp.data.msg
+        resp=queryresp.data.msg
         setError(msg)
     }
     return resp
@@ -66,7 +66,7 @@ const AutoDel = () => {
         })
     }
     useEffect(() => {
-        getAutoDel().then(function(resp){
+        getAutoDel(setError).then(function(resp){
             setAuto(resp)
         })
     },[setAuto])

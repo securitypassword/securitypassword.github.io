@@ -22,6 +22,11 @@ const NavbarPass = () => {
             Bin
             </Link>
             <Link
+            to='/settings'
+            className='nav-links'>
+            Settings
+            </Link>
+            <Link
             to='/logout'
             className='nav-links'>
             LogOut

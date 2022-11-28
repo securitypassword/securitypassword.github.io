@@ -9,7 +9,7 @@ import Admin from './Admin/Admin';
 import Register from './User/Register';
 import EditPassword from './Password/EditPassword';
 import Bin from './Password/Bin';
-import AutoDel from './User/Settings/AutoDel';
+import Settings from './User/Settings/Settings';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 //va a administrar todos los componentes en base a las rutas
@@ -22,7 +22,7 @@ const Paths = () => {
                         <Route path='/bin' element={<Bin></Bin>}></Route>
                         <Route path='/login' element={<Login></Login>}></Route>
                         <Route path='/logout' element={<Logout></Logout>}></Route>
-                        <Route path='/autodel' element={<AutoDel></AutoDel>}></Route>
+                        <Route path='/settings' element={<Settings></Settings>}></Route>
                         <Route path='/register' element={<Register></Register>}></Route>
                         <Route path='/passwords' element={<Passwords></Passwords>}></Route>
                         <Route path='/newpassword' element={<NewPassword></NewPassword>}></Route>
