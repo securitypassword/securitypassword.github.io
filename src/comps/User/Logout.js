@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logout = () => {
     window.sessionStorage.setItem("token", "")
-    window.location.href = "/login"
+    window.location.href = "/"
     return(<></>)
 }
 

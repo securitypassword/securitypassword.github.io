@@ -47,7 +47,7 @@ const GetPasswords = () => {
             setPass(ramPass)
             setError(" ")
         }else{
-            window.location.href = "/logout"
+            window.location.href = "/#/logout"
         }
         return resp
     }

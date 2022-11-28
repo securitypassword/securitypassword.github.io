@@ -10,13 +10,13 @@ import Register from './User/Register';
 import EditPassword from './Password/EditPassword';
 import Bin from './Password/Bin';
 import Settings from './User/Settings/Settings';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route , HashRouter} from "react-router-dom";
 
 //va a administrar todos los componentes en base a las rutas
 const Paths = () => {
         return (
             <>
-                <BrowserRouter>
+                <HashRouter basename="/">
                     <Routes>
                         <Route path='/' element={<Home></Home>}></Route>
                         <Route path='/bin' element={<Bin></Bin>}></Route>
@@ -31,7 +31,7 @@ const Paths = () => {
                         <Route path='/admin' element={<Admin></Admin>}></Route>
                         <Route path='*' element={<NoPage></NoPage>}></Route>
                     </Routes>
-                </BrowserRouter>
+                </HashRouter>
             </>
         )
 }

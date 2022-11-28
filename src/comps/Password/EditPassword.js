@@ -65,7 +65,7 @@ const EditPassword = () => {
                 }
             }
             if(!found){
-                window.location.href = "/passwords"
+                window.location.href = "/#/passwords"
             }
         })
     }, [parms, setName, setValue, setUrl, setError])

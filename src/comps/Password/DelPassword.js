@@ -26,7 +26,7 @@ export const delPass = async (id, setError) => {
         setError(resp.data.msg)
     }
     if(resp.data.data=='succes'){
-        window.location.href = "/passwords"
+        window.location.href = "/#/passwords"
     }
 
 }

@@ -36,7 +36,7 @@ const Auth = () => {
     useEffect(() => {
         authquery().then(function(valid){
             if(!valid){
-                window.location.href = "/login"
+                window.location.href = "/#/login"
             }
         })
     }, [])

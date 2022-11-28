@@ -25,7 +25,7 @@ const Login = () => {
 
     authquery().then(function(valid){
         if(valid){
-            window.location.href = "/passwords"
+            window.location.href = "/#/passwords"
         }
     })
     const handleSubmit = async (e) => {
@@ -50,7 +50,7 @@ const Login = () => {
             if(response.data.valid===true){
                 window.sessionStorage.setItem("token",response.data.data)
                 if(response.data.usu_rol===42){
-                    window.location.href = "/admin"
+                    window.location.href = "/#/admin"
                 }
                 //window.location.href = "/login"
             }
