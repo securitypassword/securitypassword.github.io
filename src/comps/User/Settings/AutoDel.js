@@ -73,6 +73,7 @@ const AutoDel = () => {
     return(
         <>
         <Auth></Auth>
+        <br></br>
         <p>{error}</p>
         <BotonCheck seleccionado={auto} click={changeAuto}></BotonCheck>
         </>
