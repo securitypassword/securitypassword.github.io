@@ -1,6 +1,7 @@
 import React from "react";
 import Auth from "../../Tokens/Auth";
 import AutoDel from "./AutoDel";
+import Ask from "./Ask";
 import NavbarPass from "../../Password/NavbarPass";
 
 const Settings = () => {
@@ -9,6 +10,7 @@ const Settings = () => {
         <Auth></Auth>
         <NavbarPass></NavbarPass>
         <AutoDel></AutoDel>
+        <Ask></Ask>
         </>
     )
 }

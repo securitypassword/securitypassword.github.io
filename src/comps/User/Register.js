@@ -18,7 +18,7 @@ const Register = () => {
     const [validName, setValidName] = useState(false);
     const [userFocus, setUserFocus] = useState(false);
 
-    const [email, setEmail] = useState('dem@gmail.com');
+    const [email, setEmail] = useState('');
     const [validEmail, setValidEmail] = useState(false);
     const [emailFocus, setEmailFocus] = useState(false);
 
@@ -158,6 +158,30 @@ const Register = () => {
                                     Debe empezar con una letra.<br />
                                     Letras, números y guiones permitidos.
                                 </p>
+
+
+                                <label htmlFor="email">
+                                    Email:
+                                    <FontAwesomeIcon icon={faCheck} className={validEmail ? "valid" : "hide"} />
+                                    <FontAwesomeIcon icon={faTimes} className={validEmail || !email ? "hide" : "invalid"} />
+                                </label>
+                                <input
+                                    type="text"
+                                    id="email"
+                                    autoComplete="off"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                    required
+                                    aria-invalid={validEmail ? "false" : "true"}
+                                    aria-describedby="uidnote"
+                                    onFocus={() => setEmailFocus(true)}
+                                    onBlur={() => setEmailFocus(false)}
+                                />
+                                <p id="uidnote" className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
+                                    <FontAwesomeIcon icon={faInfoCircle} />
+                                    Introducir email valido<br />
+                                </p>
+
 
 
                                 <label htmlFor="password">
