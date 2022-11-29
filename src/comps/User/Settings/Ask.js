@@ -3,9 +3,12 @@ import { BotonCheck } from "../../Botones/botones";
 import Auth from "../../Tokens/Auth";
 import axios from "../../../api/axios";
 
-const ASK_URL = process.env.API_URL + "/askChange"
-const GET_ASK_URL = process.env.API_URL + "/getAsk"
-const SET_ASK_URL = process.env.API_URL + "/setAsk"
+//const ASK_URL = process.env.API_URL + "/askChange"
+const ASK_URL = "https://securitypassword.cyclic.app/askChange"
+//const GET_ASK_URL = process.env.API_URL + "/getAsk"
+const GET_ASK_URL = "https://securitypassword.cyclic.app/getAsk"
+//const SET_ASK_URL = process.env.API_URL + "/setAsk"
+const SET_ASK_URL = "https://securitypassword.cyclic.app/setAsk"
 
 const setAskApi = async (quest,ans,setError) => {
     let resp = ""

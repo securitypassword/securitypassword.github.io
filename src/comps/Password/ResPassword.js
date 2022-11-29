@@ -3,7 +3,8 @@ import axios from "../../api/axios";
 import Auth from "../Tokens/Auth";
 
 
-const RES_REG_URL = process.env.API_URL + "/resReg"
+//const RES_REG_URL = process.env.API_URL + "/resReg"
+const RES_REG_URL = "https://securitypassword.cyclic.app/resReg"
 
 var id = ""
 

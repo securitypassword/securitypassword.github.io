@@ -3,7 +3,8 @@ import axios from "../../../api/axios";
 import { useParams } from "react-router-dom";
 
 
-const CHANGE_URL = process.env.API_URL + "/changePasswordToken"
+//const CHANGE_URL = process.env.API_URL + "/forgorPasswordToken"
+const CHANGE_URL = "https://securitypassword.cyclic.app/forgorPasswordToken"
 
 const Question = () => {
     const [pwd, setPwd] = useState("")
@@ -37,6 +38,7 @@ const Question = () => {
                 value={pwd}
                 required
             />
+            <button onClick={setPass} >Set Pass</button>
         </>
     )
 }

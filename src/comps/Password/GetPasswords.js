@@ -6,7 +6,8 @@ import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
 import EditButton from './EditButton';
 
-const GET_REGS_URL = process.env.API_URL + "/getActiveRegs"
+//const GET_REGS_URL = process.env.API_URL + "/getActiveRegs"
+const GET_REGS_URL = "https://securitypassword.cyclic.app/getActiveRegs"
 
 export const getpass = async () => {
     let token = window.sessionStorage.getItem("token")

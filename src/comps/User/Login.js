@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 import { authquery } from '../Tokens/Auth';
 import NavbarHome from '../NavbarHome';
 
-const LOGIN_URL = process.env.API_URL + "/login"
-const CHANGE_URL = process.env.API_URL + "/changePassword"
+//const LOGIN_URL = process.env.API_URL + "/login"
+const LOGIN_URL = "https://securitypassword.cyclic.app/login"
+//const CHANGE_URL = process.env.API_URL + "/forgorPassword"
+const CHANGE_URL = "https://securitypassword.cyclic.app/forgorPassword"
 
 const Login = () => {
     const userRef = useRef();
@@ -69,6 +71,7 @@ const Login = () => {
         }
     }
     const changePassword = async () => {
+        console.log("change")
         const data = {
             name:user
         }

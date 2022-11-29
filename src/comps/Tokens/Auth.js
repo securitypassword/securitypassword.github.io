@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import {Navigate, Outlet, useLocation} from "react-router-dom";
 import axios from "../../api/axios"
 
-const AUTH_URL = process.env.API_URL + "/loginToken"
+//const AUTH_URL = process.env.API_URL + "/loginToken"
+const AUTH_URL = "https://securitypassword.cyclic.app/loginToken"
 
 var valid = false
 

@@ -3,8 +3,10 @@ import { BotonCheck } from "../../Botones/botones";
 import Auth from "../../Tokens/Auth";
 import axios from "../../../api/axios";
 
-const AUTO_DEL_URL = process.env.API_URL + "/autoDel"
-const GET_AUTO_DEL_URL = process.env.API_URL + "/getAutoDel"
+//const AUTO_DEL_URL = process.env.API_URL + "/autoDel"
+const AUTO_DEL_URL = "https://securitypassword.cyclic.app/autoDel"
+//const GET_AUTO_DEL_URL = process.env.API_URL + "/getAutoDel"
+const GET_AUTO_DEL_URL = "https://securitypassword.cyclic.app/getAutoDel"
 
 const setAutoDel = async (setError) => {
     let resp = ""

@@ -8,7 +8,8 @@ import DelPassword from "./DelPassword"
 import SecurityCheck from './SecurityCheck';
 import axios from '../../api/axios';
 
-const EDIT_REG_URL = process.env.API_URL + "/editReg"
+//const EDIT_REG_URL = process.env.API_URL + "/editReg"
+const EDIT_REG_URL = "https://securitypassword.cyclic.app/editReg"
 
 export const editPass = async (id, name, value, url, setError) => {
     let token = window.sessionStorage.getItem("token")

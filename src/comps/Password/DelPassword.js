@@ -3,7 +3,8 @@ import axios from "../../api/axios";
 import Auth from "../Tokens/Auth";
 
 
-const DEL_REG_URL = process.env.API_URL + "/delReg"
+//const DEL_REG_URL = process.env.API_URL + "/delReg"
+const DEL_REG_URL = "https://securitypassword.cyclic.app/delReg"
 
 var id = ""
 
