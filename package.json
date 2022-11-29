@@ -1,12 +1,8 @@
 {
   "name": "a",
   "version": "0.1.0",
-  "homepage": "https://securitypassword.github.io/",
-  "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
-    "@capacitor/android": "4.5.0",
-    "@capacitor/core": "^4.5.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -26,8 +22,6 @@
     "zxcvbn": "^4.4.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -50,9 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@capacitor/cli": "^4.5.0",
-    "gh-pages": "^4.0.0"
   }
 }
