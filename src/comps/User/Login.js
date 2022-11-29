@@ -8,6 +8,7 @@ import { authquery } from '../Tokens/Auth';
 import NavbarHome from '../NavbarHome';
 
 const LOGIN_URL = process.env.API_URL + "/login"
+const CHANGE_URL = process.env.API_URL + "/changePassword"
 
 const Login = () => {
     const userRef = useRef();
@@ -67,7 +68,19 @@ const Login = () => {
             errRef.current.focus();
         }
     }
-
+    const changePassword = async () => {
+        const data = {
+            name:user
+        }
+        const response = await axios.post(CHANGE_URL,
+            JSON.stringify(data),
+            {
+                headers: { 'Content-Type': 'application/json' },
+                withCredentials: true
+            }
+        );
+        console.log("response",response)
+    }
     return (
         <>
         <NavbarHome />
@@ -117,7 +130,7 @@ const Login = () => {
             </p>
             </section>   
         </center>
- 
+        <button onClick={changePassword} ></button>
         </>
         )
         
