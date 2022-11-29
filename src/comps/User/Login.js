@@ -130,7 +130,7 @@ const Login = () => {
             </p>
             </section>   
         </center>
-        <button onClick={changePassword} ></button>
+        <button onClick={changePassword} >forgor?</button>
         </>
         )
         

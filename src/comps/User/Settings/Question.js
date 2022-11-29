@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
+import axios from "../../../api/axios";
 import { useParams } from "react-router-dom";
+
+
+const CHANGE_URL = process.env.API_URL + "/changePasswordToken"
 
 const Question = () => {
     const [pwd, setPwd] = useState("")
@@ -13,7 +17,7 @@ const Question = () => {
             token: parms.token,
             password:pwd
         }
-        const response = await axios.post(LOGIN_URL,
+        const response = await axios.post(CHANGE_URL,
             JSON.stringify(data),
             {
                 headers: { 'Content-Type': 'application/json' },
