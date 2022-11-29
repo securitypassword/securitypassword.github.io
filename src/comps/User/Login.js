@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 import { authquery } from '../Tokens/Auth';
 import NavbarHome from '../NavbarHome';
 
-//const LOGIN_URL = process.env.API_URL + "/login"
-const LOGIN_URL = "https://securitypassword.cyclic.app/login"
+const LOGIN_URL = process.env.API_URL + "/login"
 
 const Login = () => {
     const userRef = useRef();

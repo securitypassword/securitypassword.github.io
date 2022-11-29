@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import axios from "../../api/axios"
 import { BotonIncrementar, BotonDisminuir, BotonCheck, BotonGenerar } from '../Botones/botones';
 
-//const GEN_URL = process.env.API_URL + "/generate"
-const GEN_URL = "https://securitypassword.cyclic.app/generate"
+const GEN_URL = process.env.API_URL + "/generate"
 
 const generarPassword = async (config) => {
 	let resp = "a"

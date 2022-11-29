@@ -6,8 +6,7 @@ import SecurityCheck from './SecurityCheck';
 import { useState } from "react";
 import axios from "../../api/axios"
 
-//const NEW_REG_URL = process.env.API_URL + "/setReg"
-const NEW_REG_URL = "https://securitypassword.cyclic.app/setReg"
+const NEW_REG_URL = process.env.API_URL + "/setReg"
 
 export const savePass = async (name, value, url, setError) => {
     let token = window.sessionStorage.getItem("token")

@@ -8,8 +8,7 @@ import DelPassword from './DelPassword';
 import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
 
-//const GET_BIN_URL = process.env.API_URL + "/getBinRegs"
-const GET_BIN_URL = "https://securitypassword.cyclic.app/getBinRegs"
+const GET_BIN_URL = process.env.API_URL + "/getBinRegs"
 
 export const getpass = async () => {
     let token = window.sessionStorage.getItem("token")
