@@ -1,14 +1,14 @@
-import React from "react"
+import React from "react";
 const EditButton = (parms) => {
-    const EDIT_URL = "/#/editpassword/"+parms.id
+    const EDIT_URL = "/editpassword/" + parms.id;
     const act = () => {
-        window.location.href = EDIT_URL
-    }
-    return(
+        window.location.href = EDIT_URL;
+    };
+    return (
         <>
-        <button onClick={act}>Edit</button>
+            <button onClick={act}>Edit</button>
         </>
-    )
-}
+    );
+};
 
-export default EditButton
+export default EditButton;

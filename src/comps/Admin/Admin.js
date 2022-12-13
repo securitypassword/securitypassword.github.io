@@ -2,11 +2,11 @@ import React from "react";
 import NavbarAdmin from "./NavbarAdmin";
 
 const Admin = () => {
-    return(
+    return (
         <>
-        <NavbarAdmin></NavbarAdmin>
+            <NavbarAdmin></NavbarAdmin>
         </>
-    )
-}
+    );
+};
 
-export default Admin
+export default Admin;

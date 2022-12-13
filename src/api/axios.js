@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default axios.create({
-    baseURL: process.env.BASE_URL
+    baseURL: process.env.BASE_URL,
 });
 
 export const axiosPrivate = axios.create({
     baseURL: process.env.BASE_URL,
-    headers: { 'Content-Type': 'application/json' },
-    withCredentials: true
+    headers: { "Content-Type": "application/json" },
+    withCredentials: true,
 });
