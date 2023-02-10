@@ -154,9 +154,8 @@ const RegisterForm = () => {
                                     Letras, números y guiones permitidos.
                                 </p>
 
-                                m onSubmit={handleSubmit}>
                                 <label htmlFor="email">
-                                    Usuario:
+                                    Email:
                                     <FontAwesomeIcon icon={faCheck} className={validEmail ? "valid" : "hide"} />
                                     <FontAwesomeIcon icon={faTimes} className={validEmail || !email ? "hide" : "invalid"} />
                                 </label>
@@ -170,8 +169,8 @@ const RegisterForm = () => {
                                     required
                                     aria-invalid={validName ? "false" : "true"}
                                     aria-describedby="uidnote"
-                                    onFocus={() => setUserFocus(true)}
-                                    onBlur={() => setUserFocus(false)}
+                                    onFocus={() => setEmailFocus(true)}
+                                    onBlur={() => setEmailFocus(false)}
                                 />
                                 <p id="uidnote" className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
                                     <FontAwesomeIcon icon={faInfoCircle} />
