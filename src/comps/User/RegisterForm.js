@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 const REGISTER_URL = 'https://securitypassword.cyclic.app/register';
 
 const RegisterForm = () => {
@@ -18,7 +19,7 @@ const RegisterForm = () => {
     const [validName, setValidName] = useState(false);
     const [userFocus, setUserFocus] = useState(false);
 
-    const [email, setEmail] = useState('dem@gmail.com');
+    const [email, setEmail] = useState('');
     const [validEmail, setValidEmail] = useState(false);
     const [emailFocus, setEmailFocus] = useState(false);
 
@@ -40,6 +41,10 @@ const RegisterForm = () => {
     useEffect(() => {
         setValidName(USER_REGEX.test(user));
     }, [user])
+
+    useEffect(() => {
+        setValidEmail(EMAIL_REGEX.test(email));
+    }, [email])
 
     useEffect(() => {
         setValidPwd(PWD_REGEX.test(pwd));
@@ -149,6 +154,29 @@ const RegisterForm = () => {
                                     Letras, números y guiones permitidos.
                                 </p>
 
+                                m onSubmit={handleSubmit}>
+                                <label htmlFor="email">
+                                    Usuario:
+                                    <FontAwesomeIcon icon={faCheck} className={validEmail ? "valid" : "hide"} />
+                                    <FontAwesomeIcon icon={faTimes} className={validEmail || !email ? "hide" : "invalid"} />
+                                </label>
+                                <input
+                                    type="text"
+                                    id="email"
+                                    ref={userRef}
+                                    autoComplete="off"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                    required
+                                    aria-invalid={validName ? "false" : "true"}
+                                    aria-describedby="uidnote"
+                                    onFocus={() => setUserFocus(true)}
+                                    onBlur={() => setUserFocus(false)}
+                                />
+                                <p id="uidnote" className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
+                                    <FontAwesomeIcon icon={faInfoCircle} />
+                                    malo email
+                                </p>
 
                                 <label htmlFor="password">
                                     Contraseña Maestra:

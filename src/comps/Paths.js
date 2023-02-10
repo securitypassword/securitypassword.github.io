@@ -17,7 +17,7 @@ import {BrowserRouter, Routes, Route , HashRouter} from "react-router-dom";
 const Paths = () => {
         return (
             <>
-                <HashRouter basename="/">
+                <HashRouter basename="/#">
                     <Routes>
                         <Route path='/' element={<Home></Home>}></Route>
                         <Route path='/bin' element={<Bin></Bin>}></Route>
