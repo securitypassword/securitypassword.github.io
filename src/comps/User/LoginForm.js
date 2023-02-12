@@ -5,10 +5,12 @@ import useToggle from "../../hooks/useToggle"
 import axios from '../../api/axios';
 import { Link } from "react-router-dom";
 import { authquery } from '../Tokens/Auth';
+import { useNavigate } from 'react-router-dom';
 //const LOGIN_URL = process.env.API_URL + "/login"
 const LOGIN_URL = "https://securitypassword.cyclic.app/login"
 
 const LoginForm = () => {
+    const navigate = useNavigate();
     const userRef = useRef();
     const errRef = useRef();
 
@@ -23,7 +25,7 @@ const LoginForm = () => {
 
     authquery().then(function(valid){
         if(valid){
-            window.location.href = "/passwords"
+            navigate("/passwords");
         }
     })
     const handleSubmit = async (e) => {
@@ -48,7 +50,7 @@ const LoginForm = () => {
             if(response.data.valid===true){
                 window.sessionStorage.setItem("token",response.data.data)
                 if(response.data.usu_rol===42){
-                    window.location.href = "/admin"
+                    navigate("/admin")
                 }
                 //window.location.href = "/login"
             }

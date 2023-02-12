@@ -1,10 +1,10 @@
 import React from 'react';
-import NavbarHome from './NavbarHome';
+import Navbar from './Navbar/Navbar';
 
 const NoPage = () => {
     return(
         <>
-        <NavbarHome></NavbarHome>
+        <Navbar></Navbar>
         <div>404 not found</div>
         </>
     )

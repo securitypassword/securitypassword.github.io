@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "../../api/axios";
 import Auth from "../Tokens/Auth";
+import { useNavigate } from 'react-router-dom';
 
 
 //const DEL_REG_URL = process.env.API_URL + "/delReg"
@@ -8,7 +9,7 @@ const DEL_REG_URL = "https://securitypassword.cyclic.app/delReg"
 
 var id = ""
 
-export const delPass = async (id, setError) => {
+export const delPass = async (id, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
     const query = {
         token:token,
@@ -26,19 +27,20 @@ export const delPass = async (id, setError) => {
         setError(resp.data.msg)
     }
     if(resp.data.data=='succes'){
-        window.location.href = "/#/passwords"
+        navigate("/#/passwords");
     }
 
 }
 
 
 const DelPassword = (parms) => {
+    const navigate = useNavigate();
     console.log(parms)
     const [error, setError] = useState("")
     id = parms.id
 
     const del = async () => {
-        await delPass(id, setError)
+        await delPass(id, setError, navigate)
     }
 
     return(

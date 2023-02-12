@@ -1,8 +1,11 @@
 import React from "react"
+import { useNavigate } from 'react-router-dom';
+
 const EditButton = (parms) => {
-    const EDIT_URL = "/#/editpassword/"+parms.id
+    const navigate = useNavigate();
+    const EDIT_URL = "/editpassword"+parms.id
     const act = () => {
-        window.location.href = EDIT_URL
+        navigate(EDIT_URL);
     }
     return(
         <>

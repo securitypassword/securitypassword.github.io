@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "../../api/axios";
 import Auth from "../Tokens/Auth";
+import { useNavigate } from 'react-router-dom';
 
 
 //const RES_REG_URL = process.env.API_URL + "/resReg"
@@ -8,7 +9,7 @@ const RES_REG_URL = "https://securitypassword.cyclic.app/resReg"
 
 var id = ""
 
-export const resPass = async (id, setError) => {
+export const resPass = async (id, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
     const query = {
         token:token,
@@ -26,19 +27,20 @@ export const resPass = async (id, setError) => {
         setError(resp.data.msg)
     }
     if(resp.data.data=='succes'){
-        window.location.href = "/#/passwords"
+        navigate("/passwords")
     }
 
 }
 
 
 const ResPassword = (parms) => {
+    const navigate = useNavigate();
     console.log(parms)
     const [error, setError] = useState("")
     id = parms.id
 
     const res = async () => {
-        await resPass(id, setError)
+        await resPass(id, setError, navigate)
     }
 
     return(

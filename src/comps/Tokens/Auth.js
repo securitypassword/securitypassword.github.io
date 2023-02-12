@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {Navigate, Outlet, useLocation} from "react-router-dom";
+import React, { useEffect} from 'react';
+import {useNavigate} from "react-router-dom";
 import axios from "../../api/axios"
 
 //const AUTH_URL = process.env.API_URL + "/loginToken"
@@ -33,11 +33,11 @@ export const authquery = async () => {
 }
 
 const Auth = () => {
-    const location = useLocation();
+    const navigate = useNavigate();
     useEffect(() => {
         authquery().then(function(valid){
             if(!valid){
-                window.location.href = "/#/login"
+                navigate("/login");
             }
         })
     }, [])

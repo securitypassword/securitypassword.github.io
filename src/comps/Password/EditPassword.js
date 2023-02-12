@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Auth from '../Tokens/Auth';
 import NavbarPass from './NavbarPass'
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { getpass } from './GetPasswords';
 import { from64 } from '../../api/sec';
 import DelPassword from "./DelPassword"
@@ -38,6 +38,7 @@ export const editPass = async (id, name, value, url, setError) => {
 }
 
 const EditPassword = () => {
+    const navigate = useNavigate();
     const [name, setName] = useState("")
     const [value, setValue] = useState("")
     const [url, setUrl] = useState("")
@@ -65,7 +66,7 @@ const EditPassword = () => {
                 }
             }
             if(!found){
-                window.location.href = "/#/passwords"
+                navigate("/passwords")
             }
         })
     }, [parms, setName, setValue, setUrl, setError])

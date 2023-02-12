@@ -11,22 +11,21 @@ import EditPassword from './Password/EditPassword';
 import Bin from './Password/Bin';
 import Settings from './User/Settings/Settings';
 import Question from './User/Settings/Question';
-import {BrowserRouter, Routes, Route , HashRouter} from "react-router-dom";
+import { Routes, Route , HashRouter } from "react-router-dom";
 
 //va a administrar todos los componentes en base a las rutas
 const Paths = () => {
         return (
             <>
-                <HashRouter basename="/">
+                <HashRouter>
                     <Routes>
-                        <Route path='/' element={<Home></Home>}></Route>
+                        <Route exact path='/' element={<Home></Home>}></Route>
                         <Route path='/bin' element={<Bin></Bin>}></Route>
                         <Route path='/login' element={<Login></Login>}></Route>
                         <Route path='/logout' element={<Logout></Logout>}></Route>
                         <Route path='/settings' element={<Settings></Settings>}></Route>
                         <Route path='/register' element={<Register></Register>}></Route>
                         <Route path='/passwords' element={<Passwords></Passwords>}></Route>
-                        <Route path='/#/passwords' element={<Passwords></Passwords>}></Route>
                         <Route path='/newpassword' element={<NewPassword></NewPassword>}></Route>
                         <Route path='/changePassword/:token' element={<Question></Question>}></Route>
                         <Route path='/editpassword/:reg_id' element={<EditPassword></EditPassword>}></Route>

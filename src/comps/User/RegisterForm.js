@@ -3,7 +3,8 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from '../../api/axios';
-import { Link } from "react-router-dom";
+import { Button } from '../Button/Button';
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -12,6 +13,24 @@ const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 const REGISTER_URL = 'https://securitypassword.cyclic.app/register';
 
 const RegisterForm = () => {
+    const navigate = useNavigate();
+        const [click, setClick] = useState(false);
+    const [button, setButton] = useState(true);
+
+    const showButton = () => {
+        if (window.innerWidth <= 960) {
+        setButton(false);
+        } else {
+        setButton(true);
+        }
+    };
+
+    useEffect(() => {
+        showButton();
+    }, []);
+
+    window.addEventListener('resize', showButton);
+
     const userRef = useRef();
     const errRef = useRef();
 
@@ -113,7 +132,7 @@ const RegisterForm = () => {
                                 <br/>
                                 <br/>   
                                 <p>
-                                    <a href="/login">Inicia sesión</a>
+                                    {button && <Button buttonStyle='btn--outline'>INICIAR SESIÓN</Button>}
                                 </p>
                             </center>
                         </section>
