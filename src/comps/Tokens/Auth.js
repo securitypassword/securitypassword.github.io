@@ -37,8 +37,10 @@ const Auth = () => {
     useEffect(() => {
         authquery().then(function(valid){
             if(!valid){
+                window.sessionStorage.setItem("token", "");
                 navigate("/login");
             }
+            console.log(window.sessionStorage.getItem("token"));
         })
     }, [])
 }
