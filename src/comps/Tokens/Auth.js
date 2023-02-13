@@ -9,6 +9,7 @@ var valid = false
 
 export const authquery = async () => {
     let token = window.sessionStorage.getItem("token")
+    valid = false
     if(token != undefined && token!= "" && token != null){
         const query = {
             token:token
@@ -21,7 +22,6 @@ export const authquery = async () => {
             }
         );
         if(resp.data.msg==='not found'){
-            valid = false
             console.log("auth failed")
         }
         if(resp.data.msg==='found'){
