@@ -6,7 +6,7 @@ var id = ""
 
 const Password = (parms) => {
     const navigate = useNavigate();
-    console.log("Password parms",parms)
+    //console.log("Password parms",parms)
     id = parms.id
     return(
         <>
