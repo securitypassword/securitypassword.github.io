@@ -27,7 +27,7 @@ export const delPass = async (id, setError, navigate) => {
         setError(resp.data.msg)
     }
     if(resp.data.data=='succes'){
-        navigate("/#/passwords");
+        navigate("/passwords");
     }
 
 }

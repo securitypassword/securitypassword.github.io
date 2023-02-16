@@ -33,7 +33,7 @@ export const editPass = async (id, name, value, url, setError, navigate) => {
     }
     if(resp.data.data=="success"){
         setError(resp.data.data)
-        navigate("/");
+        navigate("");
     }
 
 }
