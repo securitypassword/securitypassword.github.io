@@ -39,11 +39,11 @@ const GetPasswords = () => {
             const passwords = await getpass().then(function(passwords){
                 return passwords.data
             })
-            console.log("pass",passwords)
+            //console.log("pass",passwords)
             for(let i in passwords){
                 let pwd=passwords[i]
                 ramPass[i]={key:i, id: pwd.id, name:from64(pwd.name).toString(), url:from64(pwd.url).toString(), value:from64(pwd.value).toString()}
-                console.log(ramPass[i])
+                //console.log(ramPass[i])
             }
             resp=ramPass
             setPass(ramPass)

@@ -22,11 +22,11 @@ export const authquery = async () => {
             }
         );
         if(resp.data.msg==='not found'){
-            console.log("auth failed")
+            //console.log("auth failed")
         }
         if(resp.data.msg==='found'){
             valid = true
-            console.log("auth success")
+            //console.log("auth success")
         }
     }
     return valid
