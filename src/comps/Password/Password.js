@@ -13,7 +13,7 @@ const Password = (parms) => {
         <br></br>
         <div className='passwordBox' > 
             <div>
-            <button onClick={() => {navigate(parms.url)}} >Edit</button>
+            <button onClick={() => {window.location.href = parms.url}} >Go</button>
             </div>
 
             <div>

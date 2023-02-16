@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const EditButton = (parms) => {
     const navigate = useNavigate();
-    const EDIT_URL = "/editpassword"+parms.id
+    const EDIT_URL = "/editpassword/"+parms.id
     const act = () => {
         navigate(EDIT_URL);
     }
