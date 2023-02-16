@@ -11,7 +11,7 @@ import axios from '../../api/axios';
 //const EDIT_REG_URL = process.env.API_URL + "/editReg"
 const EDIT_REG_URL = "https://securitypassword.cyclic.app/editReg"
 
-export const editPass = async (id, name, value, url, setError) => {
+export const editPass = async (id, name, value, url, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
     const query = {
         token:token,
@@ -33,6 +33,7 @@ export const editPass = async (id, name, value, url, setError) => {
     }
     if(resp.data.data=="success"){
         setError(resp.data.data)
+        navigate("/");
     }
 
 }
@@ -47,7 +48,7 @@ const EditPassword = () => {
     console.log(parms)
 
     const save = async () => {
-        await editPass(parms.reg_id,name,value,url,setError)
+        await editPass(parms.reg_id,name,value,url,setError, navigate)
     }
 
     useEffect(()=>{

@@ -3,6 +3,7 @@ import Generator from "./Generator"
 import Auth from '../Tokens/Auth';
 import NavbarPass from './NavbarPass';
 import SecurityCheck from './SecurityCheck';
+import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import axios from "../../api/axios"
 
@@ -24,8 +25,12 @@ export const savePass = async (name, value, url, setError) => {
             withCredentials: true
         }
     );
-    console.log("resp",resp)
+    console.log("resp")
     setError(resp.data.msg)
+    if(resp.data.data == "success"){
+        const navigate = useNavigate();
+        navigate("/");
+    }
 
 }
 

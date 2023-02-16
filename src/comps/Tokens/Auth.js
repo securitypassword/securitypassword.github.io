@@ -40,7 +40,7 @@ const Auth = () => {
                 window.sessionStorage.setItem("token", "");
                 navigate("/login");
             }
-            console.log(window.sessionStorage.getItem("token"));
+            //console.log(window.sessionStorage.getItem("token"));
         })
     }, [])
 }
