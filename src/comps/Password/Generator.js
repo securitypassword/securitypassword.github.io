@@ -34,7 +34,8 @@ const Generator = (parms) => {
 		numeroDeCaracteres: 7,
 		simbolos: true,
 		numeros: true,
-		mayusculas: true
+		mayusculas: true,
+		minusculas: true
 	});
 
 	const [passwordGenerada, cambiarPasswordGenerada] = useState('');
