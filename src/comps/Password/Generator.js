@@ -13,6 +13,7 @@ const generarPassword = async (config) => {
 	const query = {
 		len:config.numeroDeCaracteres,
 		up:config.mayusculas.toString(),
+		low:config.minusculas.toString(),
 		num:config.numeros.toString(),
 		char:config.simbolos.toString()
 	}
@@ -92,6 +93,14 @@ const Generator = (parms) => {
 		});
 	}
 
+	const toggleMinusculas = () => {
+		cambiarConfiguracion((configuracionAnterior) => {
+			const nuevaConfiguracion = {...configuracionAnterior};
+			nuevaConfiguracion.minusculas = !nuevaConfiguracion.minusculas;
+			return nuevaConfiguracion; 
+		});
+	}
+
 	const onSubmit = (e) => {
 		e.preventDefault();
 		async function gen(){
@@ -116,16 +125,20 @@ const Generator = (parms) => {
 					</Controles>
 				</Fila>
 				<Fila>
-					<label>¿Incluir Simbolos?</label>
-					<BotonCheck seleccionado={configuracion.simbolos} click={toggleSimbolos} />
+					<label>¿Incluir Mayusculas?</label>
+					<BotonCheck seleccionado={configuracion.mayusculas} click={toggleMayusculas} />
+				</Fila>
+				<Fila>
+					<label>¿Incluir Minusculas?</label>
+					<BotonCheck seleccionado={configuracion.minusculas} click={toggleMinusculas} />
 				</Fila>
 				<Fila>
 					<label>¿Incluir Numeros?</label>
 					<BotonCheck seleccionado={configuracion.numeros} click={toggleNumeros} />
 				</Fila>
 				<Fila>
-					<label>¿Incluir Mayusculas?</label>
-					<BotonCheck seleccionado={configuracion.mayusculas} click={toggleMayusculas} />
+					<label>¿Incluir Simbolos?</label>
+					<BotonCheck seleccionado={configuracion.simbolos} click={toggleSimbolos} />
 				</Fila>
 				<Fila>
 					<BotonGenerar />
