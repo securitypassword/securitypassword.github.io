@@ -57,6 +57,7 @@ const RegisterForm = () => {
         userRef.current.focus();
     }, [])
 
+    //for validating text inputs
     useEffect(() => {
         setValidName(USER_REGEX.test(user));
     }, [user])
@@ -193,7 +194,7 @@ const RegisterForm = () => {
                                 />
                                 <p id="uidnote" className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
                                     <FontAwesomeIcon icon={faInfoCircle} />
-                                    malo email
+                                    Email no valido
                                 </p>
 
                                 <label htmlFor="password">

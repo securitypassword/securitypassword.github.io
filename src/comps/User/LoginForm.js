@@ -23,6 +23,7 @@ const LoginForm = () => {
         userRef.current.focus();
     }, [])
 
+    //verificar el correcto inicio de sesion
     authquery().then(function(valid){
         if(valid){
             navigate("/passwords");
@@ -36,6 +37,7 @@ const LoginForm = () => {
                 name:user,
                 password:pwd
             }
+            //conectar con la api
             const response = await axios.post(LOGIN_URL,
                 JSON.stringify(data),
                 {

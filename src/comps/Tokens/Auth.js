@@ -10,10 +10,12 @@ var valid = false
 export const authquery = async () => {
     let token = window.sessionStorage.getItem("token")
     valid = false
+    //si no hay token
     if(token != undefined && token!= "" && token != null){
         const query = {
             token:token
         }
+        //conectar con la api
         const resp = await axios.post(AUTH_URL,
             JSON.stringify(query),
             {

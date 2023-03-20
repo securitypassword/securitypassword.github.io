@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NavbarAdmin = () => {
     return(
         <>
-        <nav>ur admin
+        <nav>rol : admin
             <Link
             to='/logout'
             className='nav-links'>
