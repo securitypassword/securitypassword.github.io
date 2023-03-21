@@ -18,6 +18,7 @@ const Generator = () => {
 		cambiarPasswordGenerada(generarPassword(configuracion));
 	}, [configuracion]);
 
+	//funciones
 	const incrementarNumeroCaracteres = () => {
 		cambiarConfiguracion((configuracionAnterior) => {
 			const nuevaConfiguracion = {...configuracionAnterior};
@@ -59,7 +60,7 @@ const Generator = () => {
 			return nuevaConfiguracion; 
 		});
 	}
-
+	//generar contrase;a
 	const onSubmit = (e) => {
 		e.preventDefault();
 

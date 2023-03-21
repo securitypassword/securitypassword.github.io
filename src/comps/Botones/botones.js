@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//los botones para el generador
 export const BotonDisminuir = ({click}) => {
 	return (
 		<Boton onClick={click}>
