@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 //const GET_REGS_URL = process.env.API_URL + "/getActiveRegs"
 const GET_REGS_URL = "https://securitypassword.cyclic.app/getActiveRegs"
 
+//solicitar a la api las contraseñas del usuario
 export const getpass = async () => {
     let token = window.sessionStorage.getItem("token")
     const query = {
@@ -25,11 +26,13 @@ export const getpass = async () => {
     return resp.data
 }
 
+//principal
 const GetPasswords = () => {
     const navigate = useNavigate();
     let ramPass= []
     const [pass, setPass] = useState(ramPass)
     const [error, setError] = useState("")
+    //obtener contraseñas
     const getPass = async () => {
         const valid = await authquery().then(function(valid){
             return valid
@@ -53,6 +56,7 @@ const GetPasswords = () => {
         }
         return resp
     }
+    //obtener y guardar contraseñas al iniciar
 	useEffect(() => {
         const resp = getPass().then(function(resp){
             setPass(resp)
@@ -60,6 +64,7 @@ const GetPasswords = () => {
         })
 
     }, [getPass])
+    //por cada elemento en la lista de contraseñas mostrar un elemento password
     return(
         <>
             <p>{error}</p>
