@@ -7,8 +7,10 @@ import { useNavigate } from 'react-router-dom';
 //const DEL_REG_URL = process.env.API_URL + "/delReg"
 const DEL_REG_URL = "https://securitypassword.cyclic.app/delReg"
 
+//global
 var id = ""
 
+//solicitar a la api la eliminacion de una contraseña
 export const delPass = async (id, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
     const query = {
@@ -32,7 +34,7 @@ export const delPass = async (id, setError, navigate) => {
 
 }
 
-
+//principal
 const DelPassword = (parms) => {
     const navigate = useNavigate();
     console.log(parms)
@@ -43,6 +45,7 @@ const DelPassword = (parms) => {
         await delPass(id, setError, navigate)
     }
 
+    //boton para ejecutar la eliminacion
     return(
         <>
         <Auth></Auth>

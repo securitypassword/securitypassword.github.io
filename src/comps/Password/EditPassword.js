@@ -11,6 +11,7 @@ import axios from '../../api/axios';
 //const EDIT_REG_URL = process.env.API_URL + "/editReg"
 const EDIT_REG_URL = "https://securitypassword.cyclic.app/editReg"
 
+//solicitar a la api la edicion de la contraseña
 export const editPass = async (id, name, value, url, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
     const query = {
@@ -27,10 +28,12 @@ export const editPass = async (id, name, value, url, setError, navigate) => {
             withCredentials: true
         }
     );
+    //mostrar error en caso de error
     console.log("resp",resp)
     if(resp.data.data==="error"){
         setError(resp.data.msg)
     }
+    //redireccionar al inicio en caso de exito
     if(resp.data.data=="success"){
         setError(resp.data.data)
         navigate("");
@@ -38,6 +41,7 @@ export const editPass = async (id, name, value, url, setError, navigate) => {
 
 }
 
+//principal
 const EditPassword = () => {
     const navigate = useNavigate();
     const [name, setName] = useState("")
@@ -50,7 +54,7 @@ const EditPassword = () => {
     const save = async () => {
         await editPass(parms.reg_id,name,value,url,setError, navigate)
     }
-
+    //preparar la contraseña
     useEffect(()=>{
         setError("Loading...")
         getpass().then(function(resp){
@@ -71,6 +75,7 @@ const EditPassword = () => {
             }
         })
     }, [parms, setName, setValue, setUrl, setError])
+    //formulario para edicion
     return(
         <>
         <Auth></Auth>

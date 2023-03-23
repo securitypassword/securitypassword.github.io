@@ -7,6 +7,7 @@ const EditButton = (parms) => {
     const act = () => {
         navigate(EDIT_URL);
     }
+    //redireccion para modo de edicion de contraseña
     return(
         <>
         <button onClick={act}>Edit</button>

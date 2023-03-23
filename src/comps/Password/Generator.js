@@ -7,9 +7,11 @@ import { BotonIncrementar, BotonDisminuir, BotonCheck, BotonGenerar } from '../B
 //const GEN_URL = process.env.API_URL + "/generate"
 const GEN_URL = "https://securitypassword.cyclic.app/generate"
 
+//solicitar a la api una contraseña aleatoria
 const generarPassword = async (config) => {
 	let resp = "a"
 	console.log(config)
+	//parametros para la generación
 	const query = {
 		len:config.numeroDeCaracteres,
 		up:config.mayusculas.toString(),
@@ -39,7 +41,7 @@ const Generator = (parms) => {
 	});
 
 	const [passwordGenerada, cambiarPasswordGenerada] = useState('');
-
+	//generar una contraseña al iniciar
 	useEffect(() => {
 		parms.setValue(passwordGenerada)
 		async function gen(){
@@ -52,6 +54,7 @@ const Generator = (parms) => {
 		})
 	}, [configuracion]);
 
+	//comandos para los botones
 	const incrementarNumeroCaracteres = () => {
 		cambiarConfiguracion((configuracionAnterior) => {
 			const nuevaConfiguracion = {...configuracionAnterior};
@@ -113,7 +116,7 @@ const Generator = (parms) => {
 			return resp
 		})
 	}
-
+	//formulario para la generacion de una contraseña
 	return (
 		<div className="contenedor">
 			<form onSubmit={onSubmit}>
