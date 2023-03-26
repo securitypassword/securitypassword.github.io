@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 var zxcvbn = require('zxcvbn');
 
+//para medir la seguridad de una contraseña
 const SecurityCheck = (parms) => {
     const [level, setLevel] = useState("")
     useEffect(() => {

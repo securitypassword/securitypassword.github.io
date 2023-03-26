@@ -10,6 +10,7 @@ import axios from "../../api/axios"
 //const NEW_REG_URL = process.env.API_URL + "/setReg"
 const NEW_REG_URL = "https://securitypassword.cyclic.app/setReg"
 
+//solicitud a la api de guardar la contraseña
 export const savePass = async (name, value, url, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
     const query = {
@@ -33,6 +34,7 @@ export const savePass = async (name, value, url, setError, navigate) => {
 
 }
 
+//principal
 const NewPassword = () => {
     const navigate = useNavigate();
     const [name, setName] = useState()

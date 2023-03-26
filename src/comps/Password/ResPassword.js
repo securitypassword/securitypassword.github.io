@@ -9,6 +9,7 @@ const RES_REG_URL = "https://securitypassword.cyclic.app/resReg"
 
 var id = ""
 
+//solitar a la api la restauracion de una contraseña
 export const resPass = async (id, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
     const query = {
@@ -32,7 +33,7 @@ export const resPass = async (id, setError, navigate) => {
 
 }
 
-
+//principal
 const ResPassword = (parms) => {
     const navigate = useNavigate();
     console.log(parms)
