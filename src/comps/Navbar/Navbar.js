@@ -7,9 +7,12 @@ const Navbar=()=>{
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  //when clicked change state
   const handleClick = () => setClick(!click);
+  //if the menu is closed, the button is not clicked
   const closeMobileMenu = () => setClick(false);
 
+  //for settings of the button
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -22,6 +25,7 @@ const Navbar=()=>{
     showButton();
   }, []);
 
+  //when the window gets resized
   window.addEventListener('resize', showButton);
 
   return (
