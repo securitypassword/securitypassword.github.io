@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 //const DEL_REG_URL = process.env.API_URL + "/delReg"
-const DEL_REG_URL = "https://securitypassword.cyclic.app/delReg"
+const DEL_REG_URL = "https://securitypassword.cyclic.app/terReg"
 
 //global
 var id = ""
