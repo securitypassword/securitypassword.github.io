@@ -83,7 +83,7 @@ const GetPasswords = () => {
                         
                                 </th>
                                 <th>
-                                <EditButton id={password.id}></EditButton>
+                                    <EditButton id={password.id}></EditButton>
                                 </th>
                             </tr>
                         </table>
