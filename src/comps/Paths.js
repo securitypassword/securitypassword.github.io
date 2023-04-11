@@ -20,12 +20,12 @@ const Paths = () => {
                 <HashRouter>
                     <Routes>
                         <Route exact path='/' element={<Home></Home>}></Route>
-                        <Route path='/bin' element={<Bin></Bin>}></Route>
-                        <Route path='/login' element={<Login></Login>}></Route>
-                        <Route path='/logout' element={<Logout></Logout>}></Route>
-                        <Route path='/settings' element={<Settings></Settings>}></Route>
-                        <Route path='/register' element={<Register></Register>}></Route>
-                        <Route path='/passwords' element={<Passwords></Passwords>}></Route>
+                        <Route path='/bin' element={<Bin></Bin>}></Route>{/*no hay algo*/}
+                        <Route path='/login' element={<Login></Login>}></Route>{/*ya*/}
+                        <Route path='/logout' element={<Logout></Logout>}></Route>{/*ya*/}
+                        <Route path='/settings' element={<Settings></Settings>}></Route>{/*a este no se que moverle */}
+                        <Route path='/register' element={<Register></Register>}></Route>{/*ya*/}
+                        <Route path='/passwords' element={<Passwords></Passwords>}></Route>{/*ya*/}
                         <Route path='/newpassword' element={<NewPassword></NewPassword>}></Route>
                         <Route path='/changePassword/:token' element={<Question></Question>}></Route>
                         <Route path='/editpassword/:reg_id' element={<EditPassword></EditPassword>}></Route>

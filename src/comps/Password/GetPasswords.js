@@ -6,6 +6,7 @@ import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
 import EditButton from './EditButton';
 import { useNavigate } from 'react-router-dom';
+import './Password.css';
 
 //const GET_REGS_URL = process.env.API_URL + "/getActiveRegs"
 const GET_REGS_URL = "https://securitypassword.cyclic.app/getActiveRegs"
@@ -72,10 +73,20 @@ const GetPasswords = () => {
                 {
                     pass.map((password) =>
                     <>
-                        <Password key={password.key} name={password.name}
-                        url={password.url} value={password.value}
-                        id={password.id} ></Password>
-                        <EditButton id={password.id}></EditButton>
+                        <table className='tabla'>
+                            <tr>
+                                <th>
+                                <Password key={password.key} name={password.name}
+                                    url={password.url} value={password.value}
+                                    id={password.id} >
+                                </Password>
+                        
+                                </th>
+                                <th>
+                                <EditButton id={password.id}></EditButton>
+                                </th>
+                            </tr>
+                        </table>
                     </>
                     )
                 }

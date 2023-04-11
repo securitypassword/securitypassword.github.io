@@ -12,14 +12,25 @@ const Password = (parms) => {
         <>
         <br></br>
         <div className='passwordBox' > 
-            <div>
-            <button onClick={() => {window.location.href = parms.url}} className='passwordButtonGo'>Go</button>
-            </div>
-
-            <div>
-            <p>{parms.name}</p>
-            <p>{parms.value}</p>
-            </div>
+                <table className='tabla'>
+                    <tr>
+                        <th>Link</th>
+                        <th>Nombre</th>
+                        <th>Contraseña</th>
+                    </tr>
+                    </table>
+            <table className='tabla'>
+                
+                <tr>
+                    <button onClick={() => {window.location.href = parms.url}} className='passwordButtonGo'>Go</button>
+                    <th>
+                        {parms.name}
+                    </th>
+                    <th>
+                        {parms.value}
+                    </th>
+                </tr>
+            </table>
         </div>
         </>
     )

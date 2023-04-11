@@ -13,6 +13,7 @@ const Navbar=()=>{
   const closeMobileMenu = () => setClick(false);
 
   //for settings of the button
+  /*
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -20,13 +21,16 @@ const Navbar=()=>{
       setButton(true);
     }
   };
+  */
 
+  /*
   useEffect(() => {
     showButton();
   }, []);
+*/
 
   //when the window gets resized
-  window.addEventListener('resize', showButton);
+  //window.addEventListener('resize', showButton);
 
   return (
     <>
@@ -35,26 +39,23 @@ const Navbar=()=>{
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             Security Password
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
+          {/*<div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-          </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
+          </div>*/}
+
+          <div className={click ? 'nav-menu active' : 'nav-menu'}>
+            {/*<div className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Principal
               </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/register'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
+            </div>*/}
+            <div className='nav-item'>
+              <Link to='/register' className='nav-links' onClick={closeMobileMenu}>
                 Registrarse
               </Link>
-            </li>
+            </div>
 
-            <li>
+            {/*<div>
               <Link
                 to='/login'
                 className='nav-links-mobile'
@@ -62,9 +63,9 @@ const Navbar=()=>{
               >
                 Iniciar Sesión
               </Link>
-            </li>
-          </ul>
-          {button && <Button buttonStyle='btn--outline'>INICIAR SESIÓN</Button>}
+            </div>*/}
+            {button && <Button buttonStyle='btn--outline'>INICIAR SESIÓN</Button>}
+          </div>
         </div>
       </nav>
       <Outlet />

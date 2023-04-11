@@ -8,6 +8,7 @@ const Passwords = () => {
         <>
         <Auth></Auth>
         <NavbarPass></NavbarPass>
+        <br/><br/>
         <div>passwords</div>
         <GetPasswords></GetPasswords>
         </>

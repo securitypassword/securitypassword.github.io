@@ -50,7 +50,9 @@ const NewPassword = () => {
         <>
         <Auth></Auth>
         <NavbarPass></NavbarPass>
+
         <Generator value={value} setValue={setValue}></Generator>
+        
         <br></br>
         <p>{error}</p>
         <input
