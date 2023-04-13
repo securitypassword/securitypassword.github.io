@@ -10,7 +10,6 @@ const Settings = () => {
         <Auth></Auth>
         <NavbarPass></NavbarPass>
         <AutoDel></AutoDel>
-        <Ask></Ask>
         </>
     )
 }

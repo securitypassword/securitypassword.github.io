@@ -7,6 +7,7 @@ import { from64 } from '../../api/sec';
 import DelPassword from "./DelPassword"
 import SecurityCheck from './SecurityCheck';
 import axios from '../../api/axios';
+import "./css.css"
 
 //const EDIT_REG_URL = process.env.API_URL + "/editReg"
 const EDIT_REG_URL = "https://securitypassword.cyclic.app/editReg"
@@ -82,42 +83,69 @@ const EditPassword = () => {
         <NavbarPass></NavbarPass>
         <p>{error}</p>
         <br></br>
-        <input
-            type="text"
-            id="name"
-            autoComplete="off"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-            required
-            placeholder='nombre'
-        />
+        
         <br></br>
         <br></br>
-        <input
-            type="text"
-            id="value"
-            autoComplete="off"
-            onChange={(e) => setValue(e.target.value)}
-            value={value}
-            required
-            placeholder='value'
-        />
-        <br></br>
-        <SecurityCheck text={value}></SecurityCheck>
+        
         <br></br>
         <br></br>
-        <input
-            type="text"
-            id="url"
-            autoComplete="off"
-            onChange={(e) => setUrl(e.target.value)}
-            value={url}
-            required
-            placeholder='url'
-        />
+        
         <br></br>
-        <button onClick={save}>Save Edit</button>
-        <DelPassword id={parms.reg_id}></DelPassword>
+        
+        <table className='tab'>
+            <tr>
+                <th>
+                    <input
+                        type="text"
+                        id="name"
+                        autoComplete="off"
+                        onChange={(e) => setName(e.target.value)}
+                        value={name}
+                        required
+                        placeholder='nombre'
+                    />
+                </th>
+                <th>
+                    <input
+                        type="text"
+                        id="url"
+                        autoComplete="off"
+                        onChange={(e) => setUrl(e.target.value)}
+                        value={url}
+                        required
+                        placeholder='url'
+                    />
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input
+                        type="text"
+                        id="value"
+                        autoComplete="off"
+                        onChange={(e) => setValue(e.target.value)}
+                        value={value}
+                        required
+                        placeholder='value'
+                    />        
+                </th>
+                <th>
+                    <SecurityCheck text={value}></SecurityCheck>
+                </th>
+            </tr>
+        </table>
+        <table className='tab'>
+            <tr>
+                <th>
+                    <button className='boton12' onClick={save}>Save Edit</button>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <DelPassword className='boton12' id={parms.reg_id}></DelPassword>
+                </th>
+            </tr>
+        </table>
         </>
     )
 }

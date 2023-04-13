@@ -6,6 +6,7 @@ import SecurityCheck from './SecurityCheck';
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import axios from "../../api/axios"
+import "./css.css"
 
 //const NEW_REG_URL = process.env.API_URL + "/setReg"
 const NEW_REG_URL = "https://securitypassword.cyclic.app/setReg"
@@ -55,41 +56,55 @@ const NewPassword = () => {
         
         <br></br>
         <p>{error}</p>
-        <input
-            type="text"
-            id="name"
-            autoComplete="off"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-            required
-            placeholder='nombre'
-        />
-        <br></br>
-        <br></br>
-        <input
-            type="text"
-            id="value"
-            autoComplete="off"
-            onChange={(e) => setValue(e.target.value)}
-            value={value}
-            required
-            placeholder='value'
-        />
-        <br></br>
-        <SecurityCheck text={value}></SecurityCheck>
-        <br></br>
-        <br></br>
-        <input
-            type="text"
-            id="url"
-            autoComplete="off"
-            onChange={(e) => setUrl(e.target.value)}
-            value={url}
-            required
-            placeholder='url'
-        />
-        <br></br>
-        <button onClick={save} title="Save">Save</button>
+
+        <div className='center'>
+            <table className='tab'>
+                <tr>
+                    <th>
+                        <input
+                            type="text"
+                            id="name"
+                            autoComplete="off"
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
+                            required
+                            placeholder='nombre'
+                        />
+                    </th>
+                    <th>
+                        <input
+                            type="text"
+                            id="url"
+                            autoComplete="off"
+                            onChange={(e) => setUrl(e.target.value)}
+                            value={url}
+                            required
+                            placeholder='url'
+                        />
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input
+                            type="text"
+                            id="value"
+                            autoComplete="off"
+                            onChange={(e) => setValue(e.target.value)}
+                            value={value}
+                            required
+                            placeholder='contraseña'
+                        />
+                    </th>
+                    <th>
+                    <SecurityCheck text={value}></SecurityCheck>
+                    </th>
+                </tr>
+            </table>
+            
+            <br></br>
+            <button className='boton12' onClick={save} title="Save">Save</button>
+        </div>
+        
         </>
     )
 }

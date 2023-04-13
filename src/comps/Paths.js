@@ -23,15 +23,15 @@ const Paths = () => {
                         <Route path='/bin' element={<Bin></Bin>}></Route>{/*no hay algo*/}
                         <Route path='/login' element={<Login></Login>}></Route>{/*ya*/}
                         <Route path='/logout' element={<Logout></Logout>}></Route>{/*ya*/}
-                        <Route path='/settings' element={<Settings></Settings>}></Route>{/*a este no se que moverle */}
+                        <Route path='/settings' element={<Settings></Settings>}></Route>{/*cambiarle el texto de auto delete*/}
                         <Route path='/register' element={<Register></Register>}></Route>{/*ya*/}
                         <Route path='/passwords' element={<Passwords></Passwords>}></Route>{/*ya*/}
-                        <Route path='/newpassword' element={<NewPassword></NewPassword>}></Route>
+                        <Route path='/newpassword' element={<NewPassword></NewPassword>}></Route>{/*ya */}
                         <Route path='/changePassword/:token' element={<Question></Question>}></Route>
                         <Route path='/editpassword/:reg_id' element={<EditPassword></EditPassword>}></Route>
-                        <Route path='/editpassword' element={<EditPassword></EditPassword>}></Route>
-                        <Route path='/admin' element={<Admin></Admin>}></Route>
-                        <Route path='*' element={<NoPage></NoPage>}></Route>
+                        <Route path='/editpassword' element={<EditPassword></EditPassword>}></Route>{/*ya*/}
+                        <Route path='/admin' element={<Admin></Admin>}></Route>{/**/}
+                        <Route path='*' element={<NoPage></NoPage>}></Route>{/*ya*/}
                     </Routes>
                 </HashRouter>
             </>

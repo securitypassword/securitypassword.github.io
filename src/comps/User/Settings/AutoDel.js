@@ -66,6 +66,7 @@ const AutoDel = () => {
             setAuto(resp)
         })
     }
+
     useEffect(() => {
         getAutoDel(setError).then(function(resp){
             setAuto(resp)
@@ -74,8 +75,9 @@ const AutoDel = () => {
     return(
         <>
         <Auth></Auth>
-        <br></br>
+        <br></br><br></br>
         <p>{error}</p>
+        
         <BotonCheck seleccionado={auto} click={changeAuto}></BotonCheck>
         </>
     )

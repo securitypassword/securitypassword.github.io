@@ -17,7 +17,7 @@ const SecurityCheck = (parms) => {
     })
     return(
         <>
-        <p>Nivel : {level}</p>
+        <p>Nivel de la contraseña: {level}</p>
         </>
     )
 }

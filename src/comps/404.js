@@ -5,7 +5,9 @@ const NoPage = () => {
     return(
         <>
         <Navbar></Navbar>
-        <div>404 not found</div>
+        <div className='nopag'>
+            404 not found
+        </div>
         </>
     )
 }
