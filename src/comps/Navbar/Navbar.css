@@ -139,12 +139,7 @@
     max-width: 100%;
   }
 
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-10%, 0%);
-  }
+  
 
   .menu-icon {
     display: block;
