@@ -4,7 +4,7 @@ import Password from './Password';
 import Auth from "../Tokens/Auth"
 import NavbarPass from "./NavbarPass"
 import ResPassword from './ResPassword';
-import DelPassword from './DelPassword';
+import TerPassword from './TerPassword';
 import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
 
@@ -70,7 +70,7 @@ const Bin = () => {
                         url={password.url} value={password.value}
                         id={password.id} ></Password>
                         <ResPassword id={password.id}></ResPassword>
-                        <DelPassword id={password.id}></DelPassword>
+                        <TerPassword id={password.id}></TerPassword>
                     </>
                     )
                 }
