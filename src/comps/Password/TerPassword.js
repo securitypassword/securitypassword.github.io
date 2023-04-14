@@ -55,4 +55,4 @@ const TerPassword = (parms) => {
     )
 }
 
-export default DelPassword
+export default TerPassword
