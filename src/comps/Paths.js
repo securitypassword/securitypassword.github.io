@@ -20,7 +20,7 @@ const Paths = () => {
                 <HashRouter>
                     <Routes>
                         <Route exact path='/' element={<Home></Home>}></Route>
-                        <Route path='/bin' element={<Bin></Bin>}></Route>{/*no hay algo*/}
+                        <Route path='/bin' element={<Bin></Bin>}></Route>{/*ya*/}
                         <Route path='/login' element={<Login></Login>}></Route>{/*ya*/}
                         <Route path='/logout' element={<Logout></Logout>}></Route>{/*ya*/}
                         <Route path='/settings' element={<Settings></Settings>}></Route>{/*cambiarle el texto de auto delete*/}

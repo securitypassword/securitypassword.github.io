@@ -7,6 +7,7 @@ import ResPassword from './ResPassword';
 import TerPassword from './TerPassword';
 import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
+import "./css.css"
 
 //const GET_BIN_URL = process.env.API_URL + "/getBinRegs"
 const GET_BIN_URL = "https://securitypassword.cyclic.app/getBinRegs"
@@ -61,20 +62,30 @@ const Bin = () => {
         <>
             <Auth></Auth>
             <NavbarPass></NavbarPass>
+            <br></br>
+            <br></br>
             <p>{error}</p>
             <Fragment>
                 {
                     pass.map((password) =>
                     <>
-                        <Password key={password.key} name={password.name}
-                        url={password.url} value={password.value}
-                        id={password.id} ></Password>
-                        <ResPassword id={password.id}></ResPassword>
-                        <TerPassword id={password.id}></TerPassword>
+                        <table className='tab'>
+                            <tr>
+                                <th>
+                                    <Password key={password.key} name={password.name}
+                                    url={password.url} value={password.value}
+                                    id={password.id} ></Password>
+                                </th>
+                                <th><ResPassword id={password.id}></ResPassword></th>
+                                <th><TerPassword id={password.id}></TerPassword></th>
+                            </tr>
+
+                        </table>                                             
                     </>
                     )
                 }
             </Fragment>
+            
         </>
     )
 }

@@ -48,7 +48,7 @@ const ResPassword = (parms) => {
         <>
         <Auth></Auth>
         <>{error}</>
-        <button onClick={res} >Restore</button>
+        <button onClick={res} >Restaurar</button>
         </>
     )
 }

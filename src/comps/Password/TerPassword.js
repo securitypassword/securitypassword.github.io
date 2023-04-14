@@ -50,7 +50,7 @@ const TerPassword = (parms) => {
         <>
         <Auth></Auth>
         <>{error}</>
-        <button onClick={ter} >Terminate</button>
+        <button onClick={ter} >Terminar</button>
         </>
     )
 }
