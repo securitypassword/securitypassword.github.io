@@ -12,35 +12,35 @@ const NavbarPass = () => {
                     <Link
                     to='/newpassword'
                     className='nav-links'>
-                    New Password
+                    Nueva contraseña
                     </Link>
                 </div>
                 <div className='nav-item'>
                     <Link
                     to='/passwords'
                     className='nav-links'>
-                    Get Passwords
+                    Contraseñas
                     </Link>
                 </div>
                 <div className='nav-item'>
                     <Link
                     to='/bin'
                     className='nav-links'>
-                    Bin
+                    Papelera
                     </Link>
                 </div>
                 <div className='nav-item'>
                     <Link
                     to='/settings'
                     className='nav-links'>
-                    Settings
+                    Configuracines
                     </Link>
                 </div>
                 <div className='nav-item'>
                     <Link
                     to='/logout'
                     className='nav-links'>
-                    LogOut
+                    Salir
                     </Link>
                 </div>
             </div>

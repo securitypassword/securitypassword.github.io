@@ -54,10 +54,6 @@
   margin-right: 2rem;
 }
 
-.nav-item {
-  height: 80px;
-}
-
 .nav-links {
   color: #fff;
   display: flex;
@@ -67,6 +63,7 @@
   height: 100%;
   width: 15%;
 }
+
 
 .nav-links:hover {
   border-bottom: 4px solid #fff;
@@ -89,6 +86,7 @@
   .NavbarItems {
     position: relative;
   }
+
 
   .nav-menu {
     display: flex;
@@ -115,6 +113,16 @@
     padding: 2rem;
     width: 100%;
     display: table;
+  }
+
+  .nav-links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    width: 15%;
   }
 
   .nav-links:hover {
