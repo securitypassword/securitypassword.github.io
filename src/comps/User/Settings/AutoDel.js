@@ -48,7 +48,13 @@ const getAutoDel = async (setError) => {
         setError(resp.data.msg)
     }
     if(queryresp.data.data=="success"){
-        const msg = "auto delete is " + queryresp.data.msg
+        let msg = "El auto-borrado de la cuenta a los 6 intentos fallidos está "
+        if(queryresp.data.msg == "true"){
+            msg += "activado"
+        }
+        else{
+            msg += "desactivado"
+        }
         resp=queryresp.data.msg
         setError(msg)
     }
