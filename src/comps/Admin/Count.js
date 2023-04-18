@@ -26,13 +26,14 @@ const Count = () => {
     useEffect(() => {
         const resp = getCount().then(function(resp){
             setCounts(resp)
+            console.log(resp)
             return resp
         })
     }
     ,[])
     return(
         <>
-        {counts}
+        <div>users: {counts.users}</div>
         </>
     )
 }
