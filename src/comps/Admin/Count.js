@@ -33,7 +33,7 @@ const Count = () => {
     return(
         <>
         <div>users: {counts.users}</div>
-        <div>regs: {counts.regs}</div>
+        <div>registers: {counts.registers}</div>
         <div>tokens: {counts.tokens}</div>
         </>
     )
