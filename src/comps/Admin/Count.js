@@ -25,8 +25,7 @@ const Count = () => {
 
     useEffect(() => {
         const resp = getCount().then(function(resp){
-            setCounts(resp)
-            console.log(resp)
+            setCounts(resp.msg)
             return resp
         })
     }
