@@ -8,6 +8,17 @@ const AUTO_DEL_URL = "https://securitypassword.cyclic.app/autoDel"
 //const GET_AUTO_DEL_URL = process.env.API_URL + "/getAutoDel"
 const GET_AUTO_DEL_URL = "https://securitypassword.cyclic.app/getAutoDel"
 
+const autoDelMsg = (data) => {
+    let msg = "El auto-borrado de la cuenta a los 6 intentos fallidos está "
+    if(data == "true"){
+        msg += "activado"
+    }
+    else{
+        msg += "desactivado"
+    }
+    return msg
+}
+
 const setAutoDel = async (setError) => {
     let resp = ""
     let token = window.sessionStorage.getItem("token")
@@ -25,7 +36,7 @@ const setAutoDel = async (setError) => {
         setError(queryresp.data.msg)
     }
     if(queryresp.data.data=="success"){
-        const msg = "auto delete set to " + queryresp.data.msg
+        const msg = autoDelMsg(queryresp.data.msg)
         resp=queryresp.data.msg
         setError(msg)
     }
@@ -48,13 +59,7 @@ const getAutoDel = async (setError) => {
         setError(resp.data.msg)
     }
     if(queryresp.data.data=="success"){
-        let msg = "El auto-borrado de la cuenta a los 6 intentos fallidos está "
-        if(queryresp.data.msg == "true"){
-            msg += "activado"
-        }
-        else{
-            msg += "desactivado"
-        }
+        const msg = autoDelMsg(queryresp.data.msg)
         resp=queryresp.data.msg
         setError(msg)
     }
