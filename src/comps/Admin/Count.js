@@ -32,8 +32,11 @@ const Count = () => {
     ,[])
     return(
         <>
+        <br/>
         <div>users: {counts.users}</div>
+        <br/>
         <div>registers: {counts.registers}</div>
+        <br/>
         <div>tokens: {counts.tokens}</div>
         </>
     )

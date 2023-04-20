@@ -7,7 +7,9 @@ const Admin = () => {
     return(
         <>
         <NavbarAdmin></NavbarAdmin>
-        <Count></Count>
+        <center>
+            <Count></Count>
+        </center>
         </>
     )
 }
