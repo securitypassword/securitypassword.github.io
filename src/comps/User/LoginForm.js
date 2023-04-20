@@ -102,7 +102,8 @@ const LoginForm = () => {
                     required
                 />
                 <button>Iniciar Sesión</button>
-                <div className="persistCheck">
+                
+                {/*<div className="persistCheck">
                     <input
                         type="checkbox"
                         id="persist"
@@ -110,7 +111,7 @@ const LoginForm = () => {
                         checked={check}
                     />
                     <label htmlFor="persist">Confiar en este dispositivo</label>
-                </div>
+                </div>*/}
             </form>
             <p>
                 No tienes cuenta?<br />
