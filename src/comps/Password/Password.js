@@ -5,7 +5,7 @@ import './Password.css';
 var id = ""
 
 const Password = (parms) => {
-    //console.log("Password parms",parms)
+    console.log("Password parms",parms)
     //crear un elemento de contraseña a partir de parametros
     id = parms.id
     return(

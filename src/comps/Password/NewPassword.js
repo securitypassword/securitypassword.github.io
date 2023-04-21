@@ -28,8 +28,6 @@ export const savePass = async (name, username, value, url, setError, navigate) =
             withCredentials: true
         }
     );
-    console.log("resp uwu")
-    setError(resp.data.msg)
     if(resp.data.data.data == "success"){
         navigate("/bin");
     }
