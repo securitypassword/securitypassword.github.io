@@ -30,7 +30,9 @@ const Password = (parms) => {
                 
                 <tr>
                     {parms.url != "" && (
-                    <button onClick={() => {window.location.href = parms.url}} className='passwordButtonGo'>Go</button>
+                    <th>
+                        <button onClick={() => {window.location.href = parms.url}} className='passwordButtonGo'>Go</button>
+                    </th>
                     )}
                     {parms.name != "" && (
                     <th>
