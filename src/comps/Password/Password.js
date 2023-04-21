@@ -30,21 +30,21 @@ const Password = (parms) => {
                 
                 <tr>
                     {parms.url != "" && (
-                    <th>
+                    <th className='celda'>
                         <button onClick={() => {window.location.href = parms.url}} className='passwordButtonGo'>Go</button>
                     </th>
                     )}
                     {parms.name != "" && (
-                    <th>
+                    <th className='celda'>
                         {parms.name}
                     </th>
                     )}
                     {parms.username != "" && (
-                    <th>
+                    <th className='celda'>
                         {parms.username}
                     </th>
                     )}
-                    <th>
+                    <th className='celda'>
                         {parms.value}
                     </th>
                 </tr>
