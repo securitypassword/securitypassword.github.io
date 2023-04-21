@@ -30,15 +30,12 @@ export const editPass = async (id, name, username, value, url, setError, navigat
             withCredentials: true
         }
     );
-    //mostrar error en caso de error
-    console.log("resp",resp)
-    if(resp.data.data==="error"){
-        setError(resp.data.msg)
-    }
     //redireccionar al inicio en caso de exito
-    if(resp.data.data=="success"){
-        setError(resp.data.data)
-        navigate("");
+    if(resp.data.data.data=="success"){
+        navigate("/passwords");
+    }
+    else{
+        setError(resp.data.msg)
     }
 
 }

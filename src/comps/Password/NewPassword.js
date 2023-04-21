@@ -31,6 +31,9 @@ export const savePass = async (name, username, value, url, setError, navigate) =
     if(resp.data.data.data == "success"){
         navigate("/passwords");
     }
+    else{
+        setError(resp.data.msg)
+    }
 
 }
 
