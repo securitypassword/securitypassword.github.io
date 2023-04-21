@@ -14,18 +14,34 @@ const Password = (parms) => {
         <div className='passwordBox' > 
                 <table className='tabla'>
                     <tr>
+                        {parms.url != "" && (
                         <th>Link</th>
-                        <th>Nombre</th>
+                        )}
+                        {parms.name != "" && (
+                        <th>Nombre de contraseña</th>
+                        )}
+                        {parms.username != "" && (
+                        <th>Nombre de usuario</th>
+                        )}
                         <th>Contraseña</th>
                     </tr>
                     </table>
             <table className='tabla'>
                 
                 <tr>
+                    {parms.url != "" && (
                     <button onClick={() => {window.location.href = parms.url}} className='passwordButtonGo'>Go</button>
+                    )}
+                    {parms.name != "" && (
                     <th>
                         {parms.name}
                     </th>
+                    )}
+                    {parms.username != "" && (
+                    <th>
+                        {parms.username}
+                    </th>
+                    )}
                     <th>
                         {parms.value}
                     </th>

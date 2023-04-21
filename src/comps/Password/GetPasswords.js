@@ -76,7 +76,7 @@ const GetPasswords = () => {
                         <table className='tabla'>
                             <tr>
                                 <th>
-                                <Password key={password.key} name={password.name}
+                                <Password key={password.key} name={password.name} username={password.username}
                                     url={password.url} value={password.value}
                                     id={password.id} >
                                 </Password>
