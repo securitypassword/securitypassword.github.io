@@ -64,7 +64,7 @@ const GetPasswords = () => {
             return resp
         })
 
-    }, [getPass])
+    }, [])
     //por cada elemento en la lista de contraseñas mostrar un elemento password
     return(
         <>
