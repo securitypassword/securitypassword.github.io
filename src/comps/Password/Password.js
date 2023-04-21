@@ -12,21 +12,19 @@ const Password = (parms) => {
         <>
         <br></br>
         <div className='passwordBox' > 
-                <table className='tabla'>
-                    <tr>
-                        {parms.url != "" && (
-                        <th>Link</th>
-                        )}
-                        {parms.name != "" && (
-                        <th>Nombre de contraseña</th>
-                        )}
-                        {parms.username != "" && (
-                        <th>Nombre de usuario</th>
-                        )}
-                        <th>Contraseña</th>
-                    </tr>
-                    </table>
             <table className='tabla'>
+                <tr>
+                    {parms.url != "" && (
+                    <th>Link</th>
+                    )}
+                    {parms.name != "" && (
+                    <th>Nombre de contraseña</th>
+                    )}
+                    {parms.username != "" && (
+                    <th>Nombre de usuario</th>
+                    )}
+                    <th>Contraseña</th>
+                </tr>
                 
                 <tr>
                     {parms.url != "" && (
