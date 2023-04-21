@@ -64,6 +64,7 @@ const EditPassword = () => {
                 if(data.id===parms.reg_id){
                     console.log(data)
                     setName(from64(data.name))
+                    setUsername(from64(data.username))
                     setValue(from64(data.value))
                     setUrl(from64(data.url))
                     setError("")
