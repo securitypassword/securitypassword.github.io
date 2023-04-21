@@ -113,7 +113,7 @@ const EditPassword = () => {
                         id="username"
                         autoComplete="off"
                         onChange={(e) => setUsername(e.target.value)}
-                        value={usernamename}
+                        value={username}
                         required
                         placeholder='nombre de usuario'
                     />

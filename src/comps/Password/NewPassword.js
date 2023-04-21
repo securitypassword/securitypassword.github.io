@@ -28,7 +28,7 @@ export const savePass = async (name, username, value, url, setError, navigate) =
             withCredentials: true
         }
     );
-    console.log("resp")
+    console.log("resp uwu")
     console.log(resp.data.data + " data")
     console.log("end of resp")
     setError(resp.data.msg)
