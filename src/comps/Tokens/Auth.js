@@ -1,6 +1,7 @@
 import React, { useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
 import axios from "../../api/axios"
+import { render } from '@testing-library/react';
 
 //const AUTH_URL = process.env.API_URL + "/loginToken"
 const AUTH_URL = "https://securitypassword.cyclic.app/loginToken"
@@ -34,17 +35,23 @@ export const authquery = async () => {
     return valid
 }
 
+export const auth = () => {
+    authquery().then(function(valid){
+        if(!valid){
+            window.sessionStorage.setItem("token", "")
+            useNavigate("/login")
+        }
+        //console.log(window.sessionStorage.getItem("token"));
+    })
+}
+
 const Auth = () => {
-    const navigate = useNavigate();
     useEffect(() => {
-        authquery().then(function(valid){
-            if(!valid){
-                window.sessionStorage.setItem("token", "");
-                navigate("/login");
-            }
-            //console.log(window.sessionStorage.getItem("token"));
-        })
+        auth()
     }, [])
+    render(
+        <></>
+    )
 }
 
 export default Auth
