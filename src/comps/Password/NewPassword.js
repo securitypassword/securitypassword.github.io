@@ -29,10 +29,8 @@ export const savePass = async (name, username, value, url, setError, navigate) =
         }
     );
     console.log("resp uwu")
-    console.log(resp.data.data + " data")
-    console.log("end of resp")
     setError(resp.data.msg)
-    if(resp.data.data == "success"){
+    if(resp.data.data.data == "success"){
         navigate("/bin");
     }
 
