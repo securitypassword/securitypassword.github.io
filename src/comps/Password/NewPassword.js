@@ -28,7 +28,7 @@ export const savePass = async (name, username, value, url, setError, navigate) =
             withCredentials: true
         }
     );
-    if(resp.data.data.data == "success"){
+    if(resp.data.data == "success"){
         navigate("/passwords");
     }
     else{
