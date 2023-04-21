@@ -31,7 +31,7 @@ export const editPass = async (id, name, username, value, url, setError, navigat
         }
     );
     //redireccionar al inicio en caso de exito
-    if(resp.data.data.data=="success"){
+    if(resp.data.data=="success"){
         navigate("/passwords");
     }
     else{
