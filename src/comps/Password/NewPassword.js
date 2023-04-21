@@ -29,7 +29,7 @@ export const savePass = async (name, username, value, url, setError, navigate) =
         }
     );
     if(resp.data.data.data == "success"){
-        navigate("/bin");
+        navigate("/passwords");
     }
 
 }
