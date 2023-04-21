@@ -33,7 +33,7 @@ const NavbarPass = () => {
                     <Link
                     to='/settings'
                     className='nav-links'>
-                    Configuracines
+                    Configuraciones
                     </Link>
                 </div>
                 <div className='nav-item'>
