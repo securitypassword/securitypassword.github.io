@@ -1,6 +1,7 @@
+import { useNavigate } from "react-router-dom";
 const Legal = () => {
     const act = () => {
-        navigate("/");
+        useNavigate("/");
     }
     return(
         <>
