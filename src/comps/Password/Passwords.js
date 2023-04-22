@@ -1,12 +1,14 @@
-import React from 'react';
-import Auth from '../Tokens/Auth';
+import React, { useEffect} from 'react';
+import Auth, { auth } from '../Tokens/Auth';
 import NavbarPass from './NavbarPass';
 import GetPasswords from './GetPasswords';
 
 const Passwords = () => {
+    useEffect(() => {
+        auth()
+    }, [])
     return(
         <>
-        <Auth></Auth>
         <NavbarPass></NavbarPass>
         <br/><br/>
         <div>passwords</div>

@@ -13,12 +13,13 @@ import "./css.css"
 const EDIT_REG_URL = "https://securitypassword.cyclic.app/editReg"
 
 //solicitar a la api la edicion de la contraseña
-export const editPass = async (id, name, value, url, setError, navigate) => {
+export const editPass = async (id, name, username, value, url, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
     const query = {
         token:token,
         id:id,
         name:name,
+        username:username,
         value:value,
         url:url
     }
@@ -29,15 +30,12 @@ export const editPass = async (id, name, value, url, setError, navigate) => {
             withCredentials: true
         }
     );
-    //mostrar error en caso de error
-    console.log("resp",resp)
-    if(resp.data.data==="error"){
-        setError(resp.data.msg)
-    }
     //redireccionar al inicio en caso de exito
     if(resp.data.data=="success"){
-        setError(resp.data.data)
-        navigate("");
+        navigate("/passwords");
+    }
+    else{
+        setError(resp.data.msg)
     }
 
 }
@@ -46,6 +44,7 @@ export const editPass = async (id, name, value, url, setError, navigate) => {
 const EditPassword = () => {
     const navigate = useNavigate();
     const [name, setName] = useState("")
+    const [username, setUsername] = useState("")
     const [value, setValue] = useState("")
     const [url, setUrl] = useState("")
     const [error, setError] = useState("")
@@ -53,7 +52,7 @@ const EditPassword = () => {
     console.log(parms)
 
     const save = async () => {
-        await editPass(parms.reg_id,name,value,url,setError, navigate)
+        await editPass(parms.reg_id,name,username,value,url,setError, navigate)
     }
     //preparar la contraseña
     useEffect(()=>{
@@ -65,6 +64,7 @@ const EditPassword = () => {
                 if(data.id===parms.reg_id){
                     console.log(data)
                     setName(from64(data.name))
+                    setUsername(from64(data.username))
                     setValue(from64(data.value))
                     setUrl(from64(data.url))
                     setError("")
@@ -102,7 +102,18 @@ const EditPassword = () => {
                         onChange={(e) => setName(e.target.value)}
                         value={name}
                         required
-                        placeholder='nombre'
+                        placeholder='nombre de contraseña'
+                    />
+                </th>
+                <th>
+                    <input
+                        type="text"
+                        id="username"
+                        autoComplete="off"
+                        onChange={(e) => setUsername(e.target.value)}
+                        value={username}
+                        required
+                        placeholder='nombre de usuario'
                     />
                 </th>
                 <th>

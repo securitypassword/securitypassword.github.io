@@ -12,11 +12,12 @@ import "./css.css"
 const NEW_REG_URL = "https://securitypassword.cyclic.app/setReg"
 
 //solicitud a la api de guardar la contraseña
-export const savePass = async (name, value, url, setError, navigate) => {
+export const savePass = async (name, username, value, url, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
     const query = {
         token:token,
         name:name,
+        username:username,
         value:value,
         url:url
     }
@@ -27,24 +28,26 @@ export const savePass = async (name, value, url, setError, navigate) => {
             withCredentials: true
         }
     );
-    console.log("resp")
-    setError(resp.data.msg)
     if(resp.data.data == "success"){
-        navigate("/bin");
+        navigate("/passwords");
+    }
+    else{
+        setError(resp.data.msg)
     }
 
 }
 
 //principal
 const NewPassword = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
     const [name, setName] = useState()
+    const [username, setUsername] = useState()
     const [value, setValue] = useState()
     const [url, setUrl] = useState()
     const [error, setError] = useState()
     
     const save = async () => {
-        await savePass(name,value,url,setError,navigate)
+        await savePass(name,username,value,url,setError,navigate)
     }
 
     return(
@@ -68,7 +71,18 @@ const NewPassword = () => {
                             onChange={(e) => setName(e.target.value)}
                             value={name}
                             required
-                            placeholder='nombre'
+                            placeholder='nombre de contraseña'
+                        />
+                    </th>
+                    <th>
+                        <input
+                            type="text"
+                            id="username"
+                            autoComplete="off"
+                            onChange={(e) => setUsername(e.target.value)}
+                            value={username}
+                            required
+                            placeholder='nombre de usuario'
                         />
                     </th>
                     <th>
