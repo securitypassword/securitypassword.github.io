@@ -5,7 +5,7 @@ const Legal = () => {
     return(
         <>
         aviso legal aviso legal
-        <button onClick={act}></button>
+        <button onClick={act}>Volver</button>
         </>
     )
 }
