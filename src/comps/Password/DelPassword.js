@@ -48,7 +48,6 @@ const DelPassword = (parms) => {
     //boton para ejecutar la eliminacion
     return(
         <>
-        <Auth></Auth>
         <>{error}</>
         <button onClick={del} >Delete</button>
         </>
