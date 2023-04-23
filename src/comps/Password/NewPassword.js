@@ -1,6 +1,6 @@
 import React from 'react';
 import Generator from "./Generator"
-import Auth from '../Tokens/Auth';
+import {BrowserView, MobileView} from 'react-device-detect';
 import NavbarPass from './NavbarPass';
 import SecurityCheck from './SecurityCheck';
 import { useNavigate } from 'react-router-dom';
@@ -61,60 +61,121 @@ const NewPassword = () => {
 
         <div className='center'>
             <table className='tab'>
-                <tr>
-                    <th>
-                        <input
-                            type="text"
-                            id="name"
-                            autoComplete="off"
-                            onChange={(e) => setName(e.target.value)}
-                            value={name}
-                            required
-                            placeholder='nombre de contraseña'
-                        />
-                    </th>
-                    <th>
-                        <input
-                            type="text"
-                            id="username"
-                            autoComplete="off"
-                            onChange={(e) => setUsername(e.target.value)}
-                            value={username}
-                            required
-                            placeholder='nombre de usuario'
-                        />
-                    </th>
-                    <th>
-                        <input
-                            type="text"
-                            id="url"
-                            autoComplete="off"
-                            onChange={(e) => setUrl(e.target.value)}
-                            value={url}
-                            required
-                            placeholder='url'
-                        />
-                    </th>
-                    <th>
-                        <input
-                            type="text"
-                            id="value"
-                            autoComplete="off"
-                            onChange={(e) => setValue(e.target.value)}
-                            value={value}
-                            required
-                            placeholder='contraseña'
-                        />
-                    </th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th>
-                    <SecurityCheck text={value}></SecurityCheck>
-                    </th>
-                </tr>
+                <BrowserView>
+                    <tr>
+                        <th>
+                            <input
+                                type="text"
+                                id="name"
+                                autoComplete="off"
+                                onChange={(e) => setName(e.target.value)}
+                                value={name}
+                                required
+                                placeholder='nombre de contraseña'
+                            />
+                        </th>
+                        <th>
+                            <input
+                                type="text"
+                                id="username"
+                                autoComplete="off"
+                                onChange={(e) => setUsername(e.target.value)}
+                                value={username}
+                                required
+                                placeholder='nombre de usuario'
+                            />
+                        </th>
+                        <th>
+                            <input
+                                type="text"
+                                id="url"
+                                autoComplete="off"
+                                onChange={(e) => setUrl(e.target.value)}
+                                value={url}
+                                required
+                                placeholder='url'
+                            />
+                        </th>
+                        <th>
+                            <input
+                                type="text"
+                                id="value"
+                                autoComplete="off"
+                                onChange={(e) => setValue(e.target.value)}
+                                value={value}
+                                required
+                                placeholder='contraseña'
+                            />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                        <SecurityCheck text={value}></SecurityCheck>
+                        </th>
+                    </tr>
+                </BrowserView>
+                <MobileView>
+                    <tr>
+                        <th>
+                            <input
+                                type="text"
+                                id="name"
+                                autoComplete="off"
+                                onChange={(e) => setName(e.target.value)}
+                                value={name}
+                                required
+                                placeholder='nombre de contraseña'
+                            />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input
+                                type="text"
+                                id="username"
+                                autoComplete="off"
+                                onChange={(e) => setUsername(e.target.value)}
+                                value={username}
+                                required
+                                placeholder='nombre de usuario'
+                            />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input
+                                type="text"
+                                id="url"
+                                autoComplete="off"
+                                onChange={(e) => setUrl(e.target.value)}
+                                value={url}
+                                required
+                                placeholder='url'
+                            />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input
+                                type="text"
+                                id="value"
+                                autoComplete="off"
+                                onChange={(e) => setValue(e.target.value)}
+                                value={value}
+                                required
+                                placeholder='contraseña'
+                            />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                        <SecurityCheck text={value}></SecurityCheck>
+                        </th>
+                    </tr>
+                </MobileView>
             </table>
             
             <br></br>
