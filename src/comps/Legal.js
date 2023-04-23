@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 const Legal = () => {
     const navigate = useNavigate()
-    const act = () => {
-        navigate();
+    const action = () => {
+        navigate("/");
     }
     return(
         <>
         aviso legal aviso legal
-        <button onClick={act}></button>
+        <button onClick={action}>Volver</button>
         </>
     )
 }
