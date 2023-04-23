@@ -95,8 +95,6 @@ const NewPassword = () => {
                             placeholder='url'
                         />
                     </th>
-                </tr>
-                <tr>
                     <th>
                         <input
                             type="text"
@@ -108,6 +106,11 @@ const NewPassword = () => {
                             placeholder='contraseña'
                         />
                     </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                     <th>
                     <SecurityCheck text={value}></SecurityCheck>
                     </th>
