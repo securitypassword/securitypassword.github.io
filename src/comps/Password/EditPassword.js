@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import NavbarPass from './NavbarPass'
 import { useParams, useNavigate } from "react-router-dom";
-import { auth } from '../Tokens/Auth';
+
 import { getpass } from './GetPasswords';
 import { from64 } from '../../api/sec';
 import DelPassword from "./DelPassword"
@@ -54,9 +54,6 @@ const EditPassword = () => {
     const save = async () => {
         await editPass(parms.reg_id,name,username,value,url,setError, navigate)
     }
-    useEffect(() => {
-        auth()
-    }, [])
     //preparar la contraseña
     useEffect(()=>{
         setError("Loading...")

@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Outlet, Link } from "react-router-dom";
 import "./Password.css"
 
 const NavbarPass = () => {
+    const navigate = useNavigate();
+    useEffect(() => {
+        const valid = authquery().then(function(valid){
+            return valid
+        })
+        let resp = ""
+        if(!valid){
+            navigate("/logout");
+        }
+    })
     return(
         <>
         <br></br>

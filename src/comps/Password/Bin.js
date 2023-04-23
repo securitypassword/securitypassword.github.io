@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react';
 import axios from "../../api/axios"
-import { auth } from '../Tokens/Auth';
 import Password from './Password';
 import NavbarPass from "./NavbarPass"
 import ResPassword from './ResPassword';
@@ -42,17 +41,12 @@ const Bin = () => {
             for(let i in passwords){
                 let pwd=passwords[i]
                 ramPass[i]={key:i, id: pwd.id, name:from64(pwd.name).toString(), username:from64(pwd.username).toString(), url:from64(pwd.url).toString(), value:from64(pwd.value).toString()}
+                
             }
             resp=ramPass
             setError(" ")
         return resp
     }
-    useEffect(() => {
-        auth()
-    }, [])
-    useEffect(() => {
-        auth()
-    }, [])
     //obtener y guardar la papelera al iniciar
 	useEffect(() => {
         const resp = getBin().then(function(resp){
