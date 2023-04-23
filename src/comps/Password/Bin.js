@@ -41,7 +41,6 @@ const Bin = () => {
             for(let i in passwords){
                 let pwd=passwords[i]
                 ramPass[i]={key:i, id: pwd.id, name:from64(pwd.name).toString(), username:from64(pwd.username).toString(), url:from64(pwd.url).toString(), value:from64(pwd.value).toString()}
-                console.log(ramPass[i])
             }
             resp=ramPass
             setError(" ")

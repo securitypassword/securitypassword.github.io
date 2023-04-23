@@ -46,7 +46,7 @@ const LoginForm = () => {
                     withCredentials: true
                 }
             );
-            console.log("response",response.data)
+            
             if(response.data.valid===false){
                 setErrMsg(JSON.stringify(response.data.msg))
             }

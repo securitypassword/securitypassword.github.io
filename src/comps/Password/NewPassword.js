@@ -1,6 +1,5 @@
 import React from 'react';
 import Generator from "./Generator"
-import {BrowserView, MobileView} from 'react-device-detect';
 import NavbarPass from './NavbarPass';
 import SecurityCheck from './SecurityCheck';
 import { useNavigate } from 'react-router-dom';

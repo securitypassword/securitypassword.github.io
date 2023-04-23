@@ -1,4 +1,4 @@
 export const isMobile = () => {
-    const ratio = screen.width/screen.height
+    const ratio = window.innerWidth / window.innerHeight
     return ratio < 1
 }

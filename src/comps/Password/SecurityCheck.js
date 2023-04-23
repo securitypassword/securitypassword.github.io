@@ -8,7 +8,7 @@ const SecurityCheck = (parms) => {
     useEffect(() => {
         if(parms.text!=undefined && parms.text!=""){
             const resp = zxcvbn(parms.text)
-            console.log(resp)
+            
             setLevel(resp.score)
         }else{
             setLevel(0)

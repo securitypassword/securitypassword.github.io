@@ -23,7 +23,7 @@ export const delPass = async (id, setError, navigate) => {
             withCredentials: true
         }
     );
-    console.log("resp",resp)
+
     if(resp.data.data==='error'){
         setError(resp.data.msg)
     }
@@ -36,7 +36,7 @@ export const delPass = async (id, setError, navigate) => {
 //principal
 const DelPassword = (parms) => {
     const navigate = useNavigate();
-    console.log(parms)
+    
     const [error, setError] = useState("")
     id = parms.id
 

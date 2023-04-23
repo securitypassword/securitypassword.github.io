@@ -4,7 +4,7 @@ import './Password.css';
 
 const Password = (parms) => {
     const [passwordShown, setPasswordShown] = useState(false);
-    console.log("Password parms",parms)
+    
     //crear un elemento de contraseña a partir de parametros
     return(
         <>

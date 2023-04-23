@@ -10,7 +10,7 @@ const GEN_URL = "https://securitypassword.cyclic.app/generate"
 //solicitar a la api una contraseña aleatoria
 const generarPassword = async (config) => {
 	let resp = "a"
-	console.log(config)
+	
 	//parametros para la generación
 	const query = {
 		len:config.numeroDeCaracteres,
@@ -27,7 +27,7 @@ const generarPassword = async (config) => {
         }
     );
 	resp = resp.data.data
-	console.log(resp)
+	
 	return resp
 }
 

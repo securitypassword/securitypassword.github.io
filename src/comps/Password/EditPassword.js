@@ -48,7 +48,7 @@ const EditPassword = () => {
     const [url, setUrl] = useState("")
     const [error, setError] = useState("")
     let parms=useParams()
-    console.log(parms)
+    
 
     const save = async () => {
         await editPass(parms.reg_id,name,username,value,url,setError, navigate)
@@ -61,7 +61,7 @@ const EditPassword = () => {
             for(var i in resp.data){
                 const data = resp.data[i]
                 if(data.id===parms.reg_id){
-                    console.log(data)
+                    
                     setName(from64(data.name))
                     setUsername(from64(data.username))
                     setValue(from64(data.value))

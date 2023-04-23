@@ -11,7 +11,7 @@ const Question = () => {
     let parms=useParams()
 
     useEffect(() => {
-        console.log(parms.token)
+        
     },[parms])
     const setPass = async () => {
         const data = {
@@ -25,7 +25,7 @@ const Question = () => {
                 withCredentials: true
             }
         );
-        console.log(response)
+        
     }
     return(
         <>
