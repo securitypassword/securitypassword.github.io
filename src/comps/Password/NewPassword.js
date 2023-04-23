@@ -50,7 +50,9 @@ const NewPassword = () => {
     const save = async () => {
         await savePass(name,username,value,url,setError,navigate)
     }
-
+    window.addEventListener('resize', () => {
+        setMobile(isMobile())
+    })
     useEffect(() => {
         setMobile(isMobile())
     })
