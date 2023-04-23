@@ -6,8 +6,8 @@ const NavbarPass = () => {
     return(
         <>
         <br></br>
-        <nav>
-            <div className='navbar-container'>
+        <table className='navbar-container'>
+            <th>
                 <div className='nav-item'>
                     <Link
                     to='/newpassword'
@@ -15,6 +15,8 @@ const NavbarPass = () => {
                     Nueva contraseña
                     </Link>
                 </div>
+            </th>
+            <th>
                 <div className='nav-item'>
                     <Link
                     to='/passwords'
@@ -22,6 +24,8 @@ const NavbarPass = () => {
                     Contraseñas
                     </Link>
                 </div>
+            </th>
+            <th>
                 <div className='nav-item'>
                     <Link
                     to='/bin'
@@ -29,6 +33,8 @@ const NavbarPass = () => {
                     Papelera
                     </Link>
                 </div>
+            </th>
+            <th>
                 <div className='nav-item'>
                     <Link
                     to='/settings'
@@ -36,6 +42,8 @@ const NavbarPass = () => {
                     Configuraciones
                     </Link>
                 </div>
+            </th>
+            <th>
                 <div className='nav-item'>
                     <Link
                     to='/logout'
@@ -43,8 +51,8 @@ const NavbarPass = () => {
                     Salir
                     </Link>
                 </div>
-            </div>
-        </nav>
+            </th>
+        </table>
         <Outlet></Outlet>
         </>
     )

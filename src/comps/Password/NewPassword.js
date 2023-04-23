@@ -66,7 +66,7 @@ const NewPassword = () => {
 
         <div className='center'>
             <table className='tab'>
-                {!mobile() && (
+                {!mobile && (
                     <>
                     <tr>
                         <th>
@@ -124,7 +124,7 @@ const NewPassword = () => {
                     </tr>
                     </>
                 )}
-                {mobile() && (
+                {mobile && (
                     <>
                     <tr>
                         <th>
