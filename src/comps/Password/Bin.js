@@ -1,13 +1,11 @@
 import React, {Fragment} from 'react';
 import axios from "../../api/axios"
 import Password from './Password';
-import Auth from "../Tokens/Auth"
 import NavbarPass from "./NavbarPass"
 import ResPassword from './ResPassword';
 import TerPassword from './TerPassword';
 import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
-import "./css.css"
 
 //const GET_BIN_URL = process.env.API_URL + "/getBinRegs"
 const GET_BIN_URL = "https://securitypassword.cyclic.app/getBinRegs"
@@ -68,18 +66,11 @@ const Bin = () => {
                 {
                     pass.map((password) =>
                     <>
-                        <table className='tab'>
-                            <tr>
-                                <th>
-                                    <Password key={password.key} name={password.name} username={password.username}
-                                    url={password.url} value={password.value}
-                                    id={password.id} ></Password>
-                                </th>
-                                <th><ResPassword id={password.id}></ResPassword></th>
-                                <th><TerPassword id={password.id}></TerPassword></th>
-                            </tr>
-
-                        </table>                                             
+                        <Password key={password.key} name={password.name} username={password.username}
+                        url={password.url} value={password.value}
+                        id={password.id} >
+                        <ResPassword id={password.id}></ResPassword>
+                        <TerPassword id={password.id}></TerPassword></Password>        
                     </>
                     )
                 }

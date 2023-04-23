@@ -6,7 +6,8 @@ import SecurityCheck from './SecurityCheck';
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import axios from "../../api/axios"
-import "./css.css"
+import "./Password.css"
+import { isMobile } from 'react-device-detect';
 
 //const NEW_REG_URL = process.env.API_URL + "/setReg"
 const NEW_REG_URL = "https://securitypassword.cyclic.app/setReg"
@@ -61,7 +62,8 @@ const NewPassword = () => {
 
         <div className='center'>
             <table className='tab'>
-                <BrowserView>
+                {!isMobile() && (
+                    <>
                     <tr>
                         <th>
                             <input
@@ -116,8 +118,10 @@ const NewPassword = () => {
                         <SecurityCheck text={value}></SecurityCheck>
                         </th>
                     </tr>
-                </BrowserView>
-                <MobileView>
+                    </>
+                )}
+                {!isMobile() && (
+                    <>
                     <tr>
                         <th>
                             <input
@@ -175,7 +179,8 @@ const NewPassword = () => {
                         <SecurityCheck text={value}></SecurityCheck>
                         </th>
                     </tr>
-                </MobileView>
+                    </>
+                )}
             </table>
             
             <br></br>

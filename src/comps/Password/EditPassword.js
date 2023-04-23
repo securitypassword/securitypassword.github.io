@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Auth from '../Tokens/Auth';
 import NavbarPass from './NavbarPass'
 import { useParams, useNavigate } from "react-router-dom";
 import { getpass } from './GetPasswords';
@@ -7,7 +6,7 @@ import { from64 } from '../../api/sec';
 import DelPassword from "./DelPassword"
 import SecurityCheck from './SecurityCheck';
 import axios from '../../api/axios';
-import "./css.css"
+import "./Password.css"
 
 //const EDIT_REG_URL = process.env.API_URL + "/editReg"
 const EDIT_REG_URL = "https://securitypassword.cyclic.app/editReg"

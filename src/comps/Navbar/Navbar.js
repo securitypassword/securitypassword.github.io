@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import { Button } from '../Button/Button';
 import { Outlet, Link } from 'react-router-dom';
 import './Navbar.css';
-import '../Password/css.css'
+import '../Password/Password.css'
 
 const Navbar=()=>{
   const [click, setClick] = useState(false);

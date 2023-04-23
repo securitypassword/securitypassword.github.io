@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './Password.css';
 
-var id = ""
-
 const Password = (parms) => {
     const [passwordShown, setPasswordShown] = useState(false);
     console.log("Password parms",parms)
