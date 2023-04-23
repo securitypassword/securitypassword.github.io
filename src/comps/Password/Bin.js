@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import axios from "../../api/axios"
+import { auth } from '../Tokens/Auth';
 import Password from './Password';
 import NavbarPass from "./NavbarPass"
 import ResPassword from './ResPassword';
@@ -46,6 +47,12 @@ const Bin = () => {
             setError(" ")
         return resp
     }
+    useEffect(() => {
+        auth()
+    }, [])
+    useEffect(() => {
+        auth()
+    }, [])
     //obtener y guardar la papelera al iniciar
 	useEffect(() => {
         const resp = getBin().then(function(resp){

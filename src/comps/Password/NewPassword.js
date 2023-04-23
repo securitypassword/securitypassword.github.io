@@ -71,7 +71,7 @@ const NewPassword = () => {
                 {!mobile && (
                     <>
                     <tr>
-                        <th>
+                        <th className='celda'>
                             <input
                                 type="text"
                                 id="name"
@@ -82,7 +82,7 @@ const NewPassword = () => {
                                 placeholder='nombre de contraseña'
                             />
                         </th>
-                        <th>
+                        <th className='celda'>
                             <input
                                 type="text"
                                 id="username"
@@ -93,7 +93,7 @@ const NewPassword = () => {
                                 placeholder='nombre de usuario'
                             />
                         </th>
-                        <th>
+                        <th className='celda'>
                             <input
                                 type="text"
                                 id="url"
@@ -104,7 +104,7 @@ const NewPassword = () => {
                                 placeholder='url'
                             />
                         </th>
-                        <th>
+                        <th className='celda'>
                             <input
                                 type="text"
                                 id="value"
@@ -129,7 +129,7 @@ const NewPassword = () => {
                 {mobile && (
                     <>
                     <tr>
-                        <th>
+                        <th className='celda'>
                             <input
                                 type="text"
                                 id="name"
@@ -142,7 +142,7 @@ const NewPassword = () => {
                         </th>
                     </tr>
                     <tr>
-                        <th>
+                        <th className='celda'>
                             <input
                                 type="text"
                                 id="username"
@@ -154,7 +154,7 @@ const NewPassword = () => {
                             />
                         </th>
                     </tr>
-                    <tr>
+                    <tr className='celda'>
                         <th>
                             <input
                                 type="text"
@@ -167,7 +167,7 @@ const NewPassword = () => {
                             />
                         </th>
                     </tr>
-                    <tr>
+                    <tr className='celda'>
                         <th>
                             <input
                                 type="text"
@@ -180,7 +180,7 @@ const NewPassword = () => {
                             />
                         </th>
                     </tr>
-                    <tr>
+                    <tr className='celda'>
                         <th>
                         <SecurityCheck text={value}></SecurityCheck>
                         </th>

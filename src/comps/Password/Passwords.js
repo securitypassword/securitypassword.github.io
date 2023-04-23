@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react';
-import Auth, { auth } from '../Tokens/Auth';
+import { auth } from '../Tokens/Auth';
 import NavbarPass from './NavbarPass';
 import GetPasswords from './GetPasswords';
 
