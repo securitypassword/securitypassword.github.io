@@ -1,10 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
+import { useState } from 'react';
 import './Password.css';
 
 var id = ""
 
 const Password = (parms) => {
+    const [passwordShown, setPasswordShown] = useState(false);
     console.log("Password parms",parms)
     //crear un elemento de contraseña a partir de parametros
     id = parms.id
@@ -30,20 +32,29 @@ const Password = (parms) => {
                     {parms.url != "" && (
                     <th className='celda'>
                         <button onClick={() => {window.location.href = parms.url}} className='passwordButtonGo'>Go</button>
+                        <button onClick={() => {navigator.clipboard.writeText(parms.url)}}>Copiar URL</button>
                     </th>
                     )}
                     {parms.name != "" && (
                     <th className='celda'>
                         {parms.name}
+                        <button onClick={() => {navigator.clipboard.writeText(parms.name)}}>Copiar</button>
                     </th>
                     )}
                     {parms.username != "" && (
                     <th className='celda'>
                         {parms.username}
+                        <button onClick={() => {navigator.clipboard.writeText(parms.username)}}>Copiar</button>
+                    </th>
+                    )}
+                    {passwordShown != "" && (
+                    <th className='celda'>
+                        {parms.value}
                     </th>
                     )}
                     <th className='celda'>
-                        {parms.value}
+                        <button onClick={() => {setPasswordShown(!passwordShown)}}>Mostrar Contraseña</button>
+                        <button onClick={() => {navigator.clipboard.writeText(parms.value)}}>Copiar Contraseña</button>
                     </th>
                 </tr>
             </table>

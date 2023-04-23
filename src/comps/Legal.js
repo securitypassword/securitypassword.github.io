@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 const Legal = () => {
+    const navigate = useNavigate()
     const act = () => {
-        useNavigate("/");
+        navigate();
     }
     return(
         <>
