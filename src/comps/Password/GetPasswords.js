@@ -73,20 +73,11 @@ const GetPasswords = () => {
                 {
                     pass.map((password) =>
                     <>
-                        <table className='tabla'>
-                            <tr>
-                                <th>
                                 <Password key={password.key} name={password.name} username={password.username}
                                     url={password.url} value={password.value}
                                     id={password.id} >
+                                        <EditButton id={password.id}></EditButton>
                                 </Password>
-                        
-                                </th>
-                                <th>
-                                    <EditButton id={password.id}></EditButton>
-                                </th>
-                            </tr>
-                        </table>
                     </>
                     )
                 }

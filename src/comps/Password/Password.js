@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './Password.css';
 
@@ -24,6 +24,9 @@ const Password = (parms) => {
                     <th>Nombre de usuario</th>
                     )}
                     <th>Contraseña</th>
+                    {parms.children != "" && (
+                    <th></th>
+                    )}
                 </tr>
                 
                 <tr>
@@ -57,7 +60,11 @@ const Password = (parms) => {
                         passwordShown ? "Ocultar" : "Mostrar"}</button>
                         <button onClick={() => {navigator.clipboard.writeText(parms.value)}}>Copiar</button>
                     </th>
+                    {parms.children != "" && (
+                    <th>{parms.children}</th>
+                    )}
                 </tr>
+                
             </table>
         </div>
         </>
