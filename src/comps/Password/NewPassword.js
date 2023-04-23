@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import axios from "../../api/axios"
 import "./Password.css"
-import { isMobile } from 'react-device-detect';
+import { isMobile } from '../Device';
 
 //const NEW_REG_URL = process.env.API_URL + "/setReg"
 const NEW_REG_URL = "https://securitypassword.cyclic.app/setReg"
@@ -120,7 +120,7 @@ const NewPassword = () => {
                     </tr>
                     </>
                 )}
-                {!isMobile() && (
+                {isMobile() && (
                     <>
                     <tr>
                         <th>
