@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate} from 'react-router-dom';
 import { useState } from 'react';
 import './Password.css';
 
@@ -9,7 +8,6 @@ const Password = (parms) => {
     const [passwordShown, setPasswordShown] = useState(false);
     console.log("Password parms",parms)
     //crear un elemento de contraseña a partir de parametros
-    id = parms.id
     return(
         <>
         <br></br>

@@ -1,8 +1,6 @@
 import React from "react";
-import Logout from "../User/Logout";
 import { Link } from "react-router-dom";
 import "../Navbar/Navbar.css"
-import NavbarPass from "../Password/NavbarPass";
 
 const NavbarAdmin = () => {
     return(

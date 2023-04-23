@@ -59,12 +59,12 @@ const GetPasswords = () => {
     }
     //obtener y guardar contraseñas al iniciar
 	useEffect(() => {
-        const resp = getPass().then(function(resp){
+        getPass().then(function(resp){
             setPass(resp)
             return resp
         })
 
-    }, [])
+    }, [getPass])
     //por cada elemento en la lista de contraseñas mostrar un elemento password
     return(
         <>
