@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Generator from "./Generator"
 import NavbarPass from './NavbarPass';
 import SecurityCheck from './SecurityCheck';
@@ -45,10 +45,15 @@ const NewPassword = () => {
     const [value, setValue] = useState()
     const [url, setUrl] = useState()
     const [error, setError] = useState()
+    const [mobile, setMobile] = useState()
     
     const save = async () => {
         await savePass(name,username,value,url,setError,navigate)
     }
+
+    useEffect(() => {
+        setMobile(isMobile())
+    })
 
     return(
         <>
@@ -61,7 +66,7 @@ const NewPassword = () => {
 
         <div className='center'>
             <table className='tab'>
-                {!isMobile() && (
+                {!mobile() && (
                     <>
                     <tr>
                         <th>
@@ -119,7 +124,7 @@ const NewPassword = () => {
                     </tr>
                     </>
                 )}
-                {isMobile() && (
+                {mobile() && (
                     <>
                     <tr>
                         <th>
