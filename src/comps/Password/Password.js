@@ -31,7 +31,9 @@ const Password = (parms) => {
                 <tr>
                     {parms.url != "" && (
                     <th className='celda'>
-                        <button onClick={() => {window.location.href = parms.url}} className='passwordButtonGo'>Go</button>
+                        <button onClick={() => {
+                            window.open('https://codingbeautydev.com', '_blank', 'noreferrer')}
+                            } className='passwordButtonGo'>Go</button>
                         <button onClick={() => {navigator.clipboard.writeText(parms.url)}}>Copiar URL</button>
                     </th>
                     )}
