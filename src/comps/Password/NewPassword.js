@@ -67,7 +67,7 @@ const NewPassword = () => {
         <p>{error}</p>
 
         <div className='center'>
-            <table className='tab'>
+            <table className='table'>
                 {!mobile && (
                     <>
                     <tr>
