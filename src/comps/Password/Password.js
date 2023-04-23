@@ -55,7 +55,8 @@ const Password = (parms) => {
                     </th>
                     )}
                     <th className='celda'>
-                        <button onClick={() => {setPasswordShown(!passwordShown)}}>Mostrar</button>
+                        <button onClick={() => {setPasswordShown(!passwordShown)}}>{
+                        passwordShown ? "Ocultar" : "Mostrar"}</button>
                         <button onClick={() => {navigator.clipboard.writeText(parms.value)}}>Copiar</button>
                     </th>
                 </tr>
