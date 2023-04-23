@@ -79,7 +79,6 @@ const EditPassword = () => {
     //formulario para edicion
     return(
         <>
-        <Auth></Auth>
         <NavbarPass></NavbarPass>
         <p>{error}</p>
         <br></br>
@@ -144,8 +143,6 @@ const EditPassword = () => {
                     <SecurityCheck text={value}></SecurityCheck>
                 </th>
             </tr>
-        </table>
-        <table className='tab'>
             <tr>
                 <th>
                     <button className='boton12' onClick={save}>Save Edit</button>

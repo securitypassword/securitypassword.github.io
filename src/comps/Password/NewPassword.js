@@ -52,7 +52,6 @@ const NewPassword = () => {
 
     return(
         <>
-        <Auth></Auth>
         <NavbarPass></NavbarPass>
 
         <Generator value={value} setValue={setValue}></Generator>

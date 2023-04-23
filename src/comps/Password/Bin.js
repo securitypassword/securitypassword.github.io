@@ -60,7 +60,6 @@ const Bin = () => {
     //por cada elemento en la papelera renderizar 1 elemento de contraseña
     return(
         <>
-            <Auth></Auth>
             <NavbarPass></NavbarPass>
             <br></br>
             <br></br>
