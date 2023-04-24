@@ -28,7 +28,7 @@ const Paths = () => {
                         <Route path='/settings' element={<Settings></Settings>}></Route>{/*ya*/}
                         <Route path='/register' element={<Register></Register>}></Route>{/*ya*/}
                         <Route path='/passwords' element={<Passwords></Passwords>}></Route>{/*ya*/}
-                        <Route path='/newpassword' element={<Passwords></Passwords>}></Route>{/*ya*/}
+                        <Route path='/newpassword' element={<NewPassword></NewPassword>}></Route>{/*ya*/}
                         <Route path='/changePassword/:token' element={<Question></Question>}></Route>
                         <Route path='/editpassword/:reg_id' element={<EditPassword></EditPassword>}></Route>
                         <Route path='/editpassword' element={<EditPassword></EditPassword>}></Route>

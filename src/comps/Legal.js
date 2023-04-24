@@ -1,13 +1,11 @@
-import { useNavigate } from "react-router-dom";
+
+import Navbar from "./Navbar/Navbar";
+
 const Legal = () => {
-    const navigate = useNavigate()
-    const action = () => {
-        navigate("/");
-    }
     return(
         <>
+        <Navbar />
         aviso legal aviso legal
-        <button onClick={action}>Volver</button>
         </>
     )
 }

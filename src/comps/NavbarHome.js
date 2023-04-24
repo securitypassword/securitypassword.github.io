@@ -12,6 +12,12 @@ const NavbarHome = () => {
             </Link>
 
             <Link
+            to='/legal'
+            className='nav-links'>
+            Legal
+            </Link>
+
+            <Link
             to='/register'
             className='nav-links'>
             Registrarse
