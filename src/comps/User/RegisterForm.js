@@ -250,7 +250,7 @@ const RegisterForm = () => {
                                 </p>
                                 <p>
                                     <br></br>
-                                    Acepto los <a onclick={window.open("https://securitypassword.github.io/#/legal", '_blank', 'noreferrer')}> Terminos y Condiciones</a>
+                                    Acepto los <a href={"https://securitypassword.github.io/#/legal"}> Terminos y Condiciones</a>
                                     <BotonCheck seleccionado={accept} click={toggleAccept} />
                                 </p>
 
