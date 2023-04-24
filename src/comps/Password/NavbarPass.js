@@ -15,6 +15,7 @@ const NavbarPass = () => {
         }
         return 1
     }
+    
     //obtener y guardar contraseñas al iniciar
 	useEffect(() => {
         auth().then(function(resp){

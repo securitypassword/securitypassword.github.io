@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from '../../api/axios';
 import { Button } from '../Button/Button';
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import { BotonCheck } from '../Botones/botones';
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -50,6 +51,8 @@ const RegisterForm = () => {
     const [validMatch, setValidMatch] = useState(false);
     const [matchFocus, setMatchFocus] = useState(false);
 
+    const [accept, setAccept] = useState(false);
+
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
@@ -74,6 +77,12 @@ const RegisterForm = () => {
     useEffect(() => {
         setErrMsg('');
     }, [user, pwd, matchPwd])
+
+
+
+	const toggleAccept = () => {
+		setAccept(!accept);
+	}
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -239,8 +248,13 @@ const RegisterForm = () => {
                                     <FontAwesomeIcon icon={faInfoCircle} />
                                     Las contraseñas deben coincidir.
                                 </p>
+                                <p>
+                                    <br></br>
+                                    Acepto los <a onclick={window.open("https://securitypassword.github.io/#/legal", '_blank', 'noreferrer')}> Terminos y Condiciones</a>
+                                    <BotonCheck seleccionado={accept} click={toggleAccept} />
+                                </p>
 
-                                <button disabled={!validName || !validPwd || !validMatch ? true : false}>Registrarse</button>
+                                <button disabled={!validName || !validPwd || !validMatch || !accept ? true : false}>Registrarse</button>
                             </form>
                             <p>
                                 Ya tienes cuenta?<br />
