@@ -1,19 +1,27 @@
 import React, { useEffect } from 'react';
+import { authquery } from '../Tokens/Auth';
 import { useNavigate } from 'react-router-dom';
 import { Outlet, Link } from "react-router-dom";
 import "./Password.css"
 
 const NavbarPass = () => {
     const navigate = useNavigate();
-    useEffect(() => {
-        const valid = authquery().then(function(valid){
+    const auth = async () => {
+        const valid = await authquery().then(function(valid){
             return valid
         })
-        let resp = ""
         if(!valid){
             navigate("/logout");
         }
-    })
+        return 1
+    }
+    //obtener y guardar contraseñas al iniciar
+	useEffect(() => {
+        auth().then(function(resp){
+            return resp
+        })
+
+    }, [auth])
     return(
         <>
         <br></br>
