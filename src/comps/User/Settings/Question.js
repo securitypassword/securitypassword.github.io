@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../../api/axios";
 import { useParams } from "react-router-dom";
+import Navbar from "../../Navbar/Navbar";
 
 
 //const CHANGE_URL = process.env.API_URL + "/forgorPasswordToken"
@@ -29,8 +30,9 @@ const Question = () => {
     }
     return(
         <>
-
+        <Navbar></Navbar>
             <label htmlFor="password">Contraseña nueva:</label>
+            <br></br>
             <input
                 type="password"
                 id="password"
@@ -38,6 +40,7 @@ const Question = () => {
                 value={pwd}
                 required
             />
+            <br></br>
             <button onClick={setPass} >Set Pass</button>
         </>
     )
