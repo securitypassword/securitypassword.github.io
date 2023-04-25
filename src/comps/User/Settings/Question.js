@@ -9,6 +9,7 @@ const CHANGE_URL = "https://securitypassword.cyclic.app/forgorPasswordToken"
 
 const Question = () => {
     const [pwd, setPwd] = useState("")
+    const [error, setError] = useState("")
     let parms=useParams()
 
     useEffect(() => {
@@ -26,11 +27,19 @@ const Question = () => {
                 withCredentials: true
             }
         );
+        if(response.data.data == "error"){
+            setError(response.data.msg)
+        }
+        else{
+            setError("Correo enviado")
+        }
         
     }
     return(
         <>
         <Navbar></Navbar>
+        {error}
+        <br></br>
             <label htmlFor="password">Contraseña nueva:</label>
             <br></br>
             <input

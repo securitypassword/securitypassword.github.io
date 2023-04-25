@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "../../../api/axios";
 import { useParams } from "react-router-dom";
 import Navbar from "../../Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 
 //const CHANGE_URL = process.env.API_URL + "/forgorPasswordToken"
@@ -10,6 +11,7 @@ const CHANGE_URL = "https://securitypassword.cyclic.app/forgorPassword"
 const ChangePass = () => {
     const [name, setName] = useState("")
     const [error, setError] = useState("")
+    const navigate = useNavigate()
     let parms=useParams()
 
     useEffect(() => {
@@ -29,6 +31,9 @@ const ChangePass = () => {
         );
         if(response.data.data == "error"){
             setError(response.data.msg)
+        }
+        else{
+            navigate("/")
         }
         
     }
