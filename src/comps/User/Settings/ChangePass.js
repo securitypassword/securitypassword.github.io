@@ -9,6 +9,7 @@ const CHANGE_URL = "https://securitypassword.cyclic.app/forgorPassword"
 
 const ChangePass = () => {
     const [name, setName] = useState("")
+    const [error, setError] = useState("")
     let parms=useParams()
 
     useEffect(() => {
@@ -26,6 +27,9 @@ const ChangePass = () => {
                 withCredentials: true
             }
         );
+        if(response.data.data == "error"){
+            setError(response.data.msg)
+        }
         
     }
     return(
@@ -34,6 +38,7 @@ const ChangePass = () => {
         <p>
             Se le enviará un email para continuar con el cambio de contraseña
         </p>
+        <p>{error}</p>
             <label htmlFor="name">Nombre:</label>
             <br></br>
             <input
