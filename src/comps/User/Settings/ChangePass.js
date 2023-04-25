@@ -5,7 +5,7 @@ import Navbar from "../../Navbar/Navbar";
 
 
 //const CHANGE_URL = process.env.API_URL + "/forgorPasswordToken"
-const CHANGE_URL = "https://securitypassword.cyclic.app/forgorPasswordToken"
+const CHANGE_URL = "https://securitypassword.cyclic.app/forgorPassword"
 
 const ChangePass = () => {
     const [name, setName] = useState("")
@@ -14,7 +14,7 @@ const ChangePass = () => {
     useEffect(() => {
         
     },[parms])
-    const setPass = async () => {
+    const email = async () => {
         const data = {
             token: parms.token,
             name:name
@@ -44,7 +44,7 @@ const ChangePass = () => {
                 required
             />
             <br></br>
-            <button onClick={setName} >Enviar email</button>
+            <button onClick={email} >Enviar email</button>
         </>
     )
 }
