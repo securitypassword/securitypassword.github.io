@@ -25,6 +25,11 @@ const Navbar=()=>{
                 </Link>
               </th>
               <th>
+                <Link to='/legal' className='nav-links' onClick={closeMobileMenu}>
+                Legal
+                </Link>
+              </th>
+              <th>
                 <Link to='/register' className='nav-links' onClick={closeMobileMenu}>
                 Registrarse
                 </Link>

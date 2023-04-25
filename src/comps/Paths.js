@@ -8,6 +8,7 @@ import NewPassword from './Password/NewPassword';
 import Admin from './Admin/Admin';
 import Register from './User/Register';
 import EditPassword from './Password/EditPassword';
+import ChangePass from './User/Settings/ChangePass';
 import Legal from './Legal';
 import Bin from './Password/Bin';
 import Settings from './User/Settings/Settings';
@@ -29,7 +30,8 @@ const Paths = () => {
                         <Route path='/register' element={<Register></Register>}></Route>{/*ya*/}
                         <Route path='/passwords' element={<Passwords></Passwords>}></Route>{/*ya*/}
                         <Route path='/newpassword' element={<NewPassword></NewPassword>}></Route>{/*ya*/}
-                        <Route path='/changePassword/:token' element={<Question></Question>}></Route>
+                        <Route path='/changePassword/:token' element={<Question></Question>}></Route>{/*ya*/}
+                        <Route path='/changePassword/' element={<ChangePass></ChangePass>}></Route>{/*ya*/}
                         <Route path='/editpassword/:reg_id' element={<EditPassword></EditPassword>}></Route>
                         <Route path='/editpassword' element={<EditPassword></EditPassword>}></Route>
                         <Route path='/admin' element={<Admin></Admin>}></Route>{/**/}
