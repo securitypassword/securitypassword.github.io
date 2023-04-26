@@ -114,14 +114,14 @@ const LoginForm = () => {
                 </div>*/}
             </form>
             <p>
+                <a href="https://securitypassword.github.io/#/changePassword">Olvidé mi contraseña</a>    
+            </p>  
+            <p>
                 No tienes cuenta?<br />
                 <span className="line">
                     <Link to="/register">Registrate aquí</Link>
                 </span>
-            </p>
-            <p>
-                <a href="https://securitypassword.github.io/#/changePassword">Olvidé mi contraseña</a>    
-            </p>   
+            </p> 
             </section>
         </center>
         </>
