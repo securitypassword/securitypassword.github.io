@@ -7,6 +7,7 @@ import { useState } from "react";
 import axios from "../../api/axios"
 import "./Password.css"
 import { isMobile } from '../Device';
+import ReactGridLayout from 'react-grid-layout';
 
 //const NEW_REG_URL = process.env.API_URL + "/setReg"
 const NEW_REG_URL = "https://securitypassword.cyclic.app/setReg"
@@ -68,128 +69,53 @@ const NewPassword = () => {
         <p>{error}</p>
 
         <div className='center'>
-            <table className='table'>
-                {!mobile && (
-                    <>
-                    <tr>
-                        <th className='celda'>
-                            <input
-                                type="text"
-                                id="name"
-                                autoComplete="off"
-                                onChange={(e) => setName(e.target.value)}
-                                value={name}
-                                required
-                                placeholder='nombre de contraseña'
-                            />
-                        </th>
-                        <th className='celda'>
-                            <input
-                                type="text"
-                                id="username"
-                                autoComplete="off"
-                                onChange={(e) => setUsername(e.target.value)}
-                                value={username}
-                                required
-                                placeholder='nombre de usuario'
-                            />
-                        </th>
-                        <th className='celda'>
-                            <input
-                                type="text"
-                                id="url"
-                                autoComplete="off"
-                                onChange={(e) => setUrl(e.target.value)}
-                                value={url}
-                                required
-                                placeholder='url'
-                            />
-                        </th>
-                        <th className='celda'>
-                            <input
-                                type="text"
-                                id="value"
-                                autoComplete="off"
-                                onChange={(e) => setValue(e.target.value)}
-                                value={value}
-                                required
-                                placeholder='contraseña'
-                            />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th>
-                        <SecurityCheck text={value}></SecurityCheck>
-                        </th>
-                    </tr>
-                    </>
-                )}
-                {mobile && (
-                    <>
-                    <tr>
-                        <th className='celda'>
-                            <input
-                                type="text"
-                                id="name"
-                                autoComplete="off"
-                                onChange={(e) => setName(e.target.value)}
-                                value={name}
-                                required
-                                placeholder='nombre de contraseña'
-                            />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th className='celda'>
-                            <input
-                                type="text"
-                                id="username"
-                                autoComplete="off"
-                                onChange={(e) => setUsername(e.target.value)}
-                                value={username}
-                                required
-                                placeholder='nombre de usuario'
-                            />
-                        </th>
-                    </tr>
-                    <tr className='celda'>
-                        <th>
-                            <input
-                                type="text"
-                                id="url"
-                                autoComplete="off"
-                                onChange={(e) => setUrl(e.target.value)}
-                                value={url}
-                                required
-                                placeholder='url'
-                            />
-                        </th>
-                    </tr>
-                    <tr className='celda'>
-                        <th>
-                            <input
-                                type="text"
-                                id="value"
-                                autoComplete="off"
-                                onChange={(e) => setValue(e.target.value)}
-                                value={value}
-                                required
-                                placeholder='contraseña'
-                            />
-                        </th>
-                    </tr>
-                    <tr className='celda'>
-                        <th>
-                        <SecurityCheck text={value}></SecurityCheck>
-                        </th>
-                    </tr>
-                    </>
-                )}
-            </table>
-            
+            <ReactGridLayout>
+                <div key="1">
+                    <input
+                        type="text"
+                        id="name"
+                        autoComplete="off"
+                        onChange={(e) => setName(e.target.value)}
+                        value={name}
+                        required
+                        placeholder='nombre de contraseña'
+                    />
+                    </div>
+                    <div key="2">
+                    <input
+                        type="text"
+                        id="username"
+                        autoComplete="off"
+                        onChange={(e) => setUsername(e.target.value)}
+                        value={username}
+                        required
+                        placeholder='nombre de usuario'
+                    />
+                    </div>
+                    <div key="3">
+                    <input
+                        type="text"
+                        id="url"
+                        autoComplete="off"
+                        onChange={(e) => setUrl(e.target.value)}
+                        value={url}
+                        required
+                        placeholder='url'
+                    />
+                    </div>
+                    <div key="4">
+                    <input
+                        type="text"
+                        id="value"
+                        autoComplete="off"
+                        onChange={(e) => setValue(e.target.value)}
+                        value={value}
+                        required
+                        placeholder='contraseña'
+                    />
+                    <SecurityCheck text={value}></SecurityCheck>
+                    </div>
+            </ReactGridLayout>
             <br></br>
             <button className='boton12' onClick={save} title="Save">Save</button>
         </div>
