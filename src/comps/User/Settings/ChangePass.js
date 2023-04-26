@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import Navbar from "../../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 
-
 //const CHANGE_URL = process.env.API_URL + "/forgorPasswordToken"
 const CHANGE_URL = "https://securitypassword.cyclic.app/forgorPassword"
 
@@ -40,6 +39,7 @@ const ChangePass = () => {
     return(
         <>
         <Navbar></Navbar>
+        <center>
         <p>
             Se le enviará un email para continuar con el cambio de contraseña
         </p>
@@ -55,6 +55,7 @@ const ChangePass = () => {
             />
             <br></br>
             <button onClick={email} >Enviar email</button>
+            </center>
         </>
     )
 }

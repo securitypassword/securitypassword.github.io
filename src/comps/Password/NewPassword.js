@@ -63,6 +63,7 @@ const NewPassword = () => {
 
         <Generator value={value} setValue={setValue}></Generator>
         
+        <center>
         <br></br>
         <p>{error}</p>
 
@@ -192,6 +193,7 @@ const NewPassword = () => {
             <br></br>
             <button className='boton12' onClick={save} title="Save">Save</button>
         </div>
+        </center>
         
         </>
     )

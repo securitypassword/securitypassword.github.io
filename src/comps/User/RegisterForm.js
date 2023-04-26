@@ -9,9 +9,19 @@ import { BotonCheck } from '../Botones/botones';
 
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
-const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+export const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const REGISTER_URL = 'https://securitypassword.cyclic.app/register';
+
+export const PassNote = () => {
+    return(
+        <>
+        Longitud de 8 a 24 caracteres.<br />
+        Debe incluir una mayuscula, una minuscula, un numero y un caracter especial.<br />
+        Caracteres especiales permitidos: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
+        </>
+    )
+}
 
 const RegisterForm = () => {
     const navigate = useNavigate();
@@ -222,9 +232,7 @@ const RegisterForm = () => {
                                 />
                                 <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
                                     <FontAwesomeIcon icon={faInfoCircle} />
-                                    Longitud de 8 a 24 caracteres.<br />
-                                    Debe incluir una mayuscula, una minuscula, un numero y un caracter especial.<br />
-                                    Caracteres especiales permitidos: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
+                                    <PassNote></PassNote>
                                 </p>
 
 
