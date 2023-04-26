@@ -54,7 +54,7 @@ const Question = () => {
                 required
             />
             {!pwdValid && (
-            <p id="pwdnote">
+            <p id="pwdnote" className="instructions">
                 <PassNote></PassNote>
             </p>
             )}
