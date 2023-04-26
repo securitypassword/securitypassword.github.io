@@ -26,6 +26,7 @@ const NavbarPass = () => {
     return(
         <>
         <br></br>
+        <center>
         <table className='table'>
             <th className='celda'>
                 <Link
@@ -64,6 +65,7 @@ const NavbarPass = () => {
             </th>
         </table>
         <Outlet></Outlet>
+        </center>
         </>
     )
 }
