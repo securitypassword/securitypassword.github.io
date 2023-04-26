@@ -69,7 +69,7 @@ const NewPassword = () => {
         <p>{error}</p>
 
         <div className='center'>
-            <ReactGridLayout>
+            <ReactGridLayout cols={4}>
                 <div key="1">
                     <input
                         type="text"
