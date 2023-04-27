@@ -69,7 +69,6 @@ const NewPassword = () => {
         <p>{error}</p>
 
         <div className='center'>
-            <ReactGridLayout cols={4}>
                 <div key="1">
                     <input
                         type="text"
@@ -115,7 +114,6 @@ const NewPassword = () => {
                     />
                     <SecurityCheck text={value}></SecurityCheck>
                     </div>
-            </ReactGridLayout>
             <br></br>
             <button className='boton12' onClick={save} title="Save">Save</button>
         </div>
