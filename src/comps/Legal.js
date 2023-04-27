@@ -12,6 +12,7 @@ const Legal = () => {
     return(
         <>
         <Navbar />
+        <div style={{background: `linear-gradient(#212139, #252b2e)`}}>
             <div>
                 <br></br>
                 <center>
@@ -117,6 +118,7 @@ const Legal = () => {
                 <br/>
                 <p>Nuestras medidas de seguridad consisten principalmente en la gestión por medio de tokens de validación, impidiendo a un usuario a acceder a información que no le corresponda, también se usa cifrado a la hora del transporte así como directamente en la base de datos, toda la información se encuentra cifrada.</p>
             </div>
+        </div>
         </>
     )
 }
