@@ -6,12 +6,16 @@ import axios from '../../api/axios';
 import { Link, Outlet } from "react-router-dom";
 import Navbar from '../Navbar/Navbar';
 import RegisterForm from './RegisterForm';
+import image from '../../imag/backg1.jpg';
 
 const Register = () => {
     return (
         <>
         <Navbar />
-        <RegisterForm />
+        <div style={{ backgroundImage:`url(${image})`, width:'100%', height:'100%'}}>
+            <RegisterForm />
+        </div>
+        
         </>
     )
 }
