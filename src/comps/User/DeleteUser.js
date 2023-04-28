@@ -6,7 +6,8 @@ import { useNavigate } from 'react-router-dom';
 const DELETE_URL = "https://securitypassword.cyclic.app/deleteUser"
 
 //solicitar al api eliminacion de la cuenta
-export const deleteUser = async (password, setError) => {
+export const deleteUser = async (password, setError, navigate) => {
+    let respuesta = false;
     let token = window.sessionStorage.getItem("token")
     const query = {
         token:token,
@@ -21,12 +22,13 @@ export const deleteUser = async (password, setError) => {
     );
     //redireccionar al inicio en caso de exito
     if(resp.data.data=="success"){
-        const navigate = useNavigate()
+        respuesta = true;
         navigate("/")
     }
     else{
-        setError(resp.data.msg)
+        setError(resp.data.msg);
     }
+    return respuesta;
 }
 
 
@@ -36,9 +38,12 @@ const DeleteUser = () => {
     
     const [error, setError] = useState('');
 
+    const navigate = useNavigate()
     const action = async () => {
-        await deleteUser(paswword, setError);
-    };
+            await deleteUser(paswword, setError, navigate)
+        };
+
+    
 
     return (
         <>
