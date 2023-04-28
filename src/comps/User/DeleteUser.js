@@ -21,7 +21,8 @@ export const deleteUser = async (password, setError) => {
     );
     //redireccionar al inicio en caso de exito
     if(resp.data.data=="success"){
-        useNavigate("/")
+        const navigate = useNavigate()
+        navigate("/")
     }
     else{
         setError(resp.data.msg)
