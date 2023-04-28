@@ -53,6 +53,7 @@ const Bin = () => {
             setPass(resp)
             return resp
         })
+    }
         
 	useEffect(() => {
         action()
