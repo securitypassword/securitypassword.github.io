@@ -49,6 +49,9 @@ const Auth = () => {
     useEffect(() => {
         auth()
     }, [])
+    return (
+        <></>
+    )
 }
 
 export default Auth

@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { authquery } from '../Tokens/Auth';
+import Auth from '../Tokens/Auth';
 import { useNavigate } from 'react-router-dom';
 import { Outlet, Link } from "react-router-dom";
 import "./Password.css"
 
 const NavbarPass = () => {
     const navigate = useNavigate();
+    /*
     const auth = async () => {
         const valid = await authquery().then(function(valid){
             return valid
@@ -23,8 +25,10 @@ const NavbarPass = () => {
         })
 
     }, [auth])
+    */
     return(
         <>
+        <Auth></Auth>
         <br></br>
         <center>
         <table className='table'>
