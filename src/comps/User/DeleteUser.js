@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRef, useState, useEffect } from 'react';
 import axios from '../../api/axios';
+import { useNavigate } from 'react-router-dom';
 //const DELETE_URL = process.env.API_URL + "/deleteUser"
 const DELETE_URL = "https://securitypassword.cyclic.app/deleteUser"
 
@@ -20,7 +21,7 @@ export const deleteUser = async (password, setError) => {
     );
     //redireccionar al inicio en caso de exito
     if(resp.data.data=="success"){
-        
+        useNavigate("/")
     }
     else{
         setError(resp.data.msg)
@@ -49,7 +50,7 @@ const DeleteUser = () => {
                 value={paswword}
                 placeholder = "Contraseña Maestra"
             />
-            <button>Eliminar Cuenta</button>
+            <button onClick={action}>Eliminar Cuenta</button>
         </>
         )      
 }
