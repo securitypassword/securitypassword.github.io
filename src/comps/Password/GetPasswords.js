@@ -34,12 +34,7 @@ const GetPasswords = () => {
     const [pass, setPass] = useState(ramPass)
     const [error, setError] = useState("")
     //obtener contraseñas
-    const getPass = async () => {
-        const valid = await authquery().then(function(valid){
-            return valid
-        })
-        let resp = ""
-        if(valid){
+    const getPass = async () => {        
             const passwords = await getpass().then(function(passwords){
                 return passwords.data
             })
@@ -52,9 +47,6 @@ const GetPasswords = () => {
             resp=ramPass
             setPass(ramPass)
             setError(" ")
-        }else{
-            navigate("/logout");
-        }
         return resp
     }
     //obtener y guardar contraseñas al iniciar
