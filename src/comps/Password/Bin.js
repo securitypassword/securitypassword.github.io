@@ -48,13 +48,15 @@ const Bin = () => {
         return resp
     }
     //obtener y guardar la papelera al iniciar
-	useEffect(() => {
+    const action = () =>{
         const resp = getBin().then(function(resp){
             setPass(resp)
             return resp
         })
-
-    }, [getBin, setPass])
+        
+	useEffect(() => {
+        action()
+    }, [])
     //por cada elemento en la papelera renderizar 1 elemento de contraseña
     return(
         <>
