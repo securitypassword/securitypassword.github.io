@@ -6,10 +6,11 @@ import image from '../../imag/backg1.jpg';
 const Login = () => {
     return (
         <>
-        <Navbar />
-        <div style={{ backgroundImage:`url(${image})`, width:'100%', height:'100%'}}>
+        <div style={{background: `linear-gradient(#01013c, #212139)`}}>
+            <Navbar />
             <LoginForm />
         </div>
+        
         </>        
     )
 }
