@@ -1,11 +1,9 @@
 import React, {Fragment} from 'react';
-import {authquery} from '../Tokens/Auth';
 import axios from "../../api/axios"
 import Password from './Password';
 import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
 import EditButton from './EditButton';
-import { useNavigate } from 'react-router-dom';
 import './Password.css';
 
 //const GET_REGS_URL = process.env.API_URL + "/getActiveRegs"
@@ -29,7 +27,6 @@ export const getpass = async () => {
 
 //principal
 const GetPasswords = () => {
-    const navigate = useNavigate();
     let ramPass= []
     const [pass, setPass] = useState(ramPass)
     const [error, setError] = useState("")
@@ -52,6 +49,7 @@ const GetPasswords = () => {
 	const action = () => {
         getPass().then(function(resp){
             setPass(resp)
+            console.log(resp)
             return resp
         })
 
