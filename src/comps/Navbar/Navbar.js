@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { Button } from '../Button/Button';
 import { Outlet, Link } from 'react-router-dom';
 import './Navbar.css';
@@ -12,6 +12,7 @@ const Navbar=()=>{
   const handleClick = () => setClick(!click);
   //if the menu is closed, the button is not clicked
   const closeMobileMenu = () => setClick(false);
+
 
   return (
     <>

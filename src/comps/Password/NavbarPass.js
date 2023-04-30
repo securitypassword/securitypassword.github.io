@@ -7,7 +7,7 @@ import "./Password.css"
 
 const NavbarPass = () => {
     const navigate = useNavigate();
-    /*
+    
     const auth = async () => {
         const valid = await authquery().then(function(valid){
             return valid
@@ -24,11 +24,10 @@ const NavbarPass = () => {
             return resp
         })
 
-    }, [auth])
-    */
+    }, [])
+    
     return(
         <>
-        <Auth></Auth>
         <br></br>
         <center>
         <table className='table'>
