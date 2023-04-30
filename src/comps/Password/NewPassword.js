@@ -62,63 +62,66 @@ const NewPassword = () => {
         <>
         <NavbarPass></NavbarPass>
 
-        <Generator value={value} setValue={setValue}></Generator>
-        
-        <center>
-        <br></br>
-        <p>{error}</p>
-
-        <div className='center'>
-                <div key="1">
-                    <input
-                        type="text"
-                        id="name"
-                        autoComplete="off"
-                        onChange={(e) => setName(e.target.value)}
-                        value={name}
-                        required
-                        placeholder='nombre de contraseña'
-                    />
-                    </div>
-                    <div key="2">
-                    <input
-                        type="text"
-                        id="username"
-                        autoComplete="off"
-                        onChange={(e) => setUsername(e.target.value)}
-                        value={username}
-                        required
-                        placeholder='nombre de usuario'
-                    />
-                    </div>
-                    <div key="3">
-                    <input
-                        type="text"
-                        id="url"
-                        autoComplete="off"
-                        onChange={(e) => setUrl(e.target.value)}
-                        value={url}
-                        required
-                        placeholder='url'
-                    />
-                    </div>
-                    <div key="4">
-                    <input
-                        type="text"
-                        id="value"
-                        autoComplete="off"
-                        onChange={(e) => setValue(e.target.value)}
-                        value={value}
-                        required
-                        placeholder='contraseña'
-                    />
-                    <SecurityCheck text={value}></SecurityCheck>
-                    </div>
-            <br></br>
-            <button className='boton12' onClick={save} title="Save">Save</button>
-        </div>
-        </center>
-        
+        <div 
+            style={{background: `linear-gradient(to bottom right, #212139, #45189f)`}}>
+            <Generator value={value} setValue={setValue}></Generator>
+            
+            <center>
+                <p>{error}</p>
+                <div className='center'>
+                        <div key="1">
+                            <input
+                                type="text"
+                                id="name"
+                                autoComplete="off"
+                                onChange={(e) => setName(e.target.value)}
+                                value={name}
+                                required
+                                placeholder='nombre de contraseña'
+                            />
+                        </div>
+                        <br/>
+                        <div key="2">
+                            <input
+                                type="text"
+                                id="username"
+                                autoComplete="off"
+                                onChange={(e) => setUsername(e.target.value)}
+                                value={username}
+                                required
+                                placeholder='nombre de usuario'
+                            />
+                        </div>
+                        <br/>
+                        <div key="3">
+                            <input
+                                type="text"
+                                id="url"
+                                autoComplete="off"
+                                onChange={(e) => setUrl(e.target.value)}
+                                value={url}
+                                required
+                                placeholder='url'
+                            />
+                        </div>
+                        <br/>
+                        <div key="4">
+                            <input
+                                type="text"
+                                id="value"
+                                autoComplete="off"
+                                onChange={(e) => setValue(e.target.value)}
+                                value={value}
+                                required
+                                placeholder='contraseña'
+                            />
+                            <SecurityCheck text={value}></SecurityCheck>
+                        </div>
+                        
+                    <button className='boton12' onClick={save} title="Save">Save</button>
+                </div>
+            </center>
+        </div>        
         </>
     )
 }
