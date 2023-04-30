@@ -13,6 +13,7 @@ var id = ""
 //solicitar a la api la eliminacion de una contraseña
 export const terPass = async (id, setError, navigate) => {
     let token = window.sessionStorage.getItem("token")
+    console.log("e")
     const query = {
         token:token,
         id:id
@@ -24,7 +25,6 @@ export const terPass = async (id, setError, navigate) => {
             withCredentials: true
         }
     );
-
     if(resp.data.data==='error'){
         setError(resp.data.msg)
     }
@@ -32,6 +32,7 @@ export const terPass = async (id, setError, navigate) => {
         navigate("/bin");
     }
 
+    return true
 }
 
 //principal
@@ -43,6 +44,7 @@ const TerPassword = (parms) => {
 
     const ter = async () => {
         await terPass(id, setError, navigate)
+        parms.action()
     }
 
     //boton para ejecutar la eliminacion

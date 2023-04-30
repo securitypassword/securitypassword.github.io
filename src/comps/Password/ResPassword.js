@@ -31,6 +31,7 @@ export const resPass = async (id, setError, navigate) => {
         navigate("/passwords")
     }
 
+    return true
 }
 
 //principal

@@ -73,7 +73,7 @@ const Bin = () => {
                         url={password.url} value={password.value}
                         id={password.id} >
                         <ResPassword id={password.id}></ResPassword>
-                        <TerPassword id={password.id}></TerPassword></Password>        
+                        <TerPassword id={password.id} action={action}></TerPassword></Password>        
                     </>
                     )
                 }
