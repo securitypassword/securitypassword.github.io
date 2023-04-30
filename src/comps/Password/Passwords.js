@@ -9,12 +9,13 @@ const Passwords = () => {
     }, [])
     return(
         <>
-       
+        <div 
+            style={{background: `linear-gradient(to bottom right, #212139, #45189f, #212139)`}}>
             <NavbarPass></NavbarPass>
             <br/><br/>
             <div>passwords</div>
             <GetPasswords></GetPasswords>
-        
+        </div>
         </>
     )
 }

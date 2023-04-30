@@ -12,7 +12,8 @@ const Legal = () => {
     return(
         <>
         <Navbar />
-        <div style={{background: `linear-gradient(#212139, #252b2e)`}}>
+        <div 
+            style={{background: `linear-gradient(to bottom right, #212139, #45189f, #212139)`}}>
             <div>
                 <br></br>
                 <center>

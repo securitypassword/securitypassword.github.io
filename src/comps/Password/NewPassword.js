@@ -60,10 +60,11 @@ const NewPassword = () => {
 
     return(
         <>
+        <div 
+            style={{background: `linear-gradient(to bottom right, #212139, #45189f, #212139)`}}>
         <NavbarPass></NavbarPass>
 
-        <div 
-            style={{background: `linear-gradient(to bottom right, #212139, #45189f)`}}>
+        
             <Generator value={value} setValue={setValue}></Generator>
             
             <center>

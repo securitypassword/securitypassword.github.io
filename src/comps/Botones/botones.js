@@ -81,9 +81,9 @@ const BtnGenerar = styled(Boton)`
 `;
 
 const BotonNoSeleccionado = styled(Boton)`
-	background: #33257E;
+	background: #224a8a;
 
 	&:hover {
-		background: #33257E;
+		background: #33496d;
 	}
 `;

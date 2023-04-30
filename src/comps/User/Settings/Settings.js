@@ -12,6 +12,7 @@ const Settings = () => {
         <>
         <NavbarPass></NavbarPass>
         <AutoDel></AutoDel>
+        <br/><br/><br/><br/>
         <DeleteUser/>
         </>
     )

@@ -12,7 +12,8 @@ const Register = () => {
     return (
         <>
         <Navbar />
-        <div style={{background: `linear-gradient(#01013c, #212139)`}}>
+        <div 
+            style={{background: `linear-gradient(to bottom right, #212139, #45189f, #212139)`}}>
             <RegisterForm />
         </div>
         
