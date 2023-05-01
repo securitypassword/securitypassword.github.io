@@ -9,12 +9,10 @@ const Passwords = () => {
     }, [])
     return(
         <>
-        
             <NavbarPass></NavbarPass>
             <br/><br/>
             <div>passwords</div>
             <GetPasswords></GetPasswords>
-        
         </>
     )
 }
