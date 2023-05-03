@@ -16,7 +16,7 @@ const Legal = () => {
             style={{background: `linear-gradient(to bottom right, #212139, #45189f, #212139)`}}>
             <div>
                 <br></br>
-                <center>
+                <center style={{marginTop: '150px'}}>
                     <h2>Terminos de uso y condiciones</h2>
                 </center>
             </div>
