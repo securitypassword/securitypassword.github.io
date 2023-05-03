@@ -10,9 +10,10 @@ const Passwords = () => {
     return(
         <>
             <NavbarPass></NavbarPass>
-            <br/><br/>
-            <div>passwords</div>
-            <GetPasswords></GetPasswords>
+            <div style={{marginTop: '150px'}}>
+                <div>passwords</div>
+                <GetPasswords></GetPasswords>
+            </div>
         </>
     )
 }

@@ -4,6 +4,7 @@ import Auth from '../Tokens/Auth';
 import { useNavigate } from 'react-router-dom';
 import { Outlet, Link } from "react-router-dom";
 import "./Password.css"
+import './nav2.css'
 
 const NavbarPass = () => {
     const navigate = useNavigate();
@@ -28,7 +29,55 @@ const NavbarPass = () => {
     
     return(
         <>
-        <br></br>
+        <div class="pure-container" data-effect="pure-effect-slide">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left">
+                <span class="pure-toggle-icon"></span>
+            </label>
+
+            <div class="pure-drawer" data-position="left">
+                <br/><br/><br/><br/><br/><br/>
+                <table>
+                    <tr className='celda'>
+                        <Link
+                        to='/newpassword'
+                        className='nav-links'>
+                        Nueva contraseña
+                        </Link>
+                    </tr>
+                    <tr className='celda'>
+                        <Link
+                        to='/passwords'
+                        className='nav-links'>
+                        Contraseñas
+                        </Link>
+                    </tr>
+                    <tr className='celda'>
+                        <Link
+                        to='/bin'
+                        className='nav-links'>
+                        Papelera
+                        </Link>
+                    </tr>
+                    <tr className='celda'>
+                        <Link
+                        to='/settings'
+                        className='nav-links'>
+                        Configuraciones
+                        </Link>
+                    </tr>
+                    <br/><br/><br/><br/>
+                    <tr className='celda'>
+                        <Link
+                        to='/logout'
+                        className='nav-links'>
+                        Salir
+                        </Link>
+                    </tr>
+                </table>
+            </div>
+        </div>
+       {/* <br></br>
         <center>
         <table className='table'>
             <th className='celda'>
@@ -66,9 +115,10 @@ const NavbarPass = () => {
                 Salir
                 </Link>
             </th>
-        </table>
-        <Outlet></Outlet>
-        </center>
+    </table>*
+        
+    </center>*/}
+    <Outlet></Outlet>
         </>
     )
 }

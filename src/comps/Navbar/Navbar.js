@@ -4,6 +4,7 @@ import { Outlet, Link } from 'react-router-dom';
 import './Navbar.css';
 import '../Password/Password.css'
 import './nav2.css'
+import { isMobile } from '../Device';
 import Drawer from '@mui/material/Drawer';
 
 const Navbar=()=>{
@@ -15,10 +16,11 @@ const Navbar=()=>{
   //if the menu is closed, the button is not clicked
   const closeMobileMenu = () => setClick(false);
 
+  var r = isMobile();
 
   return (
     <>
-
+      
     
     <div class="pure-container" data-effect="pure-effect-slide">
         <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
@@ -28,7 +30,8 @@ const Navbar=()=>{
 
         <div class="pure-drawer" data-position="left">
            <br/><br/><br/><br/><br/><br/>
-           <table>
+           
+          <table>
             <tr><Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
               Security Password
               </Link>

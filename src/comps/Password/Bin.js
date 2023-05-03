@@ -62,23 +62,23 @@ const Bin = () => {
     return(
         <>
             <NavbarPass></NavbarPass>
-            <br></br>
-            <br></br>
-            <p>{error}</p>
-            <Fragment>
-                {
-                    pass.map((password) =>
-                    <>
-                        <Password key={password.key} name={password.name} username={password.username}
-                        url={password.url} value={password.value}
-                        id={password.id} >
-                        <ResPassword id={password.id}></ResPassword>
-                        <TerPassword id={password.id} action={action}></TerPassword></Password>        
-                    </>
-                    )
-                }
-            </Fragment>
             
+            <div style={{marginTop: '150px'}}>
+            <p>{error}</p>
+                <Fragment>
+                    {
+                        pass.map((password) =>
+                        <>
+                            <Password key={password.key} name={password.name} username={password.username}
+                            url={password.url} value={password.value}
+                            id={password.id} >
+                            <ResPassword id={password.id}></ResPassword>
+                            <TerPassword id={password.id} action={action}></TerPassword></Password>        
+                        </>
+                        )
+                    }
+                </Fragment>
+            </div>
         </>
     )
 }

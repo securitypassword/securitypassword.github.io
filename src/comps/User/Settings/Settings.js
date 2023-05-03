@@ -11,9 +11,11 @@ const Settings = () => {
     return(
         <>
         <NavbarPass></NavbarPass>
-        <AutoDel></AutoDel>
-        <br/><br/><br/><br/>
-        <DeleteUser/>
+        <div style={{marginTop: '100px'}}>
+            <AutoDel></AutoDel>
+            <br/><br/><br/><br/>
+            <DeleteUser/>
+        </div>
         </>
     )
 }
