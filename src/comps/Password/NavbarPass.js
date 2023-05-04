@@ -4,9 +4,10 @@ import Auth from '../Tokens/Auth';
 import { useNavigate } from 'react-router-dom';
 import { Outlet, Link } from "react-router-dom";
 import { isMobile } from '../Device';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import "./Password.css"
 import './nav2.css'
-
+<i class="bi-alarm"></i>
 const NavbarPass = () => {
     const navigate = useNavigate();
     
@@ -44,28 +45,29 @@ const NavbarPass = () => {
                             <Link
                             to='/newpassword'
                             className='nav-links'>
-                            Nueva contraseña
-                            </Link>
+                            Nueva contraseña <i class="bi bi-clipboard-plus"></i>
+                            
+                            </Link>                           
                         </tr>
                         <tr className='celda'>
                             <Link
                             to='/passwords'
                             className='nav-links'>
-                            Contraseñas
+                            Contraseñas <i class="bi bi-clipboard2-check"></i>
                             </Link>
                         </tr>
                         <tr className='celda'>
                             <Link
                             to='/bin'
                             className='nav-links'>
-                            Papelera
+                            Papelera <i class="bi bi-trash"></i>
                             </Link>
                         </tr>
                         <tr className='celda'>
                             <Link
                             to='/settings'
                             className='nav-links'>
-                            Configuraciones
+                            Configuraciones <i class="bi bi-gear"></i>
                             </Link>
                         </tr>
                         <br/><br/><br/><br/>
@@ -87,7 +89,7 @@ const NavbarPass = () => {
                     <Link
                     to='/newpassword'
                     className='nav-links'>
-                    Nueva contraseña
+                    Nueva contraseña 
                     </Link>
                 </th>
                 <th className='celda'>
