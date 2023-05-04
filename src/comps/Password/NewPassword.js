@@ -119,7 +119,10 @@ const NewPassword = () => {
                                 <SecurityCheck text={value}></SecurityCheck>
                             </div>
                             
-                        <button className='boton12' onClick={save} title="Save">Save</button>
+                        <button className='boton12' onClick={save} title="Save">
+                            Save
+                            <i class="bi bi-save"></i>
+                        </button>
                     </div>
                 </center>
             </div>

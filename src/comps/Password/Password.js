@@ -32,20 +32,29 @@ const Password = (parms) => {
                     <th className='celda'>
                         <button onClick={() => {
                             window.open(parms.url, '_blank', 'noreferrer')}
-                            } className='passwordButtonGo'>Go</button>
-                        <button onClick={() => {navigator.clipboard.writeText(parms.url)}}>Copiar URL</button>
+                            } className='passwordButtonGo'>
+                                 <i class="bi bi-send"></i>
+                            </button>
+                        <button onClick={() => {navigator.clipboard.writeText(parms.url)}}>
+                            <i class="bi bi-files"></i>
+                            URL
+                        </button>
                     </th>
                     )}
                     {parms.name != "" && (
                     <th className='celda'>
                         {parms.name}
-                        <button onClick={() => {navigator.clipboard.writeText(parms.name)}}>Copiar</button>
+                        <button onClick={() => {navigator.clipboard.writeText(parms.name)}}>
+                            <i class="bi bi-files"></i>
+                        </button>
                     </th>
                     )}
                     {parms.username != "" && (
                     <th className='celda'>
                         {parms.username}
-                        <button onClick={() => {navigator.clipboard.writeText(parms.username)}}>Copiar</button>
+                        <button onClick={() => {navigator.clipboard.writeText(parms.username)}}>
+                        <i class="bi bi-files"></i>
+                        </button>
                     </th>
                     )}
                     {passwordShown != "" && (
@@ -55,8 +64,10 @@ const Password = (parms) => {
                     )}
                     <th className='celda'>
                         <button onClick={() => {setPasswordShown(!passwordShown)}}>{
-                        passwordShown ? "Ocultar" : "Mostrar"}</button>
-                        <button onClick={() => {navigator.clipboard.writeText(parms.value)}}>Copiar</button>
+                        passwordShown ? "<i class='bi bi-eye' onClick=''></i>" : "<i class='bi bi-eye-slash' onClick=''></i>"}</button>
+                        <button onClick={() => {navigator.clipboard.writeText(parms.value)}}>
+                            <i class="bi bi-files"></i>
+                        </button>
                     </th>
                     {parms.children != "" && (
                     <th>{parms.children}</th>

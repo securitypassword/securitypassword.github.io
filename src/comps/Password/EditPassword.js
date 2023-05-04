@@ -82,78 +82,86 @@ const EditPassword = () => {
         <NavbarPass></NavbarPass>
         <p>{error}</p>
         <br></br>
-        
-        <br></br>
-        <br></br>
-        
-        <br></br>
-        <br></br>
-        
-        <br></br>
-        
-        <table className='tab'>
-            <tr>
-                <th>
-                    <input
-                        type="text"
-                        id="name"
-                        autoComplete="off"
-                        onChange={(e) => setName(e.target.value)}
-                        value={name}
-                        required
-                        placeholder='nombre de contraseña'
-                    />
-                </th>
-                <th>
-                    <input
-                        type="text"
-                        id="username"
-                        autoComplete="off"
-                        onChange={(e) => setUsername(e.target.value)}
-                        value={username}
-                        required
-                        placeholder='nombre de usuario'
-                    />
-                </th>
-                <th>
-                    <input
-                        type="text"
-                        id="url"
-                        autoComplete="off"
-                        onChange={(e) => setUrl(e.target.value)}
-                        value={url}
-                        required
-                        placeholder='url'
-                    />
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <input
-                        type="text"
-                        id="value"
-                        autoComplete="off"
-                        onChange={(e) => setValue(e.target.value)}
-                        value={value}
-                        required
-                        placeholder='value'
-                    />        
-                </th>
-                <th>
-                    <SecurityCheck text={value}></SecurityCheck>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <button className='boton12' onClick={save}>Save Edit</button>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <DelPassword className='boton12' id={parms.reg_id}></DelPassword>
-                </th>
-            </tr>
-        </table>
+        <center>
+            <br></br>
+            <br></br>
+            
+            <br></br>
+            <br></br>
+            
+            <br></br>
+            
+            <table className={{width: '100%'}}>
+                <tr>
+                    <th>
+                        <input
+                            type="text"
+                            id="name"
+                            autoComplete="off"
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
+                            required
+                            placeholder='nombre de contraseña'
+                        />
+                    </th>
+                    <th>
+                        <input
+                            type="text"
+                            id="username"
+                            autoComplete="off"
+                            onChange={(e) => setUsername(e.target.value)}
+                            value={username}
+                            required
+                            placeholder='nombre de usuario'
+                        />
+                    </th>
+                    <th>
+                        <input
+                            type="text"
+                            id="url"
+                            autoComplete="off"
+                            onChange={(e) => setUrl(e.target.value)}
+                            value={url}
+                            required
+                            placeholder='url'
+                        />
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input
+                            type="text"
+                            id="value"
+                            autoComplete="off"
+                            onChange={(e) => setValue(e.target.value)}
+                            value={value}
+                            required
+                            placeholder='value'
+                        />        
+                    </th>
+                    <th>
+                        <SecurityCheck text={value}></SecurityCheck>
+                    </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
+                        <button className='boton12' onClick={save}>
+                            Guardar
+                            <i class="bi bi-save"></i>
+                        </button>
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>
+                        <DelPassword className='boton12' id={parms.reg_id}></DelPassword>
+                    </th>
+                    <th></th>
+                </tr>
+            </table>
+        </center>
         </>
     )
 }

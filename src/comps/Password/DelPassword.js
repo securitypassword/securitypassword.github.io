@@ -48,7 +48,10 @@ const DelPassword = (parms) => {
     return(
         <>
         <>{error}</>
-        <button onClick={del} >Delete</button>
+        <button onClick={del} >
+            Terminar
+            <i class="bi bi-trash"></i>
+        </button>
         </>
     )
 }

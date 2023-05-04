@@ -10,7 +10,9 @@ const EditButton = (parms) => {
     //redireccion para modo de edicion de contraseña
     return(
         <>
-        <button onClick={action}>Editar</button>
+        <button onClick={action}>
+            <i class="bi bi-pencil-square"/>
+        </button>
         </>
     )
 }
