@@ -54,7 +54,10 @@ const ChangePass = () => {
                 required
             />
             <br></br>
-            <button onClick={email} >Enviar email</button>
+            <button onClick={email} >
+                Enviar email
+                <i class="bi bi-send"></i>
+            </button>
             </center>
         </>
     )
