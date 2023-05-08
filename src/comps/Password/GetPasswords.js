@@ -63,6 +63,7 @@ const GetPasswords = () => {
             <p>{error}</p>
             <Fragment>
                 {
+                    
                     pass.map((password) =>
                     <>
                                 <Password key={password.key} name={password.name} username={password.username}
@@ -71,7 +72,11 @@ const GetPasswords = () => {
                                         <EditButton id={password.id}></EditButton>
                                 </Password>
                     </>
+                    
                     )
+                }
+                {pass.length == 0 &&
+                    (<p style={{marginLeft: '50px'}}>Bobeda vacia</p>)                    
                 }
             </Fragment>
         </>

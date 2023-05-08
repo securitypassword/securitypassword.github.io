@@ -77,6 +77,9 @@ const Bin = () => {
                         </>
                         )
                     }
+                    {pass.length == 0 &&
+                        (<p style={{marginLeft: '50px'}}>Bobeda vacia</p>)                    
+                    }
                 </Fragment>
             </div>
         </>

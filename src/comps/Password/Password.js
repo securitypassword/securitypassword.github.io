@@ -64,7 +64,7 @@ const Password = (parms) => {
                     )}
                     <th className='celda'>
                         <button onClick={() => {setPasswordShown(!passwordShown)}}>{
-                        passwordShown ? "<i class='bi bi-eye' onClick=''></i>" : "<i class='bi bi-eye-slash' onClick=''></i>"}</button>
+                        passwordShown ? "Ocultar" : "Mostrar"}</button>
                         <button onClick={() => {navigator.clipboard.writeText(parms.value)}}>
                             <i class="bi bi-files"></i>
                         </button>

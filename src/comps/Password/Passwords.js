@@ -11,7 +11,7 @@ const Passwords = () => {
         <>
             <NavbarPass></NavbarPass>
             <div style={{marginTop: '150px'}}>
-                <div>passwords</div>
+                <div style={{marginLeft: '50px'}}>Bobeda</div>
                 <GetPasswords></GetPasswords>
             </div>
         </>
