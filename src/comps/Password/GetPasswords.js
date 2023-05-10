@@ -5,12 +5,17 @@ import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
 import EditButton from './EditButton';
 import './Password.css';
+import Loading from '../Loaging';
 
 //const GET_REGS_URL = process.env.API_URL + "/getActiveRegs"
 const GET_REGS_URL = "https://securitypassword.cyclic.app/getActiveRegs"
 
+
 //solicitar a la api las contraseñas del usuario
-export const getpass = async () => {
+export const getpass = async (setError) => {
+    
+    setError(<Loading></Loading>)
+
     let token = window.sessionStorage.getItem("token")
     const query = {
         token:token
@@ -33,7 +38,7 @@ const GetPasswords = () => {
     //obtener contraseñas
     const getPass = async () => {        
         let resp = []
-            const passwords = await getpass().then(function(passwords){
+            const passwords = await getpass(setError).then(function(passwords){
                 return passwords.data
             })
             for(let i in passwords){
