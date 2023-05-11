@@ -13,7 +13,7 @@ const GET_BIN_URL = "https://securitypassword.cyclic.app/getBinRegs"
 
 //solicitar a la api las contraseñas de la papelera del usuario
 export const getpass = async (setError) => {
-    
+    setError(<Loading></Loading>)
 
     let token = window.sessionStorage.getItem("token")
     const query = {
@@ -38,7 +38,7 @@ const Bin = () => {
     //obtener la papelera y regresarla
     const getBin = async () => {
         let resp = []
-            const passwords = await getpass().then(function(passwords){
+            const passwords = await getpass(setError).then(function(passwords){
                 return passwords.data
             })
             for(let i in passwords){
