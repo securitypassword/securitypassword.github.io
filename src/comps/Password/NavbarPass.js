@@ -120,7 +120,7 @@ const NavbarPass = () => {
                     Salir
                     </Link>
                 </th>
-            </table>*
+            </table>
                 
             </center>
             )}
