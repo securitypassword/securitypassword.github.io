@@ -11,6 +11,7 @@ const Password = (parms) => {
         <br></br>
         <div className='passwordBox' > 
             <table className='tabla'>
+                
                 <tr>
                     {parms.url != "" && (
                     <th>Link</th>
@@ -18,6 +19,9 @@ const Password = (parms) => {
                     {parms.name != "" && (
                     <th>Nombre de contraseña</th>
                     )}
+                    
+                </tr>
+                <tr>
                     {parms.username != "" && (
                     <th>Nombre de usuario</th>
                     )}
@@ -49,8 +53,13 @@ const Password = (parms) => {
                         </button>
                     </th>
                     )}
+                </tr>
+
+                <tr>
                     {parms.username != "" && (
                     <th className='celda'>
+                        usuario
+                        <br/>
                         {parms.username}
                         <button onClick={() => {navigator.clipboard.writeText(parms.username)}}>
                         <i class="bi bi-files"></i>
@@ -58,6 +67,7 @@ const Password = (parms) => {
                     </th>
                     )}
                     {passwordShown != "" && (
+                    
                     <th className='celda'>
                         {parms.value}
                     </th>

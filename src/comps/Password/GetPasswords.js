@@ -76,6 +76,8 @@ const GetPasswords = () => {
                                     id={password.id} >
                                         <EditButton id={password.id}></EditButton>
                                 </Password>
+                                <br/>
+                                <hr style={{borderTop: "3px double #9a84aa"}}/>
                     </>
                     
                     )
@@ -84,6 +86,7 @@ const GetPasswords = () => {
                     (<p style={{marginLeft: '50px'}}>Bobeda vacia</p>)                    
                 }
             </Fragment>
+            
         </>
     )
 }

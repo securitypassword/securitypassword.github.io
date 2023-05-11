@@ -49,7 +49,7 @@ const DelPassword = (parms) => {
         <>
         <>{error}</>
         <button onClick={del} >
-            Terminar
+            Eliminar
             <i class="bi bi-trash"></i>
         </button>
         </>
