@@ -84,44 +84,50 @@ const NavbarPass = () => {
         )}
         {!isMobile() && (
             <center>
-            <table className='table'>
-                <th className='celda'>
-                    <Link
-                    to='/newpassword'
-                    className='nav-links'>
-                    Nueva contraseña 
-                    </Link>
-                </th>
-                <th className='celda'>
-                    <Link
-                    to='/passwords'
-                    className='nav-links'>
-                    Contraseñas
-                    </Link>
-                </th>
-                <th className='celda'>
-                    <Link
-                    to='/bin'
-                    className='nav-links'>
-                    Papelera
-                    </Link>
-                </th>
-                <th className='celda'>
-                    <Link
-                    to='/settings'
-                    className='nav-links'>
-                    Configuraciones
-                    </Link>
-                </th>
-                <th className='celda'>
-                    <Link
-                    to='/logout'
-                    className='nav-links'>
-                    Salir
-                    </Link>
-                </th>
-            </table>
-                
+         
+            <div className='a'>
+                <center>
+                <table className='table'>
+                    <th className='celda'>
+                        <Link
+                        to='/newpassword'
+                        className='nav-links'>
+                        Nueva contraseña 
+                        </Link>
+                    </th>
+                    <th className='celda'>
+                        <Link
+                        to='/passwords'
+                        className='nav-links'>
+                        Contraseñas
+                        </Link>
+                    </th>
+                    <th className='celda'>
+                        <Link
+                        to='/bin'
+                        className='nav-links'>
+                        Papelera
+                        </Link>
+                    </th>
+                    <th className='celda'>
+                        <Link
+                        to='/settings'
+                        className='nav-links'>
+                        Configuraciones
+                        </Link>
+                    </th>
+                    <th className='celda'>
+                        <Link
+                        to='/logout'
+                        className='nav-links'>
+                        Salir
+                        </Link>
+                    </th>
+                </table>
+                </center>
+                <hr/>
+            </div>
+      
             </center>
             )}
         <Outlet></Outlet>
