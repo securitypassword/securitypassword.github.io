@@ -7,6 +7,7 @@ import TerPassword from './TerPassword';
 import {  useState, useEffect } from 'react';
 import {from64} from "../../api/sec"
 import Loading from '../Loaging';
+import './Password.css';
 
 //const GET_BIN_URL = process.env.API_URL + "/getBinRegs"
 const GET_BIN_URL = "https://securitypassword.cyclic.app/getBinRegs"
@@ -72,18 +73,20 @@ const Bin = () => {
                     {
                         pass.map((password) =>
                         <>
-                            <Password key={password.key} name={password.name} username={password.username}
-                            url={password.url} value={password.value}
-                            id={password.id} >
-                            <ResPassword id={password.id}></ResPassword>
-                            <TerPassword id={password.id} action={action}></TerPassword></Password>    
-                            <br/>
-                            <hr style={{borderTop: "3px double #9a84aa"}}/>    
+                            <div className='target'>
+                                <Password key={password.key} name={password.name} username={password.username}
+                                url={password.url} value={password.value}
+                                id={password.id} >
+                                <ResPassword id={password.id}></ResPassword>
+                                <TerPassword id={password.id} action={action}></TerPassword></Password>    
+                                <br/>
+                                {/*<hr style={{borderTop: "3px double #9a84aa"}}/>*/}
+                            </div>
                         </>
                         )
                     }
                     {pass.length == 0 &&
-                        (<p style={{marginLeft: '50px'}}>Bobeda vacia</p>)                    
+                        (<p style={{marginLeft: '50px'}}>Bóveda vacia</p>)                    
                     }
                 </Fragment>
             </div>

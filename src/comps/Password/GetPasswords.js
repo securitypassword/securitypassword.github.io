@@ -71,19 +71,21 @@ const GetPasswords = () => {
                     
                     pass.map((password) =>
                     <>
-                                <Password key={password.key} name={password.name} username={password.username}
-                                    url={password.url} value={password.value}
-                                    id={password.id} >
-                                        <EditButton id={password.id}></EditButton>
-                                </Password>
-                                <br/>
-                                <hr style={{borderTop: "3px double #9a84aa"}}/>
+                        <div className='target'>
+                            <Password key={password.key} name={password.name} username={password.username}
+                                url={password.url} value={password.value}
+                                id={password.id} >
+                                    <EditButton id={password.id}></EditButton>
+                            </Password>
+                        </div>
+                            <br/>
+                            {/* <hr style={{borderTop: "3px double #9a84aa"}}/>*/}
                     </>
                     
                     )
                 }
                 {pass.length == 0 &&
-                    (<p style={{marginLeft: '50px'}}>Bobeda vacia</p>)                    
+                    (<p style={{marginLeft: '50px'}}>Bóveda vacia</p>)                    
                 }
             </Fragment>
             
