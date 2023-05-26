@@ -17,7 +17,7 @@ export const PassNote = () => {
     return(
         <>
         Longitud de 8 a 24 caracteres.<br />
-        Debe incluir una mayuscula, una minuscula, un numero y un caracter especial.<br />
+        Debe incluir una mayúscula, una minúscula, un número y un carácter especial.<br />
         Caracteres especiales permitidos: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
         </>
     )
@@ -130,7 +130,7 @@ const RegisterForm = () => {
             if (!err?.response) {
                 setErrMsg('No responde el servidor');
             } else if (err.response?.status === 409) {
-                setErrMsg('Nombre de usuario ya tomado');
+                setErrMsg('El nombre de usuario ya fue tomado');
             } else {
                 setErrMsg('Fallo al registrar')
             }
@@ -146,7 +146,7 @@ const RegisterForm = () => {
                             <center>
                             <br/>    
                             <br/>
-                                <h1>Se ha creado tu cuenta con exito!!!</h1>
+                                <h1>¡Se ha creado tu cuenta con exito!</h1>
                                 <br/>
                                 <br/>   
                                 <p>
@@ -188,7 +188,7 @@ const RegisterForm = () => {
                                     <FontAwesomeIcon icon={faInfoCircle} />
                                     Longitud de 4 a 24 caracteres.<br />
                                     Debe empezar con una letra.<br />
-                                    Letras, números y guiones permitidos.
+                                    Letras, números y guiones están permitidos.
                                 </p>
 
                                 <label htmlFor="email">
@@ -211,7 +211,7 @@ const RegisterForm = () => {
                                 />
                                 <p id="uidnote" className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
                                     <FontAwesomeIcon icon={faInfoCircle} />
-                                    Email no valido
+                                    Email no válido
                                 </p>
 
                                 <label htmlFor="password">
@@ -258,14 +258,14 @@ const RegisterForm = () => {
                                 </p>
                                 <p>
                                     <br></br>
-                                    Acepto los <a href={"https://securitypassword.github.io/#/legal"}> Terminos y Condiciones</a>
+                                    Acepto los <a href={"https://securitypassword.github.io/#/legal"}> términos y condiciones</a>
                                     <BotonCheck seleccionado={accept} click={toggleAccept} />
                                 </p>
 
                                 <button disabled={!validName || !validPwd || !validMatch || !accept ? true : false}>Registrarse</button>
                             </form>
                             <p>
-                                Ya tienes cuenta?<br />
+                                ¿Ya tienes cuenta?<br />
                                 <span className="line">
                                     <Link to="/login">Inicia sesión</Link>
                                 </span>
