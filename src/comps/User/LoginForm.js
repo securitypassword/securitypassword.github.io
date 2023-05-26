@@ -117,9 +117,9 @@ const LoginForm = () => {
                 <a href="https://securitypassword.github.io/#/changePassword">Olvidé mi contraseña</a>    
             </p>  
             <p>
-                No tienes cuenta?<br />
+                ¿No tienes cuenta?<br />
                 <span className="line">
-                    <Link to="/register">Registrate aquí</Link>
+                    <Link to="/register">Regístrate aquí</Link>
                 </span>
             </p> 
             </section>

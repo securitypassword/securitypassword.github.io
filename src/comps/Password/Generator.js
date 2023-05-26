@@ -121,7 +121,7 @@ const Generator = (parms) => {
 		<div className="contenedor">
 			<form onSubmit={onSubmit}>
 				<Fila>
-					<label>Numero de caracteres:</label>
+					<label>Número de caracteres:</label>
 					<Controles>
 						<BotonDisminuir click={disminuirNumeroCaracteres} />
 						<span>{configuracion.numeroDeCaracteres}</span>
@@ -129,19 +129,19 @@ const Generator = (parms) => {
 					</Controles>
 				</Fila>
 				<Fila>
-					<label>¿Incluir Mayusculas?</label>
+					<label>¿Incluir mayúsculas?</label>
 					<BotonCheck seleccionado={configuracion.mayusculas} click={toggleMayusculas} />
 				</Fila>
 				<Fila>
-					<label>¿Incluir Minusculas?</label>
+					<label>¿Incluir minúsculas?</label>
 					<BotonCheck seleccionado={configuracion.minusculas} click={toggleMinusculas} />
 				</Fila>
 				<Fila>
-					<label>¿Incluir Numeros?</label>
+					<label>¿Incluir números?</label>
 					<BotonCheck seleccionado={configuracion.numeros} click={toggleNumeros} />
 				</Fila>
 				<Fila>
-					<label>¿Incluir Simbolos?</label>
+					<label>¿Incluir símbolos?</label>
 					<BotonCheck seleccionado={configuracion.simbolos} click={toggleSimbolos} />
 				</Fila>
 				<Fila>

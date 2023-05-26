@@ -123,7 +123,7 @@ const NewPassword = () => {
                                 </div>
                                 
                             <button className='boton12' onClick={save} title="Save">
-                                Save
+                                Guardar
                                 <i class="bi bi-save"></i>
                             </button>
                         </div>

@@ -66,10 +66,11 @@ const Bin = () => {
     return(
         <>
             <NavbarPass></NavbarPass>
-            
             <div style={{marginTop: '150px'}}>
             <p>{error}</p>
                 <Fragment>
+                    <br></br>
+                    Papelera
                     {
                         pass.map((password) =>
                         <>

@@ -12,7 +12,7 @@ function HeroSection() {
         <br/>
         <br/>
         <h1> asegurar el valor</h1>
-        <p>¿Qué estas esperando?</p>
+        <p>¿Qué estás esperando?</p>
       </div>
       <div className='hero-btns'>
         <Button

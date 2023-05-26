@@ -9,7 +9,7 @@ const AUTO_DEL_URL = "https://securitypassword.cyclic.app/autoDel"
 const GET_AUTO_DEL_URL = "https://securitypassword.cyclic.app/getAutoDel"
 
 const autoDelMsg = (data) => {
-    let msg = "El auto-borrado de la cuenta a los 6 intentos fallidos está "
+    let msg = "El autoborrado de la cuenta a los 6 intentos fallidos está "
     if(data == "true"){
         msg += "activado"
     }

@@ -66,11 +66,15 @@ const Password = (parms) => {
                         </button>
                     </th>
                     )}
-                    {passwordShown != "" && (
+                    {passwordShown != "" ? (
                     
                     <th className='celda'>
                         {parms.value}
                     </th>
+                    ) : (
+                    <th className='celdaHide'>
+                        {parms.value}
+                    </th> 
                     )}
                     <th className='celda'>
                         <button onClick={() => {setPasswordShown(!passwordShown)}}>{
