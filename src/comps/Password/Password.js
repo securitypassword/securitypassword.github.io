@@ -20,8 +20,6 @@ const Password = (parms) => {
                     <th>Nombre de contraseña</th>
                     )}
                     
-                </tr>
-                <tr>
                     {parms.username != "" && (
                     <th>Nombre de usuario</th>
                     )}
@@ -53,9 +51,6 @@ const Password = (parms) => {
                         </button>
                     </th>
                     )}
-                </tr>
-
-                <tr>
                     {parms.username != "" && (
                     <th className='celda'>
                         usuario
@@ -66,26 +61,25 @@ const Password = (parms) => {
                         </button>
                     </th>
                     )}
+                    <th className='celda'>
                     {passwordShown != "" ? (
-                    
-                    <th className='celda'>
+                    <div>
                         {parms.value}
-                    </th>
+                    </div>
                     ) : (
-                    <th className='celdaHide'>
+                    <div className='celdaHide'>
                         {parms.value}
-                    </th> 
+                    </div>
                     )}
-                    <th className='celda'>
                         <button onClick={() => {setPasswordShown(!passwordShown)}}>{
                         passwordShown ? "Ocultar" : "Mostrar"}</button>
                         <button onClick={() => {navigator.clipboard.writeText(parms.value)}}>
                             <i class="bi bi-files"></i>
                         </button>
-                    </th>
                     {parms.children != "" && (
-                    <th>{parms.children}</th>
+                    <div>{parms.children}</div>
                     )}
+                    </th>
                 </tr>
                 
             </table>
