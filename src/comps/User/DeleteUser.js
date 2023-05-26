@@ -49,6 +49,7 @@ const DeleteUser = () => {
         <>
             <p>{error}</p>
             <label>Escribe tu contraseña maestra para eliminar tu cuenta:</label>
+            <br />
             <input
                 type="text"
                 id="password"
