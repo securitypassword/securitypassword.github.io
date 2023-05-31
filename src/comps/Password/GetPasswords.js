@@ -75,6 +75,7 @@ const GetPasswords = () => {
                             <Password key={password.key} name={password.name} username={password.username}
                                 url={password.url} value={password.value}
                                 id={password.id} >
+                                    <br></br>
                                     <EditButton id={password.id}></EditButton>
                             </Password>
                         </div>
