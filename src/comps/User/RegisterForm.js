@@ -119,20 +119,15 @@ const RegisterForm = () => {
             
             if(response.data.data==="success"){
                 setSuccess(true);
-            }else{
+            }else if(response.data.data==="error"){
                 setErrMsg(response.data.msg)
             }
             //clear state and controlled inputs
-            setUser('');
             setPwd('');
             setMatchPwd('');
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No responde el servidor');
-            } else if (err.response?.status === 409) {
-                setErrMsg('El nombre de usuario ya fue tomado');
-            } else {
-                setErrMsg('Fallo al registrar')
             }
             errRef.current.focus();
         }
