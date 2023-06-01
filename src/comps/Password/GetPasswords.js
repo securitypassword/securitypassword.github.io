@@ -12,9 +12,7 @@ const GET_REGS_URL = "https://securitypassword.cyclic.app/getActiveRegs"
 
 
 //solicitar a la api las contraseñas del usuario
-export const getpass = async (setError) => {
-    
-    setError(<Loading></Loading>)
+export const getpass = async () => {
 
     let token = window.sessionStorage.getItem("token")
     const query = {
@@ -35,10 +33,12 @@ const GetPasswords = () => {
     let ramPass= []
     const [pass, setPass] = useState(ramPass)
     const [error, setError] = useState("")
+    const [loading, setLoading] = useState(true)
     //obtener contraseñas
     const getPass = async () => {        
         let resp = []
-            const passwords = await getpass(setError).then(function(passwords){
+            setLoading(true)
+            const passwords = await getpass().then(function(passwords){
                 return passwords.data
             })
             for(let i in passwords){
@@ -47,7 +47,7 @@ const GetPasswords = () => {
                 
             }
             resp=ramPass
-            setError(" ")
+            setLoading(false)
         return resp
     }
     //obtener y guardar contraseñas al iniciar
@@ -66,6 +66,7 @@ const GetPasswords = () => {
     return(
         <>
             <p>{error}</p>
+            {loading && (<Loading></Loading>)}
             <Fragment>
                 {
                     

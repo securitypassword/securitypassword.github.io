@@ -59,6 +59,9 @@ const Generator = (parms) => {
 		cambiarConfiguracion((configuracionAnterior) => {
 			const nuevaConfiguracion = {...configuracionAnterior};
 			nuevaConfiguracion.numeroDeCaracteres += 1;
+			if(nuevaConfiguracion.numeroDeCaracteres > 129){
+				nuevaConfiguracion.numeroDeCaracteres -= 1;
+			}
 			return nuevaConfiguracion; 
 		});
 	}

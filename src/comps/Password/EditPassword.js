@@ -8,6 +8,7 @@ import DelPassword from "./DelPassword"
 import SecurityCheck from './SecurityCheck';
 import axios from '../../api/axios';
 import "./Password.css"
+import Loading from '../Loaging';
 
 //const EDIT_REG_URL = process.env.API_URL + "/editReg"
 const EDIT_REG_URL = "https://securitypassword.cyclic.app/editReg"
@@ -44,6 +45,7 @@ export const editPass = async (id, name, username, value, url, setError, navigat
 const EditPassword = () => {
     const navigate = useNavigate();
     const [name, setName] = useState("")
+    const [loading, setLoading] = useState(true)
     const [username, setUsername] = useState("")
     const [value, setValue] = useState("")
     const [url, setUrl] = useState("")
@@ -56,7 +58,7 @@ const EditPassword = () => {
     }
     //preparar la contraseña
     useEffect(()=>{
-        setError("Loading...")
+        setLoading(true)
         getpass().then(function(resp){
             let found = false
             for(var i in resp.data){
@@ -67,7 +69,7 @@ const EditPassword = () => {
                     setUsername(from64(data.username))
                     setValue(from64(data.value))
                     setUrl(from64(data.url))
-                    setError("")
+                    setLoading(true)
                     found = true
                 }
             }
@@ -81,6 +83,7 @@ const EditPassword = () => {
         <>
         <NavbarPass></NavbarPass>
         <p>{error}</p>
+        {loading && (<Loading></Loading>)}
         <br></br>
         <center>
             <br></br>
