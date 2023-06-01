@@ -49,7 +49,7 @@ const ResPassword = (parms) => {
         <>
         <Auth></Auth>
         <>{error}</>
-        <button onClick={res} >Restaurar</button>
+        <button onClick={res} className="boton_copy">Restaurar</button>
         </>
     )
 }

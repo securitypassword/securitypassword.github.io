@@ -52,7 +52,7 @@ const TerPassword = (parms) => {
         <>
         <Auth></Auth>
         <>{error}</>
-        <button onClick={ter} >Terminar</button>
+        <button onClick={ter} className="boton_copy">Terminar</button>
         </>
     )
 }

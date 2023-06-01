@@ -1,5 +1,6 @@
 import React from "react"
 import { useNavigate } from 'react-router-dom';
+import './Password.css';
 
 const EditButton = (parms) => {
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ const EditButton = (parms) => {
     //redireccion para modo de edicion de contraseña
     return(
         <>
-        <button onClick={action}>
+        <button onClick={action} className="editbotonmov">
             <i class="bi bi-pencil-square"/>
         </button>
         </>
