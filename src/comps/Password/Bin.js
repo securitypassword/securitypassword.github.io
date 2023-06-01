@@ -13,8 +13,7 @@ import './Password.css';
 const GET_BIN_URL = "https://securitypassword.cyclic.app/getBinRegs"
 
 //solicitar a la api las contraseñas de la papelera del usuario
-export const getpass = async (setError) => {
-    setError(<Loading></Loading>)
+export const getpass = async () => {
 
     let token = window.sessionStorage.getItem("token")
     const query = {
@@ -35,10 +34,12 @@ const Bin = () => {
     let ramPass= []
     const [pass, setPass] = useState(ramPass)
     const [error, setError] = useState("")
+    const [loading, setLoading] = useState(false)
 
     //obtener la papelera y regresarla
     const getBin = async () => {
         let resp = []
+        setLoading(true)
             const passwords = await getpass(setError).then(function(passwords){
                 return passwords.data
             })
@@ -49,6 +50,7 @@ const Bin = () => {
             }
             resp=ramPass
             setError(" ")
+            setLoading(false)
         return resp
     }
     //obtener y guardar la papelera al iniciar
@@ -68,6 +70,7 @@ const Bin = () => {
             <NavbarPass></NavbarPass>
             <div style={{marginTop: '150px'}}>
             <p>{error}</p>
+            {loading && (<Loading></Loading>)}
                 <Fragment>
                     <br></br>
                     Papelera
