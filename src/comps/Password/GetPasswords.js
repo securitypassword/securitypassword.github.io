@@ -54,7 +54,7 @@ const GetPasswords = () => {
 	const action = () => {
         getPass().then(function(resp){
             setPass(resp)
-            console.log(resp)
+            
             return resp
         })
 

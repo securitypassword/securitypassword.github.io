@@ -38,6 +38,7 @@ export const editPass = async (id, name, username, value, url, setError, navigat
     else{
         setError(resp.data.msg)
     }
+    return true
 
 }
 
@@ -55,6 +56,7 @@ const EditPassword = () => {
 
     const save = async () => {
         await editPass(parms.reg_id,name,username,value,url,setError, navigate)
+        return true
     }
     //preparar la contraseña
     useEffect(()=>{
@@ -76,8 +78,10 @@ const EditPassword = () => {
             if(!found){
                 navigate("/passwords")
             }
+            setLoading(false)
+            return true
         })
-    }, [parms, setName, setValue, setUrl, setError])
+    }, [])
     //formulario para edicion
     return(
         <>
