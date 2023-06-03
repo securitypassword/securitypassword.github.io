@@ -7,8 +7,6 @@ import { useNavigate } from 'react-router-dom';
 //const DEL_REG_URL = process.env.API_URL + "/terReg"
 const DEL_REG_URL = "https://securitypassword.cyclic.app/terReg"
 
-//global
-var id = ""
 
 //solicitar a la api la eliminacion de una contraseña
 export const terPass = async (id, setError, navigate) => {
@@ -40,7 +38,7 @@ const TerPassword = (parms) => {
     const navigate = useNavigate();
     
     const [error, setError] = useState("")
-    id = parms.id
+    const id = parms.id
 
     const ter = async () => {
         await terPass(id, setError, navigate)

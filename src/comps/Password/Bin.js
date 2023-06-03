@@ -82,7 +82,8 @@ const Bin = () => {
                                 url={password.url} value={password.value}
                                 id={password.id} >
                                 <ResPassword id={password.id}></ResPassword>
-                                <TerPassword id={password.id} action={action}></TerPassword></Password>    
+                                <TerPassword id={password.id} action={action}></TerPassword>
+                                </Password>    
                                 <br/>
                                 {/*<hr style={{borderTop: "3px double #9a84aa"}}/>*/}
                             </div>

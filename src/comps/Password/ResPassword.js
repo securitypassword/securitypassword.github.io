@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 //const RES_REG_URL = process.env.API_URL + "/resReg"
 const RES_REG_URL = "https://securitypassword.cyclic.app/resReg"
 
-var id = ""
 
 //solitar a la api la restauracion de una contraseña
 export const resPass = async (id, setError, navigate) => {
@@ -39,7 +38,7 @@ const ResPassword = (parms) => {
     const navigate = useNavigate();
     
     const [error, setError] = useState("")
-    id = parms.id
+    const id = parms.id
 
     const res = async () => {
         await resPass(id, setError, navigate)
